@@ -1108,6 +1108,16 @@ themes["zenburn"] = {
 return setmetatable({
 	themes = themes,
 	apply_theme = apply_base16_theme,
+	theme_from_array = function(array)
+		assert(#array == 16, "base16.theme_from_array: The array length must be 16")
+		local result = {}
+		for i, value in ipairs(array) do
+			assert(#value == 6, "base16.theme_from_array: array values must be in 6 digit hex format, e.g. 'ffffff'")
+			local key = ("base%02X"):format(i - 1)
+			result[key] = value
+		end
+		return result
+	end,
 	theme_names = function()
 		local result = {}
 		for k in pairs(themes) do

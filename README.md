@@ -1,5 +1,9 @@
 ## base16.lua
 
+Programmatic lua library for setting
+[base16](https://github.com/chriskempson/base16) themes in
+[Neovim](https://github.com/neovim/neovim).
+
 ## Usage
 
 Basic usage:
@@ -20,6 +24,10 @@ local base16 = require 'base16'
 base16(base16.themes[nvim.env.BASE16_THEME or "3024"], true)
 EOF
 ```
+
+You can define your own themes and use them with the `base16` function as long
+as they match the format described below. I know the format is annoying to
+define, so the `base16.theme_from_array` utility function is available.
 
 ## API
 
@@ -45,6 +53,23 @@ Example:
 print(vim.inspect(base16.theme_names()))
 ```
 
+### base16.theme_from_array(theme_definition: array) -> dict
+
+Formats an array of 16 hex color strings into a dictionary suitable for use
+with `base16.apply_theme`.
+
+Example:
+
+```lua
+local theme = base16.theme_from_array {
+	"383838"; "404040"; "606060"; "6f6f6f";
+	"808080"; "dcdccc"; "c0c0c0"; "ffffff";
+	"dca3a3"; "dfaf8f"; "e0cf9f"; "5f7f5f";
+	"93e0e3"; "7cb8bb"; "dc8cc3"; "000000";
+}
+base16(theme, true)
+```
+
 ## Variables
 
 ### base16.themes
@@ -64,7 +89,8 @@ base16.themes["zenburn"] == {
 
 ## Notes
 
-Because this includes a copy of [`norcalli/nvim.lua`](https://github.com/norcalli/nvim.lua), you should put
+Because this includes a copy of
+[`norcalli/nvim.lua`](https://github.com/norcalli/nvim.lua), you should put
 this after `norcalli/nvim.lua` in the plugin list because lua module resolution
 is first-come-first-served, i.e.
 
