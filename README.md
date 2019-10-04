@@ -4,9 +4,28 @@ Programmatic lua library for setting
 [base16](https://github.com/chriskempson/base16) themes in
 [Neovim](https://github.com/neovim/neovim).
 
+## Demo
+
+```lua
+local theme_names = base16.theme_names()
+base16_position = 1
+function cycle_theme()
+  base16_position = (base16_position % #theme_names) + 1
+  base16(base16.themes[theme_names[base16_position]], true)
+end
+```
+
+![Cycle themes](https://raw.githubusercontent.com/norcalli/github-assets/master/nvim-base16.lua-demo.webm)
+
 ## Usage
 
-Basic usage:
+Install via your plugin manager. e.g.
+
+```vim
+Plug "norcalli/nvim-base16.lua"
+```
+
+### Basic usage
 
 ```lua
 lua << EOF
