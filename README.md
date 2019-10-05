@@ -15,7 +15,7 @@ function cycle_theme()
 end
 ```
 
-![Cycle themes](https://raw.githubusercontent.com/norcalli/github-assets/master/nvim-base16.lua-demo.gif)
+![Cycle themes](https://raw.githubusercontent.com/norcalli/github-assets/master/nvim-base16.lua-demo.webm)
 
 ## Usage
 
