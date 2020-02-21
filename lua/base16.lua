@@ -1,7 +1,10 @@
-local nvim = require 'nvim'
+local vim = vim
+local nvim_command = vim.api.nvim_command
+
+-- TODO set g:colors_name?
 
 local function highlight(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
-	local parts = {group}
+	local parts = {'highlight', group}
 	if guifg then table.insert(parts, "guifg=#"..guifg) end
 	if guibg then table.insert(parts, "guibg=#"..guibg) end
 	if ctermfg then table.insert(parts, "ctermfg="..ctermfg) end
@@ -12,8 +15,7 @@ local function highlight(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
 	end
 	if guisp then table.insert(parts, "guisp=#"..guisp) end
 
-	-- nvim.ex.highlight(parts)
-	vim.api.nvim_command('highlight '..table.concat(parts, ' '))
+	nvim_command(table.concat(parts, ' '))
 end
 
 -- Modified from https://github.com/chriskempson/base16-vim
@@ -49,29 +51,29 @@ local function apply_base16_theme(theme, use_256_colorspace)
 	end
 
 	-- Neovim terminal colours
-	if nvim.fn.has("nvim") then
-		nvim.g.terminal_color_0 =  "#"..theme.base00
-		nvim.g.terminal_color_1 =  "#"..theme.base08
-		nvim.g.terminal_color_2 =  "#"..theme.base0B
-		nvim.g.terminal_color_3 =  "#"..theme.base0A
-		nvim.g.terminal_color_4 =  "#"..theme.base0D
-		nvim.g.terminal_color_5 =  "#"..theme.base0E
-		nvim.g.terminal_color_6 =  "#"..theme.base0C
-		nvim.g.terminal_color_7 =  "#"..theme.base05
-		nvim.g.terminal_color_8 =  "#"..theme.base03
-		nvim.g.terminal_color_9 =  "#"..theme.base08
-		nvim.g.terminal_color_10 = "#"..theme.base0B
-		nvim.g.terminal_color_11 = "#"..theme.base0A
-		nvim.g.terminal_color_12 = "#"..theme.base0D
-		nvim.g.terminal_color_13 = "#"..theme.base0E
-		nvim.g.terminal_color_14 = "#"..theme.base0C
-		nvim.g.terminal_color_15 = "#"..theme.base07
-		if nvim.o.background == "light" then
-			nvim.g.terminal_color_background = "#"..theme.base05
-			nvim.g.terminal_color_foreground = "#"..theme.base0B
+	if vim.fn.has("nvim") then
+		vim.g.terminal_color_0 =  "#"..theme.base00
+		vim.g.terminal_color_1 =  "#"..theme.base08
+		vim.g.terminal_color_2 =  "#"..theme.base0B
+		vim.g.terminal_color_3 =  "#"..theme.base0A
+		vim.g.terminal_color_4 =  "#"..theme.base0D
+		vim.g.terminal_color_5 =  "#"..theme.base0E
+		vim.g.terminal_color_6 =  "#"..theme.base0C
+		vim.g.terminal_color_7 =  "#"..theme.base05
+		vim.g.terminal_color_8 =  "#"..theme.base03
+		vim.g.terminal_color_9 =  "#"..theme.base08
+		vim.g.terminal_color_10 = "#"..theme.base0B
+		vim.g.terminal_color_11 = "#"..theme.base0A
+		vim.g.terminal_color_12 = "#"..theme.base0D
+		vim.g.terminal_color_13 = "#"..theme.base0E
+		vim.g.terminal_color_14 = "#"..theme.base0C
+		vim.g.terminal_color_15 = "#"..theme.base07
+		if vim.o.background == "light" then
+			vim.g.terminal_color_background = "#"..theme.base05
+			vim.g.terminal_color_foreground = "#"..theme.base0B
 		else
-			nvim.g.terminal_color_background = "#"..theme.base00
-			nvim.g.terminal_color_foreground = "#"..theme.base0E
+			vim.g.terminal_color_background = "#"..theme.base00
+			vim.g.terminal_color_foreground = "#"..theme.base0E
 		end
 	-- VIM, not NVIM settings
 	-- elseif nvim.fn.has("terminal") then
@@ -96,8 +98,8 @@ local function apply_base16_theme(theme, use_256_colorspace)
 	end
 
 	-- TODO
-	-- nvim.command "hi clear"
-	-- nvim.command "syntax reset"
+	-- nvim_command "hi clear"
+	-- nvim_command "syntax reset"
 
 	-- Vim editor colors
 	highlight("Normal",        theme.base05, theme.base00, cterm05, cterm00, nil, nil)
@@ -331,11 +333,12 @@ local function apply_base16_theme(theme, use_256_colorspace)
 	highlight("javaOperator",     theme.base0D, nil, cterm0D, nil, nil, nil)
 
 	-- TODO
-	-- nvim.command 'syntax on'
+	-- nvim_command 'syntax enable'
 end
 
 local themes = {}
 
+-- nvim.command [[342,1109s/= "/&#/g]]
 themes["3024"] = {
 	base00 = "090300"; base01 = "3a3432"; base02 = "4a4543"; base03 = "5c5855";
 	base04 = "807d7c"; base05 = "a5a2a2"; base06 = "d6d5d4"; base07 = "f7f7f7";
@@ -1105,19 +1108,55 @@ themes["zenburn"] = {
 	base0C = "93e0e3"; base0D = "7cb8bb"; base0E = "dc8cc3"; base0F = "000000";
 }
 
+local function theme_from_array(array)
+  assert(#array == 16, "base16.theme_from_array: The array length must be 16")
+  local result = {}
+  for i, value in ipairs(array) do
+    assert(#value == 6, "base16.theme_from_array: array values must be in 6 digit hex format, e.g. 'ffffff'")
+    local key = ("base%02X"):format(i - 1)
+    result[key] = value
+  end
+  return result
+end
+
+local function validate_input(input)
+  assert(type(input) == 'table', 'base16 input must be a table')
+  for i = 1, 16 do
+    local varn = ("base%02X"):format(i-1)
+    if type(input[varn]) ~= 'string' then
+      error(varn.." is missing from base16 input")
+    end
+  end
+end
+
+local CURRENT_THEME
+
+local function apply(value, use256)
+  local theme_name
+  local theme
+  if type(value) == 'string' then
+    theme_name = value
+    theme = themes[value] or error("Invalid theme name "..value)
+  elseif type(value) == 'table' then
+    if value[1] then
+      theme = theme_from_array(value)
+    else
+      theme = value
+    end
+  end
+  validate_input(theme)
+  if theme_name then
+    vim.api.nvim_set_var('colors_name', theme_name)
+  end
+  CURRENT_THEME = theme
+  apply_base16_theme(theme, use256)
+end
+
 return setmetatable({
+  current_theme = function() return CURRENT_THEME end;
 	themes = themes,
 	apply_theme = apply_base16_theme,
-	theme_from_array = function(array)
-		assert(#array == 16, "base16.theme_from_array: The array length must be 16")
-		local result = {}
-		for i, value in ipairs(array) do
-			assert(#value == 6, "base16.theme_from_array: array values must be in 6 digit hex format, e.g. 'ffffff'")
-			local key = ("base%02X"):format(i - 1)
-			result[key] = value
-		end
-		return result
-	end,
+	theme_from_array = theme_from_array,
 	theme_names = function()
 		local result = {}
 		for k in pairs(themes) do
@@ -1127,6 +1166,6 @@ return setmetatable({
 	end
 }, {
 	__call = function (_, ...)
-		apply_base16_theme(...)
+    return apply(...)
 	end,
 })
