@@ -275,7 +275,7 @@ function M.open(initial)
     local file = io.open(filename, "w")
     local inner = ([[
 lua <<EOF
-require'base16'.apply_theme {
+require'base16' {
   {theme}
 }
 EOF
