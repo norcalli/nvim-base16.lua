@@ -1,11 +1,9 @@
---Based on https://github.com/mike-hearn/base16-vim-lightline/blob/master/templates/default.mustache
-local nvim = require('nvim')
-
+-- Based on https://github.com/mike-hearn/base16-vim-lightline/blob/master/templates/default.mustache
 local function part(color1, color2)
-    return {color1[1], color2[1], color1[2], color2[2]}
+    return {"#"..color1[1], "#"..color2[1], color1[2], color2[2]}
 end
 
-function base16_to_lightline(theme)
+local function base16_to_lightline(theme)
     local base00 = { theme.base00,  '0' } -- black
     local base01 = { theme.base01, '18' }
     local base02 = { theme.base02, '19' }
@@ -24,27 +22,28 @@ function base16_to_lightline(theme)
     local base0E = { theme.base0E,  '5' } -- pink
     local base0F = { theme.base0F, '17' } -- brown
 
-    local p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
+    local p = {normal={}, inactive={}, insert={}, replace={}, visual={}, tabline={}}
 
-    p.normal.left     = { part( s:base00, s:base0D ), part( s:base05, s:base02 ) }
-    p.insert.left     = { part( s:base01, s:base0B ), part( s:base05, s:base02 ) }
-    p.visual.left     = { part( s:base00, s:base09 ), part( s:base05, s:base02 ) }
-    p.replace.left    = { part( s:base00, s:base08 ), part( s:base05, s:base02 ) }
-    p.inactive.left   = { part( s:base02, s:base00 ) }
+    p.normal.left     = { part( base00, base0D ), part( base05, base02 ) }
+    p.insert.left     = { part( base01, base0B ), part( base05, base02 ) }
+    p.visual.left     = { part( base00, base09 ), part( base05, base02 ) }
+    p.replace.left    = { part( base00, base08 ), part( base05, base02 ) }
+    p.inactive.left   = { part( base02, base00 ) }
 
-    p.normal.middle   = { part( s:base07, s:base01 ) }
-    p.inactive.middle = { part( s:base01, s:base00 ) }
+    p.normal.middle   = { part( base07, base01 ) }
+    p.inactive.middle = { part( base01, base00 ) }
 
-    p.normal.right    = { part( s:base01, s:base03 ), part( s:base06, s:base02 ) }
-    p.inactive.right  = { part( s:base01, s:base00 ) }
+    p.normal.right    = { part( base01, base03 ), part( base06, base02 ) }
+    p.inactive.right  = { part( base01, base00 ) }
 
-    p.normal.error    = { part( s:base07, s:base08 ) }
-    p.normal.warning  = { part( s:base07, s:base09 ) }
+    p.normal.error    = { part( base07, base08 ) }
+    p.normal.warning  = { part( base07, base09 ) }
 
-    p.tabline.left    = { part( s:base05, s:base02 ) }
-    p.tabline.middle  = { part( s:base05, s:base01 ) }
-    p.tabline.right   = { part( s:base05, s:base02 ) }
-    p.tabline.tabsel  = { part( s:base02, s:base0A ) }
+    p.tabline.left    = { part( base05, base02 ) }
+    p.tabline.middle  = { part( base05, base01 ) }
+    p.tabline.right   = { part( base05, base02 ) }
+    p.tabline.tabsel  = { part( base02, base0A ) }
 
     vim.g['lightline#colorscheme#base16_nvim#palette'] = p
 end
+return { base16_to_lightline=base16_to_lightline }

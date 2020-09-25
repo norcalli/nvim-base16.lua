@@ -1,5 +1,4 @@
 local nvim = require 'nvim'
-local lighline = require 'lighline'
 
 local function highlight(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
 	local parts = {group}
@@ -18,8 +17,11 @@ local function highlight(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
 end
 
 -- Modified from https://github.com/chriskempson/base16-vim
-local function apply_base16_theme(theme, use_256_colorspace)
-	lighline.base16_to_lightline(theme)
+local function apply_base16_theme(theme, use_256_colorspace, extra_features)
+
+	--  if extra_features and extra_features['lighline'] then
+		require 'lightline'.base16_to_lightline(theme)
+	-- end
 
 	-- Terminal color definitions
 	local cterm00        = "00"
