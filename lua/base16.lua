@@ -18,10 +18,10 @@ end
 
 -- Modified from https://github.com/chriskempson/base16-vim
 local function apply_base16_theme(theme, use_256_colorspace, extra_features)
-
-	--  if extra_features and extra_features['lighline'] then
+	local extra_features = extra_features or {lightline=false}
+	if extra_features.lightline then
 		require 'lightline'.base16_to_lightline(theme)
-	-- end
+	end
 
 	-- Terminal color definitions
 	local cterm00        = "00"
