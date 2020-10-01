@@ -17,7 +17,12 @@ local function highlight(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
 end
 
 -- Modified from https://github.com/chriskempson/base16-vim
-local function apply_base16_theme(theme, use_256_colorspace)
+local function apply_base16_theme(theme, use_256_colorspace, extra_features)
+	local extra_features = extra_features or {lightline=false}
+	if extra_features.lightline then
+		require 'lightline'.base16_to_lightline(theme)
+	end
+
 	-- Terminal color definitions
 	local cterm00        = "00"
 	local cterm03        = "08"
