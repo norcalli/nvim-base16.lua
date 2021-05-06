@@ -100,7 +100,7 @@ local function apply_base16_theme(theme, use_256_colorspace)
 	-- nvim.command "syntax reset"
 
 	-- Vim editor colors
-	highlight("Normal",        theme.base05, theme.base00, cterm05, cterm00, nil, nil)
+	highlight("Normal",        theme.base05, NONE, cterm05, NONE, nil, nil)
 	highlight("Bold",          nil, nil, nil, nil, "bold", nil)
 	highlight("Debug",         theme.base08, nil, cterm08, nil, nil, nil)
 	highlight("Directory",     theme.base0D, nil, cterm0D, nil, nil, nil)
