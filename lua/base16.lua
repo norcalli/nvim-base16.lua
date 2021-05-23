@@ -330,6 +330,13 @@ local function apply_base16_theme(theme, use_256_colorspace)
 	-- Java highlighting
 	highlight("javaOperator",     theme.base0D, nil, cterm0D, nil, nil, nil)
 
+  -- LspDiagnostic base highlight group
+	highlight("LspDiagnosticsDefaultError",       theme.base08, nil, cterm00, cterm08, nil, nil)
+  highlight("LspDiagnosticsVirtualTextError",   theme.base08, nil, cterm00, cterm08, nil, nil)
+	highlight("LspDiagnosticsDefaultWarning",     theme.base0A, nil, cterm08, cterm00, nil, nil)
+	highlight("LspDiagnosticsDefaultInformation", theme.base0D, nil, cterm08, cterm00, nil, nil)
+	highlight("LspDiagnosticsDefaultHint",        theme.base0C, nil, cterm08, cterm00, nil, nil)
+
 	-- TODO
 	-- nvim.command 'syntax on'
 end
