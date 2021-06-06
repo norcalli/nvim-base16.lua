@@ -333,7 +333,7 @@ local function apply_base16_theme(theme, use_256_colorspace)
             -- treesitter
         highlight('TSNone',               theme.base05, theme.base00, cterm05, cterm00, nil, nil)
         highlight('TSPunctDelimiter',     theme.base07, nil, cterm07, nil, nil, nil)
-        highlight('TSPunctBracket',       theme.base07, nil, cterm07, nil, nil, nil)
+        highlight('TSPunctBracket',       theme.base08, nil, cterm07, nil, nil, nil)
         highlight('TSPunctSpecial',       theme.base0F, nil, cterm0F, nil, nil, nil)
         highlight('TSConstant',           theme.base09, nil, cterm0B, nil, "bold", nil)
         highlight('TSConstBuiltin',       theme.base0C, nil, cterm0C, nil, nil, nil)
