@@ -765,8 +765,8 @@ themes["nvchad-softgruv"] = {
 themes["nvchad-nord"] = {
         base00 = "2E3440"; base01 = "3B4252"; base02 = "434C5E"; base03 = "4C566A";
 	base04 = "566074"; base05 = "bfc5d0"; base06 = "c7cdd8"; base07 = "ced4df";
-	base08 = "ba5c65"; base09 = "D08770"; base0A = "EBCB8B"; base0B = "A3BE8C";
-	base0C = "97b7d7"; base0D = "81A1C1"; base0E = "B48EAD"; base0F = "BF616A";
+	base08 = "BF616A"; base09 = "D08770"; base0A = "EBCB8B"; base0B = "A3BE8C";
+	base0C = "97b7d7"; base0D = "81A1C1"; base0E = "B48EAD"; base0F = "c1636c";
 }
 themes["harmonic-dark"] = {
 	base00 = "0b1c2c"; base01 = "223b54"; base02 = "405c79"; base03 = "627e99";
