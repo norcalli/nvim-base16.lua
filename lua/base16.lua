@@ -100,7 +100,7 @@ local function apply_base16_theme(theme, use_256_colorspace)
 	-- nvim.command "syntax reset"
 
 	-- Vim editor colors
---	highlight("Normal",        theme.base05, "NONE", cterm05, "NONE", nil, nil)
+	highlight("Normal",        theme.base05, "NONE", cterm05, "NONE", nil, nil)
 	highlight("Bold",          nil, nil, nil, nil, "bold", nil)
 	highlight("Debug",         theme.base08, nil, cterm08, nil, nil, nil)
 	highlight("Directory",     theme.base0D, nil, cterm0D, nil, nil, nil)
@@ -129,18 +129,18 @@ local function apply_base16_theme(theme, use_256_colorspace)
 	highlight("Conceal",       theme.base0D, theme.base00, cterm0D, cterm00, nil, nil)
 	highlight("Cursor",        theme.base00, theme.base05, cterm00, cterm05, nil, nil)
 	highlight("NonText",       theme.base03, nil, cterm03, nil, nil, nil)
---	highlight("LineNr",        theme.base03, "NONE", cterm03, "NONE", nil, nil)
+	highlight("LineNr",        theme.base03, "NONE", cterm03, "NONE", nil, nil)
 	highlight("SignColumn",    theme.base03, "NONE", cterm03, "NONE", nil, nil)
---	highlight("StatusLine",    theme.base04, theme.base02, cterm04, cterm02, "none", nil)
---	highlight("StatusLineNC",  theme.base03, "NONE", cterm03, "NONE", "none", nil)
---	highlight("VertSplit",     theme.base02, "NONE", cterm02, "NONE", "none", nil)
+	highlight("StatusLine",    theme.base04, theme.base02, cterm04, cterm02, "none", nil)
+	highlight("StatusLineNC",  theme.base03, "NONE", cterm03, "NONE", "none", nil)
+	highlight("VertSplit",     theme.base02, "NONE", cterm02, "NONE", "none", nil)
 	highlight("ColorColumn",   nil, theme.base01, nil, cterm01, "none", nil)
 	highlight("CursorColumn",  nil, theme.base01, nil, cterm01, "none", nil)
---	highlight("CursorLine",    nil, theme.base01, nil, cterm01, "none", nil)
---	highlight("CursorLineNr",  theme.base04, "NONE", cterm04, "NONE", nil, nil)
+	highlight("CursorLine",    nil, theme.base01, nil, cterm01, "none", nil)
+	highlight("CursorLineNr",  theme.base04, "NONE", cterm04, "NONE", nil, nil)
 	highlight("QuickFixLine",  nil, theme.base01, nil, cterm01, "none", nil)
---	highlight("PMenu",         theme.base05, theme.base01, cterm05, cterm01, "none", nil)
---	highlight("PMenuSel",      theme.base01, theme.base05, cterm01, cterm05, nil, nil)
+	highlight("PMenu",         theme.base05, theme.base01, cterm05, cterm01, "none", nil)
+	highlight("PMenuSel",      theme.base01, theme.base05, cterm01, cterm05, nil, nil)
 	highlight("TabLine",       theme.base03, theme.base01, cterm03, cterm01, "none", nil)
 	highlight("TabLineFill",   theme.base03, theme.base01, cterm03, cterm01, "none", nil)
 	highlight("TabLineSel",    theme.base0B, theme.base01, cterm0B, cterm01, "none", nil)
@@ -148,7 +148,7 @@ local function apply_base16_theme(theme, use_256_colorspace)
 	-- Standard syntax highlighting
 	highlight("Boolean",      theme.base09, nil, cterm09, nil, nil, nil)
 	highlight("Character",    theme.base08, nil, cterm08, nil, nil, nil)
---	highlight("Comment",      theme.base03, nil, cterm03, nil, nil, nil)
+	highlight("Comment",      theme.base03, nil, cterm03, nil, nil, nil)
 	highlight("Conditional",  theme.base0E, nil, cterm0E, nil, nil, nil)
 	highlight("Constant",     theme.base09, nil, cterm09, nil, nil, nil)
 	highlight("Define",       theme.base0E, nil, cterm0E, nil, "none", nil)
@@ -197,8 +197,8 @@ local function apply_base16_theme(theme, use_256_colorspace)
 	highlight("cssColor",       theme.base0C, nil, cterm0C, nil, nil, nil)
 
 	-- Diff highlighting
-	--highlight("DiffAdd",      theme.base0B, theme.base01,  cterm0B, cterm01, nil, nil)
---	highlight("DiffChange",   theme.base03, theme.base01,  cterm03, cterm01, nil, nil)
+	highlight("DiffAdd",      theme.base0B, theme.base01,  cterm0B, cterm01, nil, nil)
+	highlight("DiffChange",   theme.base03, theme.base01,  cterm03, cterm01, nil, nil)
 	highlight("DiffDelete",   theme.base08, theme.base01,  cterm08, cterm01, nil, nil)
 	highlight("DiffText",     theme.base0D, theme.base01,  cterm0D, cterm01, nil, nil)
 	highlight("DiffAdded",    theme.base0B, theme.base00,  cterm0B, cterm00, nil, nil)
@@ -331,10 +331,10 @@ local function apply_base16_theme(theme, use_256_colorspace)
 	highlight("javaOperator",     theme.base0D, nil, cterm0D, nil, nil, nil)
  
   -- LspDiagnostic base highlight group
---	highlight("LspDiagnosticsDefaultError",       theme.base08, nil, cterm00, cterm08, nil, nil)
---	highlight("LspDiagnosticsDefaultWarning",     theme.base0A, nil, cterm08, cterm00, nil, nil)
---	highlight("LspDiagnosticsDefaultInformation", theme.base0D, nil, cterm08, cterm00, nil, nil)
---	highlight("LspDiagnosticsDefaultHint",        theme.base0C, nil, cterm08, cterm00, nil, nil)
+	highlight("LspDiagnosticsDefaultError",       theme.base08, nil, cterm00, cterm08, nil, nil)
+	highlight("LspDiagnosticsDefaultWarning",     theme.base0A, nil, cterm08, cterm00, nil, nil)
+	highlight("LspDiagnosticsDefaultInformation", theme.base0D, nil, cterm08, cterm00, nil, nil)
+	highlight("LspDiagnosticsDefaultHint",        theme.base0C, nil, cterm08, cterm00, nil, nil)
 
 	-- TODO
 	-- nvim.command 'syntax on'
@@ -765,8 +765,8 @@ themes["nvchad-softgruv"] = {
 themes["nvchad-nord"] = {
         base00 = "2E3440"; base01 = "3B4252"; base02 = "434C5E"; base03 = "4C566A";
 	base04 = "566074"; base05 = "bfc5d0"; base06 = "c7cdd8"; base07 = "ced4df";
-	base08 = "BF616A"; base09 = "D08770"; base0A = "EBCB8B"; base0B = "A3BE8C";
-	base0C = "97b7d7"; base0D = "81A1C1"; base0E = "B48EAD"; base0F = "c1636c";
+	base08 = "ba5c65"; base09 = "D08770"; base0A = "EBCB8B"; base0B = "A3BE8C";
+	base0C = "97b7d7"; base0D = "81A1C1"; base0E = "B48EAD"; base0F = "BF616A";
 }
 themes["harmonic-dark"] = {
 	base00 = "0b1c2c"; base01 = "223b54"; base02 = "405c79"; base03 = "627e99";
