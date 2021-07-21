@@ -4,6 +4,7 @@ Programmatic lua library for setting
 [base16](https://github.com/chriskempson/base16) themes in
 [Neovim](https://github.com/neovim/neovim).
 
+(Note : This theme plugin is supposed to be used along with NvChad only so watchout!)
 ## Demo
 
 ```lua
