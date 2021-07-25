@@ -840,6 +840,12 @@ themes["isotope"] = {
 	base08 = "ff0000"; base09 = "ff9900"; base0A = "ff0099"; base0B = "33ff00";
 	base0C = "00ffff"; base0D = "0066ff"; base0E = "cc00ff"; base0F = "3300ff";
 }
+themes["javacafe"] = {
+	base00 = "29343d"; base01 = "f9929b"; base02 = "7ed491"; base03 = "fbdf90";
+	base04 = "a3b8ef"; base05 = "ccaced"; base06 = "9ce5c0"; base07 = "ffffff";
+	base08 = "3b4b58"; base09 = "fca2aa"; base0A = "a5d4af"; base0B = "fbeab9";
+	base0C = "bac8ef"; base0D = "d7c1ed"; base0E = "c7e5d6"; base0F = "eaeaea";
+}
 themes["macintosh"] = {
 	base00 = "000000"; base01 = "404040"; base02 = "404040"; base03 = "808080";
 	base04 = "808080"; base05 = "c0c0c0"; base06 = "c0c0c0"; base07 = "ffffff";
