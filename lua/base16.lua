@@ -841,7 +841,7 @@ themes["isotope"] = {
 	base0C = "00ffff"; base0D = "0066ff"; base0E = "cc00ff"; base0F = "3300ff";
 }
 themes["javacafe"] = {
-        base00 = "181f26"; base01 = "2c333a"; base02 = "31383f"; base03 = "40474e";
+        base00 = "131a21"; base01 = "2c333a"; base02 = "31383f"; base03 = "40474e";
 	base04 = "4f565d"; base05 = "ced4df"; base06 = "d3d9e4"; base07 = "b5bcc9";
 	base08 = "ef8891"; base09 = "EDA685"; base0A = "f5d595"; base0B = "a5d4af";
 	base0C = "abb9e0"; base0D = "a3b8ef"; base0E = "c2a2e3"; base0F = "e88e9b";
