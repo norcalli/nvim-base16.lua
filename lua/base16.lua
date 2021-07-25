@@ -841,10 +841,10 @@ themes["isotope"] = {
 	base0C = "00ffff"; base0D = "0066ff"; base0E = "cc00ff"; base0F = "3300ff";
 }
 themes["javacafe"] = {
-	base00 = "29343d"; base01 = "f9929b"; base02 = "7ed491"; base03 = "fbdf90";
-	base04 = "a3b8ef"; base05 = "ccaced"; base06 = "9ce5c0"; base07 = "ffffff";
-	base08 = "3b4b58"; base09 = "fca2aa"; base0A = "a5d4af"; base0B = "fbeab9";
-	base0C = "bac8ef"; base0D = "d7c1ed"; base0E = "c7e5d6"; base0F = "eaeaea";
+        base00 = "181f26"; base01 = "2c333a"; base02 = "31383f"; base03 = "40474e";
+	base04 = "4f565d"; base05 = "ced4df"; base06 = "d3d9e4"; base07 = "b5bcc9";
+	base08 = "ef8891"; base09 = "EDA685"; base0A = "f5d595"; base0B = "a5d4af";
+	base0C = "abb9e0"; base0D = "a3b8ef"; base0E = "c2a2e3"; base0F = "e88e9b";
 }
 themes["macintosh"] = {
 	base00 = "000000"; base01 = "404040"; base02 = "404040"; base03 = "808080";
