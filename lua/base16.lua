@@ -756,13 +756,13 @@ themes["gruvbox-light-soft"] = {
 	base08 = "9d0006"; base09 = "af3a03"; base0A = "b57614"; base0B = "79740e";
 	base0C = "427b58"; base0D = "076678"; base0E = "8f3f71"; base0F = "d65d0e";
 }
-themes["nvchad-softgruv"] = {
+themes["gruvchad"] = {
 	base00 = "222526"; base01 = "2c2f30"; base02 = "36393a"; base03 = "404344";
 	base04 = "d4be98"; base05 = "c0b196"; base06 = "c3b499"; base07 = "c7b89d";
 	base08 = "ec6b64"; base09 = "e78a4e"; base0A = "e0c080"; base0B = "a9b665";
 	base0C = "86b17f"; base0D = "7daea3"; base0E = "d3869b"; base0F = "d65d0e";
 }
-themes["nvchad-nord"] = {
+themes["norchad"] = {
         base00 = "2E3440"; base01 = "3B4252"; base02 = "434C5E"; base03 = "4C566A";
 	base04 = "566074"; base05 = "bfc5d0"; base06 = "c7cdd8"; base07 = "ced4df";
 	base08 = "ba5c65"; base09 = "D08770"; base0A = "EBCB8B"; base0B = "A3BE8C";
