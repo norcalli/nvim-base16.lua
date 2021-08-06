@@ -768,6 +768,12 @@ themes["norchad"] = {
 	base08 = "ba5c65"; base09 = "D08770"; base0A = "EBCB8B"; base0B = "A3BE8C";
 	base0C = "97b7d7"; base0D = "81A1C1"; base0E = "B48EAD"; base0F = "BF616A";
 }
+themes["tokyonight"] = {
+        base00 = "1A1B26"; base01 = "3b4261"; base02 = "3b4261"; base03 = "545c7e";
+        base04 = "565c64"; base05 = "a9b1d6"; base06 = "bbc5f0"; base07 = "c0caf5";
+        base08 = "f7768e"; base09 = "ff9e64"; base0A = "e0af68"; base0B = "9ece6a";
+        base0C = "98c0ff"; base0D = "7aa2f7"; base0E = "bb9af7"; base0F = "db4b4b";
+}
 themes["harmonic-dark"] = {
 	base00 = "0b1c2c"; base01 = "223b54"; base02 = "405c79"; base03 = "627e99";
 	base04 = "aabcce"; base05 = "cbd6e2"; base06 = "e5ebf1"; base07 = "f7f9fb";
