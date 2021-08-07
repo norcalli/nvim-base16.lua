@@ -774,6 +774,12 @@ themes["tokyonight"] = {
         base08 = "f7768e"; base09 = "ff9e64"; base0A = "e0af68"; base0B = "9ece6a";
         base0C = "2ac3de"; base0D = "7aa2f7"; base0E = "9d7cd8"; base0F = "db4b4b";
 }
+themes["mountaineer"] = {
+	base00 = "1a2026"; base01 = "242a30"; base02 = "292f35"; base03 = "2e343a";
+	base04 = "42484e"; base05 = "d3d3d3"; base06 = "d8d8d8"; base07 = "b0b0b0";
+	base08 = "c49ea0"; base09 = "b89294"; base0A = "ccc9aa"; base0B = "8aac8b";
+	base0C = "8aabac"; base0D = "6b8bab"; base0E = "8f8aac"; base0F = "8b6567";
+}
 themes["harmonic-dark"] = {
 	base00 = "0b1c2c"; base01 = "223b54"; base02 = "405c79"; base03 = "627e99";
 	base04 = "aabcce"; base05 = "cbd6e2"; base06 = "e5ebf1"; base07 = "f7f9fb";
