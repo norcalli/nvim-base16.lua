@@ -5,18 +5,6 @@ Programmatic lua library for setting
 [Neovim](https://github.com/neovim/neovim).
 
 (Note : This theme plugin is supposed to be used along with NvChad only so watchout!)
-## Demo
-
-```lua
-local theme_names = base16.theme_names()
-base16_position = 1
-function cycle_theme()
-  base16_position = (base16_position % #theme_names) + 1
-  base16(base16.themes[theme_names[base16_position]], true)
-end
-```
-
-![Cycle themes](https://raw.githubusercontent.com/norcalli/github-assets/master/nvim-base16.lua-demo.webm)
 
 ## Usage
 
@@ -31,7 +19,7 @@ Plug "norcalli/nvim-base16.lua"
 ```lua
 lua << EOF
 local base16 = require 'base16'
-base16(base16.themes.brewer, true)
+base16(base16.themes("brewer"), true)
 EOF
 ```
 (note : This colorscheme plugin keeps the guibg of NORMAL as none , so neovim just takes the terminal bg color , this is very useful when you want to have a transparent background )
@@ -61,18 +49,7 @@ Alias for `base16.apply_theme(theme_definition: dict, use_256_colorspace: bool)`
 Example:
 
 ```lua
-base16(base16.themes["brewer"], true)
-```
-
-
-### base16.theme_names() -> string
-
-Return a list of all available theme names. Shortcut for fetching the keys from `base16.themes`.
-
-Example:
-
-```lua
-print(vim.inspect(base16.theme_names()))
+base16(base16.themes("brewer"), true)
 ```
 
 ### base16.theme_from_array(theme_definition: array) -> dict
