@@ -172,12 +172,6 @@ local function apply_base16_theme(theme)
 	highlight("gitcommitDiscardedFile",  theme.base08, nil, "bold", nil)
 	highlight("gitcommitSelectedFile",   theme.base0B, nil, "bold", nil)
 
-	-- GitGutter highlighting
-	highlight("GitGutterAdd",     theme.base0B, theme.base01, nil, nil)
-	highlight("GitGutterChange",  theme.base0D, theme.base01, nil, nil)
-	highlight("GitGutterDelete",  theme.base08, theme.base01, nil, nil)
-	highlight("GitGutterChangeDelete",  theme.base0E, theme.base01, nil, nil)
-
 	-- HTML highlighting
 	highlight("htmlBold",    theme.base0A, nil, nil, nil)
 	highlight("htmlItalic",  theme.base0E, nil, nil, nil)
@@ -221,10 +215,6 @@ local function apply_base16_theme(theme)
 	highlight("markdownCodeBlock",         theme.base0B, nil, nil, nil)
 	highlight("markdownHeadingDelimiter",  theme.base0D, nil, nil, nil)
 
-	-- NERDTree highlighting
-	highlight("NERDTreeDirSlash",  theme.base0D, nil,  nil, nil)
-	highlight("NERDTreeExecFile",  theme.base05, nil,  nil, nil)
-
 	-- PHP highlighting
 	highlight("phpMemberSelector",  theme.base05, nil, nil, nil)
 	highlight("phpComparison",      theme.base05, nil, nil, nil)
@@ -252,28 +242,11 @@ local function apply_base16_theme(theme)
 	highlight("sassMixing",     theme.base0E, nil,  nil, nil)
 	highlight("sassMixinName",  theme.base0D, nil,  nil, nil)
 
-	-- Signify highlighting
-	highlight("SignifySignAdd",     theme.base0B, theme.base01, nil, nil)
-	highlight("SignifySignChange",  theme.base0D, theme.base01, nil, nil)
-	highlight("SignifySignDelete",  theme.base08, theme.base01, nil, nil)
-
 	-- Spelling highlighting
 	highlight("SpellBad",     nil, nil, "undercurl", theme.base08)
 	highlight("SpellLocal",   nil, nil, "undercurl", theme.base0C)
 	highlight("SpellCap",     nil, nil, "undercurl", theme.base0D)
 	highlight("SpellRare",    nil, nil, "undercurl", theme.base0E)
-
-	-- Startify highlighting
-	highlight("StartifyBracket",  theme.base03, nil,  nil, nil)
-	highlight("StartifyFile",     theme.base07, nil,  nil, nil)
-	highlight("StartifyFooter",   theme.base03, nil,  nil, nil)
-	highlight("StartifyHeader",   theme.base0B, nil,  nil, nil)
-	highlight("StartifyNumber",   theme.base09, nil,  nil, nil)
-	highlight("StartifyPath",     theme.base03, nil,  nil, nil)
-	highlight("StartifySection",  theme.base0E, nil,  nil, nil)
-	highlight("StartifySelect",   theme.base0C, nil,  nil, nil)
-	highlight("StartifySlash",    theme.base03, nil,  nil, nil)
-	highlight("StartifySpecial",  theme.base03, nil,  nil, nil)
 
 	-- Java highlighting
 	highlight("javaOperator",     theme.base0D, nil, nil, nil)
