@@ -6,7 +6,7 @@ return {
    base04 = "62d6e8",
    base05 = "e9e9f4",
    base06 = "6272a4",
-   base07 = "f7f7fb",
+   base07 = "ff95ef",
    base08 = "ffb86c",
    base09 = "bd93f9",
    base0A = "8be9fd",
