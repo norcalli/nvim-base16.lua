@@ -1,6 +1,6 @@
 return { 
     base00 = "0f1315",
-    base01 = "c2c8cb",
+    base01 = "232729",
     base02 = "303435",
     base03 = "3c3e3e",
     base04 = "868888",
