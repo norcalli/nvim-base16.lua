@@ -11,7 +11,7 @@ Programmatic lua library for setting
 Install via your plugin manager. e.g.
 
 ```vim
-Plug "norcalli/nvim-base16.lua"
+Plug "NvChad/nvim-base16.lua"
 ```
 
 ### Basic usage
