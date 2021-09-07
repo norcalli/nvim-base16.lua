@@ -8,11 +8,12 @@ return {
    base06 = "ebdbb2",
    base07 = "fbf1c7",
    base08 = "b66467",
-   base09 = "d3d3c4",
+   base09 = "958793",
    base0A = "dcbb8c",
    base0B = "8d987e",
    base0C = "8aa6a5",
-   base0D = "6f8392",
-   base0E = "958793",
+   base0D = "8aa6a5",
+   base0E = "b66467",
    base0F = "d3d3c4",
 }
+
