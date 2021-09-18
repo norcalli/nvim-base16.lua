@@ -4,7 +4,7 @@ Programmatic lua library for setting
 [base16](https://github.com/chriskempson/base16) themes in
 [Neovim](https://github.com/neovim/neovim).
 
-(Note : This theme plugin is supposed to be used along with NvChad only so watchout!)
+(Note: This theme plugin is supposed to be used along with [NvChad](https://github.com/NvChad/NvChad) only so watchout!)
 
 ## Usage
 
@@ -23,7 +23,7 @@ base16(base16.themes("brewer"), true)
 EOF
 ```
 
-(note : This colorscheme plugin keeps the guibg of NORMAL as none , so neovim just takes the terminal bg color , this is very useful when you want to have a transparent background )
+(Note: This colorscheme plugin keeps the `guibg` of the `NORMAL` hi group as `NONE`, so NeoVim just takes the terminal's background color, which is what you'd want to have a transparent background)
 
 This is how I use it. Uses [`norcalli/nvim.lua`](https://github.com/norcalli/nvim.lua).
 
@@ -35,9 +35,7 @@ base16(base16.themes[nvim.env.BASE16_THEME or "3024"], true)
 EOF
 ```
 
-You can define your own themes and use them with the `base16` function as long
-as they match the format described below. I know the format is annoying to
-define, so the `base16.theme_from_array` utility function is available.
+You can define your own themes and use them with the `base16` function as long as they match the format described below. I know the format is annoying to define, so the `base16.theme_from_array` utility function is available.
 
 ## API
 
@@ -55,8 +53,7 @@ base16(base16.themes("brewer"), true)
 
 ### base16.theme_from_array(theme_definition: array) -> dict
 
-Formats an array of 16 hex color strings into a dictionary suitable for use
-with `base16.apply_theme`.
+Formats an array of 16 hex color strings into a dictionary suitable for use with `base16.apply_theme`.
 
 Example:
 
@@ -89,10 +86,7 @@ base16.themes["zenburn"] == {
 
 ## Notes
 
-Because this includes a copy of
-[`norcalli/nvim.lua`](https://github.com/norcalli/nvim.lua), you should put
-this after `norcalli/nvim.lua` in the plugin list because lua module resolution
-is first-come-first-served, i.e.
+Because this includes a copy of [`norcalli/nvim.lua`](https://github.com/norcalli/nvim.lua), you should put this after `norcalli/nvim.lua` in the plugin list because lua module resolution is first-come-first-served, i.e.
 
 ```vim
 Plug "norcalli/nvim.lua"
