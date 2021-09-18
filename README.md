@@ -22,8 +22,8 @@ local base16 = require 'base16'
 base16(base16.themes("brewer"), true)
 EOF
 ```
-(note : This colorscheme plugin keeps the guibg of NORMAL as none , so neovim just takes the terminal bg color , this is very useful when you want to have a transparent background )
 
+(note : This colorscheme plugin keeps the guibg of NORMAL as none , so neovim just takes the terminal bg color , this is very useful when you want to have a transparent background )
 
 This is how I use it. Uses [`norcalli/nvim.lua`](https://github.com/norcalli/nvim.lua).
 
@@ -42,6 +42,7 @@ define, so the `base16.theme_from_array` utility function is available.
 ## API
 
 ### base16.apply_theme(theme_definition: dict, use_256_colorspace: bool)
+
 ### base16(theme_definition: dict, use_256_colorspace: bool)
 
 Alias for `base16.apply_theme(theme_definition: dict, use_256_colorspace: bool)`.
