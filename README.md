@@ -23,8 +23,6 @@ base16(base16.themes("brewer"), true)
 EOF
 ```
 
-(Note: This colorscheme plugin keeps the `guibg` of the `NORMAL` hi group as `NONE`, so NeoVim just takes the terminal's background color, which is what you'd want to have a transparent background)
-
 This is how I use it. Uses [`norcalli/nvim.lua`](https://github.com/norcalli/nvim.lua).
 
 ```lua
