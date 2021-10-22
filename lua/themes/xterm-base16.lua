@@ -1,0 +1,18 @@
+return {
+   base00 = "111111",
+   base01 = "333333",
+   base02 = "555555",
+   base03 = "777777",
+   base04 = "999999",
+   base05 = "bbbbbb",
+   base06 = "dddddd",
+   base07 = "ffffff",
+   base08 = "ff0000",
+   base09 = "ffaf00",
+   base0A = "ffff00",
+   base0B = "00ff00",
+   base0C = "800080",
+   base0D = "0000ff",
+   base0E = "ff00ff",
+   base0F = "800000",
+}
