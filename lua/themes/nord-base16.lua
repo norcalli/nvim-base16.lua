@@ -1,7 +1,7 @@
 return {
-    base00 = "4C566A",
-    base01 = "4C566A",
-    base02 = "4C566A",
+    base00 = "2E3440",
+    base01 = "3B4252",
+    base02 = "434C5E",
     base03 = "4C566A",
     base04 = "D8DEE9",
     base05 = "E5E9F0",
