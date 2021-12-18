@@ -125,28 +125,6 @@ local function apply_base16_theme(theme)
    highlight("Type", theme.base0A, nil, "none", nil)
    highlight("Typedef", theme.base0A, nil, nil, nil)
 
-   ---
-   -- Extra definitions
-   ---
-
-   -- C highlighting
-   highlight("cOperator", theme.base0C, nil, nil, nil)
-   highlight("cPreCondit", theme.base0E, nil, nil, nil)
-
-   -- C# highlighting
-   highlight("csClass", theme.base0A, nil, nil, nil)
-   highlight("csAttribute", theme.base0A, nil, nil, nil)
-   highlight("csModifier", theme.base0E, nil, nil, nil)
-   highlight("csType", theme.base08, nil, nil, nil)
-   highlight("csUnspecifiedStatement", theme.base0D, nil, nil, nil)
-   highlight("csContextualStatement", theme.base0E, nil, nil, nil)
-   highlight("csNewDecleration", theme.base08, nil, nil, nil)
-
-   -- CSS highlighting
-   highlight("cssBraces", theme.base05, nil, nil, nil)
-   highlight("cssClassName", theme.base0E, nil, nil, nil)
-   highlight("cssColor", theme.base0C, nil, nil, nil)
-
    -- Diff highlighting
    highlight("DiffAdd", theme.base0B, theme.base01, nil, nil)
    highlight("DiffChange", theme.base03, theme.base01, nil, nil)
@@ -175,33 +153,6 @@ local function apply_base16_theme(theme)
    highlight("gitcommitDiscardedFile", theme.base08, nil, "bold", nil)
    highlight("gitcommitSelectedFile", theme.base0B, nil, "bold", nil)
 
-   -- HTML highlighting
-   highlight("htmlBold", theme.base0A, nil, nil, nil)
-   highlight("htmlItalic", theme.base0E, nil, nil, nil)
-   highlight("htmlEndTag", theme.base05, nil, nil, nil)
-   highlight("htmlTag", theme.base05, nil, nil, nil)
-
-   -- JavaScript highlighting
-   highlight("javaScript", theme.base05, nil, nil, nil)
-   highlight("javaScriptBraces", theme.base05, nil, nil, nil)
-   highlight("javaScriptNumber", theme.base09, nil, nil, nil)
-   -- pangloss/vim-javascript highlighting
-   highlight("jsOperator", theme.base0D, nil, nil, nil)
-   highlight("jsStatement", theme.base0E, nil, nil, nil)
-   highlight("jsReturn", theme.base0E, nil, nil, nil)
-   highlight("jsThis", theme.base08, nil, nil, nil)
-   highlight("jsClassDefinition", theme.base0A, nil, nil, nil)
-   highlight("jsFunction", theme.base0E, nil, nil, nil)
-   highlight("jsFuncName", theme.base0D, nil, nil, nil)
-   highlight("jsFuncCall", theme.base0D, nil, nil, nil)
-   highlight("jsClassFuncName", theme.base0D, nil, nil, nil)
-   highlight("jsClassMethodType", theme.base0E, nil, nil, nil)
-   highlight("jsRegexpString", theme.base0C, nil, nil, nil)
-   highlight("jsGlobalObjects", theme.base0A, nil, nil, nil)
-   highlight("jsGlobalNodeObjects", theme.base0A, nil, nil, nil)
-   highlight("jsExceptions", theme.base0A, nil, nil, nil)
-   highlight("jsBuiltins", theme.base0A, nil, nil, nil)
-
    -- Mail highlighting
    highlight("mailQuoted1", theme.base0A, nil, nil, nil)
    highlight("mailQuoted2", theme.base0B, nil, nil, nil)
@@ -212,53 +163,11 @@ local function apply_base16_theme(theme)
    highlight("mailURL", theme.base0D, nil, nil, nil)
    highlight("mailEmail", theme.base0D, nil, nil, nil)
 
-   -- Markdown highlighting
-   highlight("markdownCode", theme.base0B, nil, nil, nil)
-   highlight("markdownError", theme.base05, theme.base00, nil, nil)
-   highlight("markdownCodeBlock", theme.base0B, nil, nil, nil)
-   highlight("markdownHeadingDelimiter", theme.base0D, nil, nil, nil)
-
-   -- PHP highlighting
-   highlight("phpMemberSelector", theme.base05, nil, nil, nil)
-   highlight("phpComparison", theme.base05, nil, nil, nil)
-   highlight("phpParent", theme.base05, nil, nil, nil)
-   highlight("phpMethodsVar", theme.base0C, nil, nil, nil)
-
-   -- Python highlighting
-   highlight("pythonOperator", theme.base0E, nil, nil, nil)
-   highlight("pythonRepeat", theme.base0E, nil, nil, nil)
-   highlight("pythonInclude", theme.base0E, nil, nil, nil)
-   highlight("pythonStatement", theme.base0E, nil, nil, nil)
-
-   -- Ruby highlighting
-   highlight("rubyAttribute", theme.base0D, nil, nil, nil)
-   highlight("rubyConstant", theme.base0A, nil, nil, nil)
-   highlight("rubyInterpolationDelimiter", theme.base0F, nil, nil, nil)
-   highlight("rubyRegexp", theme.base0C, nil, nil, nil)
-   highlight("rubySymbol", theme.base0B, nil, nil, nil)
-   highlight("rubyStringDelimiter", theme.base0B, nil, nil, nil)
-
-   -- SASS highlighting
-   highlight("sassidChar", theme.base08, nil, nil, nil)
-   highlight("sassClassChar", theme.base09, nil, nil, nil)
-   highlight("sassInclude", theme.base0E, nil, nil, nil)
-   highlight("sassMixing", theme.base0E, nil, nil, nil)
-   highlight("sassMixinName", theme.base0D, nil, nil, nil)
-
    -- Spelling highlighting
    highlight("SpellBad", nil, nil, "undercurl", theme.base08)
    highlight("SpellLocal", nil, nil, "undercurl", theme.base0C)
    highlight("SpellCap", nil, nil, "undercurl", theme.base0D)
    highlight("SpellRare", nil, nil, "undercurl", theme.base0E)
-
-   -- Java highlighting
-   highlight("javaOperator", theme.base0D, nil, nil, nil)
-
-   -- LspDiagnostic base highlight group
-   highlight("LspDiagnosticsDefaultError", theme.base08, nil, nil, nil)
-   highlight("LspDiagnosticsDefaultWarning", theme.base0A, nil, nil, nil)
-   highlight("LspDiagnosticsDefaultInformation", theme.base0D, nil, nil, nil)
-   highlight("LspDiagnosticsDefaultHint", theme.base0C, nil, nil, nil)
 
    -- TODO
    -- nvim.command 'syntax on'
