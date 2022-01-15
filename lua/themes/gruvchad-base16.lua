@@ -12,7 +12,7 @@ return {
     base03 = "404344",
     base08 = "ec6b64",
     base01 = "2c2f30",
-    base00 = "222526",
+    base00 = "1e2122",
     base09 = "e78a4e",
     base06 = "c3b499"
 }
