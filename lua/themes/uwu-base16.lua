@@ -11,8 +11,8 @@ return {
     base09 = "e06e6e",
     base0A = "d8b25b",
     base0B = "8ccf7e",
-    base0C = "5dc1dd",
+    base0C = "ef7d7d",
     base0D = "6da4cd",
-    base0E = "c47fd5",
+    base0E = "5db7cb",
     base0F = "ef7d7d", 
 } 
