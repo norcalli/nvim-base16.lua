@@ -21,14 +21,14 @@ local colors = {
    yellow = "#d8b25b",
    sun = "#e0ba63",
    purple = "#c47fd5",
-   dark_purple = "#bf7ad0",
+   dark_purple = "#b570c6",
    teal = "#8ad8ef",
    orange = "#e19d5c",
    cyan = "#6da4cd",
    statusline_bg = "#1c2325",
    lightbg = "#2a3133",
    lightbg2 = "#232a2c",
-   pmenu_bg = "#6da4cd",
+   pmenu_bg = "#8ccf7e",
    folder_bg = "#6da4cd",
 }
 
