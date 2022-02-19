@@ -28,7 +28,7 @@ local colors = {
    statusline_bg = "#1c2325",
    lightbg = "#2a3133",
    lightbg2 = "#232a2c",
-   pmenu_bg = "#bab3e5",
+   pmenu_bg = "#6da4cd",
    folder_bg = "#6da4cd",
 }
 
