@@ -16,8 +16,8 @@ local colors = {
    line = "#22292b", -- for lines like vertsplit
    green = "#8ccf7e",
    vibrant_green = "#9bdead",
-   nord_blue = "#58bcd8",
-   blue = "#5dc1dd",
+   nord_blue = "#6da4cd",
+   blue = "#77aed7",
    yellow = "#d8b25b",
    sun = "#e0ba63",
    purple = "#c47fd5",
@@ -29,7 +29,7 @@ local colors = {
    lightbg = "#2a3133",
    lightbg2 = "#232a2c",
    pmenu_bg = "#bab3e5",
-   folder_bg = "#5dc1dd",
+   folder_bg = "#6da4cd",
 }
 
 return colors
