@@ -1,23 +1,23 @@
 local colors = {
-    white = "#abb2bf",
+    white = "#eeffff",
     darker_black = "#1b1f27",
-    black = "#1e222a", --  nvim bg
+    black = "#1e222a",
     black2 = "#252931",
-    one_bg = "#282c34", -- real bg of onedark
+    one_bg = "#282c34",
     one_bg2 = "#353b45",
     one_bg3 = "#30343c",
     grey = "#42464e",
-    grey_fg = "#565c64",
+    grey_fg = "#b2ccd6",
     grey_fg2 = "#6f737b",
     light_grey = "#6f737b",
     red = "#d47d85",
     baby_pink = "#DE8C92",
     pink = "#ff75a0",
-    line = "#2a2e36", -- for lines like vertsplit
+    line = "#2a2e36",
     green = "#A3BE8C",
     vibrant_green = "#7eca9c",
     nord_blue = "#81A1C1",
-    blue = "#61afef",
+    blue = "#82aaff",
     yellow = "#e7c787",
     sun = "#EBCB8B",
     purple = "#b4bbc8",
@@ -29,7 +29,7 @@ local colors = {
     lightbg = "#2d3139",
     lightbg2 = "#262a32",
     pmenu_bg = "#A3BE8C",
-    folder_bg = "#61afef",
+    folder_bg = "#82aaff",
 }
 
 return colors
