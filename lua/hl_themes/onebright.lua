@@ -1,5 +1,5 @@
 local colors = {
-    white = "#eeffff",
+    white = "#abb2bf",
     darker_black = "#1b1f27",
     black = "#1e222a",
     black2 = "#252931",
@@ -7,7 +7,7 @@ local colors = {
     one_bg2 = "#353b45",
     one_bg3 = "#30343c",
     grey = "#42464e",
-    grey_fg = "#b2ccd6",
+    grey_fg = "#565c64",
     grey_fg2 = "#6f737b",
     light_grey = "#6f737b",
     red = "#d47d85",
