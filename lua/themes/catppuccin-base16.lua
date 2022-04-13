@@ -11,7 +11,7 @@ return {
    base09 ="89DCEB",
    base0A ="F8BD96",
    base0B ="ABE9B3",
-   base0C ="D9E0EE",
+   base0C ="F5C2E7",
    base0D ="96CDFB",
    base0E ="F28FAD",
    base0F ="E8A2AF",
