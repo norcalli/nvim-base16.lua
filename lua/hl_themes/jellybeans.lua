@@ -1,4 +1,6 @@
-local colors = {
+local M = {}
+
+M.base_30 = {
    white = "#e8e8d3",
    darker_black = "#101010",
    black = "#151515", --  nvim bg
@@ -32,4 +34,25 @@ local colors = {
    folder_bg = "#8197bf",
 }
 
-return colors
+M.base_16 = {
+   base00 = "#151515",
+   base01 = "#2e2e2e",
+   base02 = "#3a3a3a",
+   base03 = "#424242",
+   base04 = "#474747",
+   base05 = "#d9d9c4",
+   base06 = "#dedec9",
+   base07 = "#f1f1e5",
+   base08 = "#dd785a",
+   base09 = "#c99f4a",
+   base0A = "#e1b655",
+   base0B = "#99ad6a",
+   base0C = "#7187af",
+   base0D = "#8fa5cd",
+   base0E = "#e18be1",
+   base0F = "#cf6a4c",
+}
+
+M = require("base16").override_theme(M, "jellybeans")
+
+return M

@@ -1,4 +1,6 @@
-local colors = {
+local M = {}
+
+M.base_30 = {
    white = "#54555b",
    darker_black = "#f5f5f5",
    black = "#fafafa", --  nvim bg
@@ -32,4 +34,25 @@ local colors = {
    folder_bg = "#6C6C6C",
 }
 
-return colors
+M.base_16 = {
+   base00 = "#fafafa",
+   base01 = "#f0f0f1",
+   base02 = "#e5e5e6",
+   base03 = "#a0a1a7",
+   base04 = "#696c77",
+   base05 = "#383a42",
+   base06 = "#202227",
+   base07 = "#090a0b",
+   base08 = "#ca1243",
+   base09 = "#d75f00",
+   base0A = "#c18401",
+   base0B = "#50a14f",
+   base0C = "#0184bc",
+   base0D = "#4078f2",
+   base0E = "#a626a4",
+   base0F = "#986801",
+}
+
+M = require("base16").override_theme(M, "one_light")
+
+return M
