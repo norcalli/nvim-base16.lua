@@ -20,4 +20,7 @@ end
 local user_highlights = require("core.utils").load_config().ui.hl_override
 highlights = merge_tb(highlights, user_highlights)
 
-return highlights
+-- finally set all highlights :D
+for hl, col in pairs(highlights) do
+   vim.api.nvim_set_hl(0, hl, col)
+end

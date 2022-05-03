@@ -32,12 +32,7 @@ end
 
 M.load_theme = function()
    package.loaded["chadlights" or false] = nil
-   local highlights = require "chadlights"
-
-   -- finally set all highlights :D
-   for hl, col in pairs(highlights) do
-      vim.api.nvim_set_hl(0, hl, col)
-   end
+   require "chadlights"
 end
 
 M.override_theme = function(default_theme, theme_name)
