@@ -4,8 +4,6 @@
  
 (Note: This theme plugin is supposed to be used along with [NvChad](https://github.com/NvChad/NvChad) only so watchout!)
 
-Base45 theming plugin 
-
 ## Contribute for new themes 
 
 - go to hl_themes and add your file, ex: atheme.lua
