@@ -1,3 +1,5 @@
+-- returns a huge table of all highlight groups & their colors
+
 local merge_tb = require("base16").merge_tb
 
 local highlights = {}

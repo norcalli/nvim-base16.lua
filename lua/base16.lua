@@ -1,8 +1,14 @@
 local M = {}
 
 M.get_colors = function(type)
-   local name = require("core.utils").load_config().ui.theme
-   vim.g.nvchad_theme = name
+   local name
+
+   if vim.g.nvchad_theme then
+      name = vim.g.nvchad_theme
+   else
+      name = require("core.utils").load_config().ui.theme
+      vim.g.nvchad_theme = name
+   end
 
    -- theme paths
    local default_path = "hl_themes." .. name
