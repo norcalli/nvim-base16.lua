@@ -11,7 +11,6 @@ local grey = colors.grey
 local grey_fg = colors.grey_fg
 local light_grey = colors.light_grey
 local line = colors.line
-local nord_blue = colors.nord_blue
 local one_bg = colors.one_bg
 local one_bg2 = colors.one_bg2
 local pmenu_bg = colors.pmenu_bg
@@ -38,16 +37,16 @@ local defaults = {
    NormalFloat = { bg = darker_black },
 
    -- Pmenu i.e completion menu
-   Pmenu = { bg = one_bg },
-   PmenuSbar = { bg = one_bg2 },
+   Pmenu = { bg = black },
+   PmenuSbar = { bg = one_bg },
    PmenuSel = { bg = pmenu_bg, fg = black },
-   PmenuThumb = { bg = nord_blue },
+   PmenuThumb = { bg = grey },
 
    -- nvim cmp
    CmpItemAbbr = { fg = white },
-   CmpItemAbbrMatch = { fg = white },
-   CmpItemKind = { fg = white },
-   CmpItemMenu = { fg = white },
+   CmpItemAbbrMatch = { fg = blue, bold = true },
+   CmpBorder = { fg = grey },
+   CmpDocBorder = { fg = grey },
 
    NvimInternalError = { fg = red },
    WinSeparator = { fg = one_bg2 },
