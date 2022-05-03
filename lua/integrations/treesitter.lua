@@ -1,4 +1,4 @@
-local theme = require("base16").get_colors "base_30"
+local theme = require("base16").get_colors "base_16"
 
 return {
    TSAnnotation = {
