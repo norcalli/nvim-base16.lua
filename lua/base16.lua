@@ -31,7 +31,10 @@ M.merge_tb = function(table1, table2)
 end
 
 M.load_theme = function()
-   package.loaded["chadlights" or false] = nil
+   -- reload highlights for theme switcher
+   require("plenary.reload").reload_module "integrations"
+   require("plenary.reload").reload_module "chadlights"
+
    require "chadlights"
 end
 
