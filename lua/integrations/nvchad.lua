@@ -100,7 +100,7 @@ local defaults = {
    NvimTreeFolderIcon = { fg = folder_bg },
    NvimTreeFolderName = { fg = folder_bg },
    NvimTreeGitDirty = { fg = red },
-   NvimTreeIndentMarker = { fg = one_bg2 },
+   NvimTreeIndentMarker = { fg = grey_fg },
    NvimTreeNormal = { bg = darker_black },
    NvimTreeNormalNC = { bg = darker_black },
    NvimTreeOpenedFolderName = { fg = folder_bg },
