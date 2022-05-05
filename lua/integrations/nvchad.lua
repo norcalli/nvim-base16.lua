@@ -104,6 +104,7 @@ local defaults = {
    NvimTreeNormal = { bg = darker_black },
    NvimTreeNormalNC = { bg = darker_black },
    NvimTreeOpenedFolderName = { fg = folder_bg },
+   NvimTreeGitIgnored = { fg = light_grey },
 
    NvimTreeWinSeparator = {
       fg = darker_black,
