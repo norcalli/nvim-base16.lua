@@ -1,4 +1,4 @@
-local theme = require("base16").get_colors("base_16")
+local theme = require("base16").get_colors "base_16"
 
 return {
    Normal = {
@@ -117,8 +117,7 @@ return {
    },
 
    Conceal = {
-      fg = theme.base0D,
-      bg = theme.base0D,
+      bg = "NONE",
    },
 
    Cursor = {
