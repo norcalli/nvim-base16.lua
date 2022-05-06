@@ -53,6 +53,6 @@ M.base_16 = {
    base0F = "#cf6a4c",
 }
 
-M = require("base16").override_theme(M, "jellybeans")
+M = require("base46").override_theme(M, "jellybeans")
 
 return M

@@ -1,4 +1,4 @@
-local colors = require("base16").get_colors "base_30"
+local colors = require("base46").get_colors "base_30"
 
 return {
 
@@ -99,5 +99,27 @@ return {
 
    BufferLineDevIconDefaultSelected = {
       bg = "NONE",
+   },
+
+   BufferLineDuplicate = {
+      fg = "NONE",
+      bg = colors.black2,
+   },
+   BufferLineDuplicateSelected = {
+      fg = colors.red,
+      bg = colors.black,
+   },
+   BufferLineDuplicateVisible = {
+      fg = colors.blue,
+      bg = colors.black2,
+   },
+
+   -- custom area
+   BufferLineRightCustomAreaText1 = {
+      bg = colors.grey,
+      fg = colors.white,
+   },
+   BufferLineRightCustomAreaText2 = {
+      fg = colors.red,
    },
 }

@@ -1,5 +1,5 @@
-local theme = require("base16").get_colors "base_16"
-local base_30 = require("base16").get_colors "base_30"
+local theme = require("base46").get_colors "base_16"
+local base_30 = require("base46").get_colors "base_30"
 
 return {
    CmpItemKindConstant = { fg = theme.base09 },

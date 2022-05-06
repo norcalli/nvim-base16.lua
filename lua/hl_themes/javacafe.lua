@@ -53,6 +53,6 @@ M.base_16 = {
    base06 = "#d3d9e4",
 }
 
-M = require("base16").override_theme(M, "javacafe")
+M = require("base46").override_theme(M, "javacafe")
 
 return M

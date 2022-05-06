@@ -53,6 +53,6 @@ M.base_16 = {
    base0F = "#d65d0e",
 }
 
-M = require("base16").override_theme(M, "gruvbox")
+M = require("base46").override_theme(M, "gruvbox")
 
 return M

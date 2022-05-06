@@ -1,6 +1,6 @@
 -- returns a huge table of all highlight groups & their colors
 
-local merge_tb = require("base16").merge_tb
+local merge_tb = require("base46").merge_tb
 
 local highlights = {}
 local hl_dir = vim.fn.stdpath "data" .. "/site/pack/packer/opt/base46/lua/integrations"

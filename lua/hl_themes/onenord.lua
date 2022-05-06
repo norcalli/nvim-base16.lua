@@ -53,6 +53,6 @@ M.base_16 = {
    base06 = "#c7cdd8",
 }
 
-M = require("base16").override_theme(M, "onenord")
+M = require("base46").override_theme(M, "onenord")
 
 return M

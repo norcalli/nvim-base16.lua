@@ -53,6 +53,6 @@ M.base_16 = {
    base0F = "#eAc1c1",
 }
 
-M = require("base16").override_theme(M, "aquarium")
+M = require("base46").override_theme(M, "aquarium")
 
 return M

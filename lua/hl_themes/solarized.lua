@@ -53,6 +53,6 @@ M.base_16 = {
    base0F = "#d33682",
 }
 
-M = require("base16").override_theme(M, "solarized")
+M = require("base46").override_theme(M, "solarized")
 
 return M
