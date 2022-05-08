@@ -20,7 +20,7 @@ M.base_16 = {
   -- some colors 
 }
 
-M = require("base16").override_theme(M, "atheme")
+M = require("base46").override_theme(M, "atheme")
 
 return M
 ```
@@ -30,7 +30,7 @@ return M
 - Use a color lightening/darkening tool, such as this https://siduck.github.io/hex-tools/
 
 ```
-black = usually your theme bg (this should be the same as base00 in doom-base16.lua)
+black = usually your theme bg 
 darker_black = 6% darker than black
 black2 = 6% lighter than black
 

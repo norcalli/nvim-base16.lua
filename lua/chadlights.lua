@@ -16,6 +16,9 @@ for _, file in ipairs(hl_files) do
    highlights = merge_tb(highlights, integration)
 end
 
+-- term colors
+require "term_hl"
+
 -- override user highlights if there are any
 local user_highlights = require("core.utils").load_config().ui.hl_override
 highlights = merge_tb(highlights, user_highlights)
