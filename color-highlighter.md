@@ -4,7 +4,8 @@
 -- copy this file, use it in your new theme, once
 -- development is done. just return `colors` table from theme
 
-local colors = {
+-- Your base16 vars
+
    base00 = "#", -- bg
    base01 = "#", -- lightbg
    base02 = "#", -- selection bg
@@ -21,8 +22,6 @@ local colors = {
    base0D = "#", -- Functions, Methods, Attribute IDs, Headings
    base0E = "#", -- Keywords, Storage, Selector, Markup Italic, Diff Changed
    base0F = "#", -- Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
-}
+ 
 
--- return cols
-
--- vim macro for removing hash: qawex+q15@a while being on first "b" in base00
+ 
