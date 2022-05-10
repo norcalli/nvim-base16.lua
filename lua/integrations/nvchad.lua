@@ -1,5 +1,5 @@
 local colors = require("base46").get_colors "base_30"
-local ui = require("core.utils").load_config().ui
+local ui = nvchad.load_config().ui
 
 local black = colors.black
 local black2 = colors.black2
