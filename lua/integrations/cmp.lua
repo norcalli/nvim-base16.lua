@@ -7,7 +7,6 @@ return {
    CmpItemKindIdentifier = { fg = theme.base08 },
    CmpItemKindField = { fg = theme.base08 },
    CmpItemKindVariable = { fg = theme.base0E },
-   Special = { fg = theme.base0C },
    CmpItemKindSnippet = { fg = base_30.red },
    CmpItemKindText = { fg = theme.base0B },
    CmpItemKindStructure = { fg = theme.base0E },
