@@ -6,7 +6,7 @@ M.get_colors = function(type)
    if vim.g.nvchad_theme then
       name = vim.g.nvchad_theme
    else
-      name = require("core.utils").load_config().ui.theme
+      name = nvchad.load_config().ui.theme
       vim.g.nvchad_theme = name
    end
 
@@ -52,7 +52,7 @@ M.load_theme = function()
 end
 
 M.override_theme = function(default_theme, theme_name)
-   local changed_themes = require("core.utils").load_config().ui.changed_themes
+   local changed_themes = nvchad.load_config().ui.changed_themes
 
    if changed_themes[theme_name] then
       return M.merge_tb(default_theme, changed_themes[theme_name])
@@ -62,7 +62,7 @@ M.override_theme = function(default_theme, theme_name)
 end
 
 M.toggle_theme = function()
-   local themes = require("core.utils").load_config().ui.theme_toggle
+   local themes = nvchad.load_config().ui.theme_toggle
 
    local theme1 = themes[1]
    local theme2 = themes[2]

@@ -20,7 +20,7 @@ end
 require "term_hl"
 
 -- override user highlights if there are any
-local user_highlights = require("core.utils").load_config().ui.hl_override
+local user_highlights = nvchad.load_config().ui.hl_override
 highlights = merge_tb(highlights, user_highlights)
 
 -- finally set all highlights :D
