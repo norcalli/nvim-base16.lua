@@ -42,12 +42,6 @@ local defaults = {
    PmenuSel = { bg = pmenu_bg, fg = black },
    PmenuThumb = { bg = grey },
 
-   -- nvim cmp
-   CmpItemAbbr = { fg = white },
-   CmpItemAbbrMatch = { fg = blue, bold = true },
-   CmpBorder = { fg = grey },
-   CmpDocBorder = { fg = grey },
-
    NvimInternalError = { fg = red },
    WinSeparator = { fg = one_bg2 },
 
@@ -94,71 +88,13 @@ local defaults = {
    DiagnosticWarn = { fg = yellow },
    DiagnosticInformation = { fg = green },
 
-   -- NvimTree
-   NvimTreeEmptyFolderName = { fg = folder_bg },
-   NvimTreeEndOfBuffer = { fg = darker_black },
-   NvimTreeFolderIcon = { fg = folder_bg },
-   NvimTreeFolderName = { fg = folder_bg },
-   NvimTreeGitDirty = { fg = red },
-   NvimTreeIndentMarker = { fg = grey_fg },
-   NvimTreeNormal = { bg = darker_black },
-   NvimTreeNormalNC = { bg = darker_black },
-   NvimTreeOpenedFolderName = { fg = folder_bg },
-   NvimTreeGitIgnored = { fg = light_grey },
+   -- whichkey
 
-   NvimTreeWinSeparator = {
-      fg = darker_black,
-      bg = darker_black,
-   },
-
-   NvimTreeWindowPicker = {
-      fg = red,
-      bg = black2,
-   },
-
-   NvimTreeCursorLine = {
-      bg = black2,
-   },
-
-   -- Telescope
-   TelescopeBorder = {
-      fg = darker_black,
-      bg = darker_black,
-   },
-
-   TelescopePromptBorder = {
-      fg = black2,
-      bg = black2,
-   },
-
-   TelescopePromptNormal = {
-      fg = white,
-      bg = black2,
-   },
-
-   TelescopePromptPrefix = {
-      fg = red,
-      bg = black2,
-   },
-
-   TelescopeNormal = { bg = darker_black },
-
-   TelescopePreviewTitle = {
-      fg = black,
-      bg = green,
-   },
-
-   TelescopePromptTitle = {
-      fg = black,
-      bg = red,
-   },
-
-   TelescopeResultsTitle = {
-      fg = darker_black,
-      bg = darker_black,
-   },
-
-   TelescopeSelection = { bg = black2 },
+   WhichKey = { fg = blue },
+   WhichKeySeparator = { fg = light_grey },
+   WhichKeyDesc = { fg = red },
+   WhichKeyGroup = { fg = green },
+   WhichKeyValue = { fg = green },
 }
 
 if ui.transparency then
