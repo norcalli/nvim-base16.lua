@@ -1,11 +1,8 @@
 local colors = require("base46").get_colors "base_30"
-local ui = nvchad.load_config().ui
 
 local black = colors.black
-local black2 = colors.black2
 local blue = colors.blue
 local darker_black = colors.darker_black
-local folder_bg = colors.folder_bg
 local green = colors.green
 local grey = colors.grey
 local grey_fg = colors.grey_fg
@@ -89,45 +86,11 @@ local defaults = {
    DiagnosticInformation = { fg = green },
 
    -- whichkey
-
    WhichKey = { fg = blue },
    WhichKeySeparator = { fg = light_grey },
    WhichKeyDesc = { fg = red },
    WhichKeyGroup = { fg = green },
    WhichKeyValue = { fg = green },
 }
-
-if ui.transparency then
-   local hl_groups = {
-      "NormalFloat",
-      "Normal",
-      "Folded",
-      "NvimTreeNormal",
-      "NvimTreeNormalNC",
-      "TelescopeNormal",
-      "TelescopePrompt",
-      "TelescopeResults",
-      "TelescopeBorder",
-      "TelescopePromptBorder",
-      "TelescopePromptNormal",
-      "TelescopePromptPrefix",
-   }
-
-   for index, _ in ipairs(hl_groups) do
-      defaults[hl_groups[index]] = {
-         bg = "NONE",
-      }
-   end
-
-   defaults.NvimTreeWinSeparator = {
-      fg = grey,
-      bg = "NONE",
-   }
-
-   defaults.TelescopeResultsTitle = {
-      fg = black,
-      bg = blue,
-   }
-end
 
 return defaults

@@ -23,6 +23,14 @@ require "term_hl"
 local user_highlights = nvchad.load_config().ui.hl_override
 highlights = merge_tb(highlights, user_highlights)
 
+-- local set_transparent = nvchad.load_config().ui.transparency
+local ui = nvchad.load_config().ui
+
+if ui.transparency then
+   local glassy_hls = require "nv_glassy"
+   highlights = merge_tb(highlights, glassy_hls)
+end
+
 -- finally set all highlights :D
 for hl, col in pairs(highlights) do
    vim.api.nvim_set_hl(0, hl, col)
