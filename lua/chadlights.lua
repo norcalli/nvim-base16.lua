@@ -20,10 +20,10 @@ end
 require "term_hl"
 
 -- polish theme specific highlights
-local theme = require("hl_themes." .. ui.theme)
+local theme = pcall(require, "hl_themes." .. ui.theme)
 
-if theme.polish_hl then
-   highlights = merge_tb(highlights, theme.polish_hl)
+if theme then
+   highlights = merge_tb(highlights, require(theme).polish_hl)
 end
 
 -- override user highlights if there are any
