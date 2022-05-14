@@ -102,7 +102,6 @@ return {
    },
    MatchParen = { link = "MatchWord" },
 
-   MatchWordCur = {
-   },
+   MatchWordCur = { },
    MatchParenCur = { link = "MatchWordCur" },
 }
