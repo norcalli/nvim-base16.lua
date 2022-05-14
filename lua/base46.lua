@@ -67,14 +67,18 @@ M.toggle_theme = function()
    local theme1 = themes[1]
    local theme2 = themes[2]
 
-   if vim.g.nvchad_theme == theme1 then
+   if vim.g.toggle_theme_icon == "   " then
+      vim.g.toggle_theme_icon = "   "
+   else
       vim.g.toggle_theme_icon = "   "
+   end
+
+   if vim.g.nvchad_theme == theme1 then
       vim.g.nvchad_theme = theme2
 
       require("nvchad").reload_theme()
       require("nvchad").change_theme(theme1, theme2)
    elseif vim.g.nvchad_theme == theme2 then
-      vim.g.toggle_theme_icon = "   "
       vim.g.nvchad_theme = theme1
 
       require("nvchad").reload_theme()

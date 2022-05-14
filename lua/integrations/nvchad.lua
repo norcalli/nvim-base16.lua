@@ -18,7 +18,7 @@ local yellow = colors.yellow
 local orange = colors.orange
 
 -- highlight groups & colors
-local defaults = {
+return {
 
    Comment = { fg = grey_fg },
 
@@ -91,6 +91,16 @@ local defaults = {
    WhichKeyDesc = { fg = red },
    WhichKeyGroup = { fg = green },
    WhichKeyValue = { fg = green },
-}
 
-return defaults
+   -- packer
+   packerPackageName = { fg = red },
+
+   -- vim-matchup
+   MatchWord = {
+      fg = black,
+      bg = white,
+   },
+
+   MatchParen = { link = "MatchWord" },
+   MatchParenCur = { link = "MatchWord" },
+}
