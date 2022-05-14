@@ -20,19 +20,28 @@ end
 require "term_hl"
 
 -- polish theme specific highlights
-local theme = pcall(require, "hl_themes." .. ui.theme)
+local polish_hl = require("base46").get_colors "polish_hl"
 
-if theme then
-   local polish_hl = require("hl_themes." .. ui.theme).polish_hl
-
-   if polish_hl then
-      highlights = merge_tb(highlights, polish_hl)
-   end
+if polish_hl then
+   highlights = merge_tb(highlights, polish_hl)
 end
 
 -- override user highlights if there are any
 if ui.hl_override then
-   local user_highlights = nvchad.load_config().ui.hl_override
+   local user_highlights = ui.hl_override
+   local colors = require("base46").get_colors "base_30"
+
+   -- fg = "white" set by user becomes fg = colors["white"]
+   -- so no need for the user to import colors
+
+   for group, _ in pairs(user_highlights) do
+      for key, color in pairs(user_highlights[group]) do
+         if key == "fg" or key == "bg" then
+            user_highlights[group][key] = colors[color]
+         end
+      end
+   end
+
    highlights = merge_tb(highlights, user_highlights)
 end
 

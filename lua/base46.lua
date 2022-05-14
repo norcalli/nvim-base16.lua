@@ -1,14 +1,7 @@
 local M = {}
 
 M.get_colors = function(type)
-   local name
-
-   if vim.g.nvchad_theme then
-      name = vim.g.nvchad_theme
-   else
-      name = nvchad.load_config().ui.theme
-      vim.g.nvchad_theme = name
-   end
+   local name = vim.g.nvchad_theme
 
    -- theme paths
    local default_path = "hl_themes." .. name
