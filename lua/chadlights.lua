@@ -37,7 +37,11 @@ if ui.hl_override then
    for group, _ in pairs(user_highlights) do
       for key, color in pairs(user_highlights[group]) do
          if key == "fg" or key == "bg" then
-            user_highlights[group][key] = colors[color]
+            if color:sub(1, 1) == "#" then
+               user_highlights[group][key] = color
+            else
+               user_highlights[group][key] = colors[color]
+            end
          end
       end
    end
