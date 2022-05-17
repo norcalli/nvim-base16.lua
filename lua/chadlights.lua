@@ -35,12 +35,12 @@ if ui.hl_override then
    -- so no need for the user to import colors
 
    for group, _ in pairs(user_highlights) do
-      for key, color in pairs(user_highlights[group]) do
+      for key, val in pairs(user_highlights[group]) do
          if key == "fg" or key == "bg" then
-            if color:sub(1, 1) == "#" then
-               user_highlights[group][key] = color
+            if val:sub(1, 1) == "#" or val == "none" or val == "NONE" then
+               user_highlights[group][key] = val
             else
-               user_highlights[group][key] = colors[color]
+               user_highlights[group][key] = colors[val]
             end
          end
       end
