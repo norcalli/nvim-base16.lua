@@ -9,7 +9,6 @@ local grey_fg = colors.grey_fg
 local light_grey = colors.light_grey
 local line = colors.line
 local one_bg = colors.one_bg
-local one_bg2 = colors.one_bg2
 local pmenu_bg = colors.pmenu_bg
 local purple = colors.purple
 local red = colors.red
@@ -40,7 +39,7 @@ return {
    PmenuThumb = { bg = grey },
 
    NvimInternalError = { fg = red },
-   WinSeparator = { fg = one_bg2 },
+   WinSeparator = { fg = line },
 
    -- Dashboard i.e alpha.nvim
    AlphaHeader = { fg = grey_fg },

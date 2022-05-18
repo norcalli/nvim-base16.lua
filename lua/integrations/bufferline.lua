@@ -11,7 +11,6 @@ return {
    BufferLineBufferSelected = {
       fg = colors.white,
       bg = colors.black,
-      bold = true,
    },
 
    BufferLineBufferVisible = {

@@ -39,5 +39,5 @@ return {
       bg = colors.darker_black,
    },
 
-   TelescopeSelection = { bg = colors.one_bg, fg = colors.white },
+   TelescopeSelection = { bg = colors.black2, fg = colors.white },
 }
