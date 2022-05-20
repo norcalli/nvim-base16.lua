@@ -27,7 +27,10 @@ return M
 
 ## Understanding theme variables 
 
+- Read the following for base_16 variables https://github.com/chriskempson/base16/blob/master/styling.md
+
 - Use a color lightening/darkening tool, such as this https://siduck.github.io/hex-tools/
+- The following variables are for base_30 
 
 ```
 black = usually your theme bg 
