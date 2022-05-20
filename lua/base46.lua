@@ -60,10 +60,12 @@ M.toggle_theme = function()
    local theme1 = themes[1]
    local theme2 = themes[2]
 
-   if vim.g.toggle_theme_icon == "   " then
-      vim.g.toggle_theme_icon = "   "
-   else
-      vim.g.toggle_theme_icon = "   "
+   if vim.g.nvchad_theme == theme1 or vim.g.nvchad_theme == theme2 then
+      if vim.g.toggle_theme_icon == "   " then
+         vim.g.toggle_theme_icon = "   "
+      else
+         vim.g.toggle_theme_icon = "   "
+      end
    end
 
    if vim.g.nvchad_theme == theme1 then

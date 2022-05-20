@@ -92,10 +92,6 @@ return {
       bg = colors.black,
    },
 
-   BufferLineDevIconDefaultInactive = {
-      bg = "NONE",
-   },
-
    BufferLineDevIconDefaultSelected = {
       bg = "NONE",
    },
