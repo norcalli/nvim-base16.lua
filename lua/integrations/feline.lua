@@ -27,12 +27,12 @@ return {
       bg = colors.lightbg2,
    },
 
-   FelineDirname = {
+   FelineDirName = {
       fg = colors.light_grey,
       bg = colors.lightbg2,
    },
 
-   FelineDirname_Separator = {
+   FelineDirName_Separator = {
       fg = colors.lightbg2,
       bg = colors.statusline_bg,
    },
