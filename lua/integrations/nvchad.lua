@@ -78,6 +78,11 @@ return {
    IndentBlanklineChar = { fg = line },
    IndentBlanklineSpaceChar = { fg = line },
 
+   -- LSP References
+   LspReferenceText = { fg = darker_black, bg = white },
+   LspReferenceRead = { fg = darker_black, bg = white },
+   LspReferenceWrite = { fg = darker_black, bg = white },
+
    -- Lsp Diagnostics
    DiagnosticHint = { fg = purple },
    DiagnosticError = { fg = red },
