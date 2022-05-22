@@ -53,6 +53,8 @@ M.base_16 = {
    base0F = "#9d9a7b",
 }
 
+M.type = "dark"
+
 M = require("base46").override_theme(M, "mountain")
 
 return M

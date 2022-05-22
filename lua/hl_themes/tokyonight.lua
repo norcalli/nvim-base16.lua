@@ -53,4 +53,8 @@ M.base_16 = {
    base06 = "#bbc5f0",
 }
 
+M.type = "dark"
+
+M = require("base46").override_theme(M, "tokyonight")
+
 return M

@@ -53,6 +53,8 @@ M.base_16 = {
    base06 = "#c3b499",
 }
 
+M.type = "dark"
+
 M = require("base46").override_theme(M, "gruvchad")
 
 return M

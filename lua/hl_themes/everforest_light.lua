@@ -53,6 +53,8 @@ M.base_16 = {
    base0F = "#d699b6",
 }
 
+M.type = "light"
+
 M.polish_hl = {
    DiffAdd = {
       fg = M.base_30.green,

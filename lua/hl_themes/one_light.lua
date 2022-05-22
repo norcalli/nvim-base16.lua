@@ -53,6 +53,8 @@ M.base_16 = {
    base0F = "#986801",
 }
 
+M.type = "light"
+
 M.polish_hl = {
    WhichKeyDesc = {
       fg = M.base_30.white,

@@ -53,6 +53,8 @@ M.base_16 = {
    base0F = "#bbc2cf",
 }
 
+M.type = "dark"
+
 M = require("base46").override_theme(M, "monekai")
 
 return M

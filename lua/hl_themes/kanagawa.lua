@@ -53,6 +53,8 @@ M.base_16 = {
    base0F = "#d27e99",
 }
 
+M.type = "dark"
+
 M = require("base46").override_theme(M, "kanagawa")
 
 return M

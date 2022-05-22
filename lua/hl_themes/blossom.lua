@@ -53,6 +53,8 @@ M.base_16 = {
    base0F = "#887c76",
 }
 
+M.type = "light"
+
 M = require("base46").override_theme(M, "blossom")
 
 return M

@@ -53,6 +53,8 @@ M.base_16 = {
    base0F = "#e87979",
 }
 
+M.type = "dark"
+
 M = require("base46").override_theme(M, "radium")
 
 return M

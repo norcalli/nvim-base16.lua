@@ -53,6 +53,8 @@ M.base_16 = {
    base0F = "#d6deeb", -- Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
 }
 
+M.type = "dark"
+
 M = require("base46").override_theme(M, "nightowl")
 
 return M
