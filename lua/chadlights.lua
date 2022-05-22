@@ -16,9 +16,6 @@ for _, file in ipairs(hl_files) do
    highlights = merge_tb(highlights, integration)
 end
 
--- term colors
-require "term_hl"
-
 -- polish theme specific highlights
 local polish_hl = require("base46").get_colors "polish_hl"
 
