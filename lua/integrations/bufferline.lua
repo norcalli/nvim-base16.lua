@@ -111,7 +111,6 @@ return {
 
    -- custom area
    BufferLineRightCustomAreaText1 = {
-      bg = colors.grey,
       fg = colors.white,
    },
    BufferLineRightCustomAreaText2 = {
