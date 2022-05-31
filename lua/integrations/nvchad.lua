@@ -101,11 +101,9 @@ return {
 
    -- vim-matchup
    MatchWord = {
-      fg = black,
-      bg = white,
+      bg = grey,
+      fg = white,
    },
-   MatchParen = { link = "MatchWord" },
 
-   MatchWordCur = { },
-   MatchParenCur = { link = "MatchWordCur" },
+   MatchParen = { link = "MatchWord" },
 }

@@ -15,23 +15,23 @@ M.base_30 = {
    red = "#e36d76",
    baby_pink = "#f98385",
    pink = "#f36d76",
-   line = "#30333c", -- for lines like vertsplit
+   line = "#363942", -- for lines like vertsplit
    green = "#96c367",
    vibrant_green = "#99c366",
    nord_blue = "#81A1C1",
    blue = "#51afef",
-   yellow = "#d39467",
+   yellow = "#e6c181",
    sun = "#fce668",
    purple = "#c885d7",
    dark_purple = "#b26fc1",
    teal = "#34bfd0",
    orange = "#d39467",
-   cyan = "#51afef",
+   cyan = "#41afef",
    statusline_bg = "#292c35",
    lightbg = "#3d4049",
    lightbg2 = "#2e313a",
    pmenu_bg = "#99c366",
-   folder_bg = "#51afef",
+   folder_bg = "#61afef",
 }
 
 M.base_16 = {
@@ -39,20 +39,28 @@ M.base_16 = {
    base01 = "#2a2e38",
    base02 = "#484854",
    base03 = "#545862",
-   base04 = "#9ca0a4",
-   base05 = "#bbc2cf",
-   base06 = "#5d656b",
-   base07 = "#4d5550",
-   base08 = "#51afef",
-   base09 = "#e18ef3",
-   base0A = "#5ac9d6",
+   base04 = "#5b5e67",
+   base05 = "#afb6c3",
+   base06 = "#b5bcc9",
+   base07 = "#bbc2cf",
+   base08 = "#d39467",
+   base09 = "#b3a5d4",
+   base0A = "#61afef",
    base0B = "#e6c181",
-   base0C = "#96c376",
+   base0C = "#61afef",
    base0D = "#96c376",
    base0E = "#e36d76",
-   base0F = "#bbc2cf",
+   base0F = "#e36d76",
 }
 
+M.polish_hl = {
+   TSParameter = {
+      fg = M.base_30.blue,
+   },
+   TSFieldKey = {
+      fg = M.base_30.red,
+   },
+}
 M.type = "dark"
 
 M = require("base46").override_theme(M, "monekai")

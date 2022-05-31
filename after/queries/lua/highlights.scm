@@ -1,0 +1,2 @@
+(field
+  name: (identifier) @TSFieldKey)

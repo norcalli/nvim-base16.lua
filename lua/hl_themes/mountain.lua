@@ -4,7 +4,7 @@ M.base_30 = {
    white = "#F0f0f0",
    darker_black = "#090909",
    black = "#0f0f0f", --  nvim bg
-   black2 = "#151515",
+   black2 = "#181818",
    one_bg = "#191919",
    one_bg2 = "#222222",
    one_bg3 = "#2a2a2a",
@@ -14,14 +14,14 @@ M.base_30 = {
    light_grey = "#535353",
    red = "#ac8a8c",
    baby_pink = "#bb999b",
-   pink = "#e89199",
-   line = "#191919", -- for lines like vertsplit
+   pink = "#AC8AAC",
+   line = "#242424", -- for lines like vertsplit
    green = "#8aac8b",
    vibrant_green = "#99bb9a",
-   blue = "#A39EC4",
-   nord_blue = "#b2add3",
+   blue = "#9691b3",
+   nord_blue = "#8F8AAC",
    yellow = "#ACA98A",
-   sun = "#d3d0ad",
+   sun = "#b3b091",
    purple = "#C49EC4",
    dark_purple = "#b58fb5",
    teal = "#8fb4b5",
@@ -29,9 +29,9 @@ M.base_30 = {
    cyan = "#9EC3C4",
    statusline_bg = "#131313",
    lightbg = "#292929",
-   lightbg2 = "#232323",
+   lightbg2 = "#212121",
    pmenu_bg = "#8aac8b",
-   folder_bg = "#A39EC4",
+   folder_bg = "#8F8AAC",
 }
 
 M.base_16 = {
@@ -40,17 +40,24 @@ M.base_16 = {
    base02 = "#191919",
    base03 = "#222222",
    base04 = "#535353",
-   base05 = "#f0f0f0",
-   base06 = "#d8d8d8",
-   base07 = "#414141",
-   base08 = "#ac8a8c",
-   base09 = "#d3d0ad",
-   base0A = "#ACA98A",
+   base05 = "#d8d8d8",
+   base06 = "#e6e6e6",
+   base07 = "#f0f0f0",
+   base08 = "#b18f91",
+   base09 = "#d8bb92",
+   base0A = "#b1ae8f",
    base0B = "#8aac8b",
-   base0C = "#9EC3C4",
-   base0D = "#8fb4b5",
-   base0E = "#C49EC4",
-   base0F = "#9d9a7b",
+   base0C = "#91b2b3",
+   base0D = "#a5a0c2",
+   base0E = "#ac8aac",
+   base0F = "#b39193",
+}
+
+M.polish_hl = {
+   TSVariable = {
+      fg = M.base_16.base05,
+   },
+
 }
 
 M.type = "dark"

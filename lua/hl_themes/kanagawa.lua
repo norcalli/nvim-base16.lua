@@ -12,10 +12,10 @@ M.base_30 = {
    grey_fg = "#4c4c55",
    grey_fg2 = "#53535c",
    light_grey = "#5c5c65",
-   red = "#E46876",
+   red = "#d8616b",
    baby_pink = "#D27E99",
    pink = "#c8748f",
-   line = "#272730", -- for lines like vertsplit
+   line = "#31313a", -- for lines like vertsplit
    green = "#98BB6C",
    vibrant_green = "#a3c677",
    nord_blue = "#7E9CD8",
@@ -23,13 +23,13 @@ M.base_30 = {
    yellow = "#FF9E3B",
    sun = "#FFA066",
    purple = "#a48ec7",
-   dark_purple = "#957FB8",
+   dark_purple = "#9c86bf",
    teal = "#7AA89F",
    orange = "#fa9b61",
    cyan = "#A3D4D5",
    statusline_bg = "#24242d",
    lightbg = "#33333c",
-   lightbg2 = "#2b2b34",
+   lightbg2 = "#292932",
    pmenu_bg = "#a48ec7",
    folder_bg = "#7E9CD8",
 }
@@ -38,19 +38,33 @@ M.base_16 = {
    base00 = "#1f1f28",
    base01 = "#2a2a37",
    base02 = "#223249",
-   base03 = "#727169",
-   base04 = "#c8c093",
-   base05 = "#dcd7ba",
-   base06 = "#938aa9",
-   base07 = "#363646",
-   base08 = "#e46876",
+   base03 = "#363646",
+   base04 = "#4c4c55",
+   base05 = "#c8c3a6",
+   base06 = "#d2cdb0",
+   base07 = "#DCD7BA",
+   base08 = "#d8616b",
    base09 = "#ffa066",
    base0A = "#dca561",
    base0B = "#98bb6c",
    base0C = "#7fb4ca",
    base0D = "#7e9cd8",
-   base0E = "#957fb8",
-   base0F = "#d27e99",
+   base0E = "#9c86bf",
+   base0F = "#d8616b",
+}
+
+M.polish_hl = {
+   TSInclude = {
+      fg = M.base_30.purple,
+   },
+
+   TSURI = {
+      fg = M.base_30.blue,
+   },
+
+   TSTagDelimiter = {
+      fg = M.base_30.red,
+   },
 }
 
 M.type = "dark"

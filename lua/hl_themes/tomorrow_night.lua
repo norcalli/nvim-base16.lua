@@ -5,7 +5,7 @@ M.base_30 = {
    darker_black = "#191b1d",
    black = "#1d1f21", -- nvim bg
    black2 = "#232527",
-   one_bg = "#363a41",
+   one_bg = "#2d2f31",
    one_bg2 = "#353b45",
    one_bg3 = "#30343c",
    grey = "#434547",
@@ -15,7 +15,7 @@ M.base_30 = {
    red = "#cc6666",
    baby_pink = "#FF6E79",
    pink = "#ff9ca3",
-   line = "#27292b", -- for lines like vertsplit
+   line = "#313335", -- for lines like vertsplit
    green = "#a4b595",
    vibrant_green = "#a3b991",
    nord_blue = "#728da8",
@@ -54,6 +54,13 @@ M.base_16 = {
 }
 
 M.type = "dark"
+
+M.polish_hl = {
+   PmenuSel = {
+      fg = M.base_30.black,
+      bg = M.base_30.red,
+   },
+}
 
 M = require("base46").override_theme(M, "tomorrow_night")
 

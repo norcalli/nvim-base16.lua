@@ -15,7 +15,7 @@ M.base_30 = {
    red = "#fb4934",
    baby_pink = "#cc241d",
    pink = "#ff75a0",
-   line = "#2c2f30", -- for lines like vertsplit
+   line = "#36393a", -- for lines like vertsplit
    green = "#b8bb26",
    vibrant_green = "#a9b665",
    nord_blue = "#83a598",
@@ -28,10 +28,10 @@ M.base_30 = {
    orange = "#e78a4e",
    cyan = "#82b3a8",
    statusline_bg = "#2c2c2c",
-   lightbg = "#353535",
-   lightbg2 = "#303030",
+   lightbg = "#3d3d3d",
+   lightbg2 = "#323232",
    pmenu_bg = "#83a598",
-   folder_bg = "#83a598",
+   folder_bg = "#749689",
 }
 
 M.base_16 = {

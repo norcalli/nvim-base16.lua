@@ -38,7 +38,7 @@ return {
    },
 
    Feline_diffIcons = {
-      fg = colors.grey_fg2,
+      fg = colors.light_grey,
       bg = colors.statusline_bg,
    },
 
@@ -118,6 +118,11 @@ return {
 
    Feline_EmptySpace = {
       fg = colors.one_bg2,
+      bg = colors.one_bg,
+   },
+
+   Feline_EmptySpace_git = {
+      fg = colors.one_bg,
       bg = colors.statusline_bg,
    },
 
@@ -133,6 +138,6 @@ return {
 
    Feline_PositionSeparator = {
       fg = colors.green,
-      bg = colors.grey,
+      bg = colors.one_bg2,
    },
 }

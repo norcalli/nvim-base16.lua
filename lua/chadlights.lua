@@ -46,7 +46,7 @@ if ui.hl_override then
    highlights = merge_tb(highlights, user_highlights)
 end
 
--- local set_transparent = require("core.utils").load_config().ui.transparency
+-- local set_transparent = nvchad.load_config().ui.transparency
 if ui.transparency then
    highlights = merge_tb(highlights, require "nv_glassy")
 end

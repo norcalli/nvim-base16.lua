@@ -11,7 +11,7 @@ M.base_30 = {
    grey = "#a6b0a0",
    grey_fg = "#939f91",
    grey_fg2 = "#829181",
-   light_grey = "#61696f",
+   light_grey = "#798878",
    red = "#c85552",
    baby_pink = "#ce8196",
    pink = "#ef6590",
@@ -36,24 +36,22 @@ M.base_30 = {
 
 M.base_16 = {
    base00 = "#fff9e8",
-   base01 = "#f7f4e0",
-   base02 = "#f0eed9",
-   base03 = "#868d80",
-   base04 = "#d3c6aa",
-   base05 = "#272f35",
-   base06 = "#e9e8d2",
-   base07 = "#fff9e8",
+   base01 = "#f6f0df",
+   base02 = "#ede7d6",
+   base03 = "#e5dfce",
+   base04 = "#ddd7c6",
+   base05 = "#495157",
+   base06 = "#3b4349",
+   base07 = "#272f35",
    base08 = "#5f9b93",
    base09 = "#b67996",
    base0A = "#8da101",
-   base0B = "#dfa000",
-   base0C = "#F96B68",
+   base0B = "#d59600",
+   base0C = "#ef615e",
    base0D = "#87a060",
-   base0E = "#f85552",
-   base0F = "#d699b6",
+   base0E = "#c85552",
+   base0F = "#c85552",
 }
-
-M.type = "light"
 
 M.polish_hl = {
    DiffAdd = {
@@ -65,7 +63,7 @@ M.polish_hl = {
    },
 
    TSField = {
-      fg = "#454d53",
+      fg = M.base_16.base05,
    },
 
    TSInclude = {
@@ -74,10 +72,6 @@ M.polish_hl = {
 
    TSConstructor = {
       fg = M.base_30.blue,
-   },
-
-   TSPunctBracket = {
-      fg = M.base_16.base03,
    },
 
    WhichKeyDesc = {
@@ -92,6 +86,9 @@ M.polish_hl = {
       fg = "#4e565c",
    },
 }
+
+M.type = "light"
+
 M = require("base46").override_theme(M, "everforest_light")
 
 return M
