@@ -32,6 +32,11 @@ return {
    FloatBorder = { fg = blue },
    NormalFloat = { bg = darker_black },
 
+   -- Renamer
+
+   RenamerTitle = { fg = black, bg = red },
+   RenamerBorder = { fg = red },
+
    -- Pmenu i.e completion menu
    Pmenu = { bg = black },
    PmenuSbar = { bg = one_bg },
