@@ -1,4 +1,5 @@
 local M = {}
+local g = vim.g
 local config = require("core.utils").load_config()
 
 M.get_theme_tb = function(name, type)
@@ -18,7 +19,7 @@ M.get_theme_tb = function(name, type)
 end
 
 M.get_colors = function(type)
-   local name = vim.g.nvchad_theme
+   local name = g.nvchad_theme
    return M.get_theme_tb(name, type)
 end
 
@@ -42,7 +43,7 @@ end
 
 M.load_theme = function()
    -- set bg option
-   local theme_type = M.get_theme_tb(vim.g.nvchad_theme, "type") -- dark/light
+   local theme_type = M.get_theme_tb(g.nvchad_theme, "type") -- dark/light
    vim.opt.bg = theme_type
 
    M.clear_highlights "BufferLine"
@@ -72,26 +73,50 @@ M.toggle_theme = function()
    local theme1 = themes[1]
    local theme2 = themes[2]
 
-   if vim.g.nvchad_theme == theme1 or vim.g.nvchad_theme == theme2 then
-      if vim.g.toggle_theme_icon == "   " then
-         vim.g.toggle_theme_icon = "   "
+   if g.nvchad_theme == theme1 or g.nvchad_theme == theme2 then
+      if g.toggle_theme_icon == "   " then
+         g.toggle_theme_icon = "   "
       else
-         vim.g.toggle_theme_icon = "   "
+         g.toggle_theme_icon = "   "
       end
    end
 
-   if vim.g.nvchad_theme == theme1 then
-      vim.g.nvchad_theme = theme2
+   if g.nvchad_theme == theme1 then
+      g.nvchad_theme = theme2
 
       require("nvchad").reload_theme()
       require("nvchad").change_theme(theme1, theme2)
-   elseif vim.g.nvchad_theme == theme2 then
-      vim.g.nvchad_theme = theme1
+   elseif g.nvchad_theme == theme2 then
+      g.nvchad_theme = theme1
 
       require("nvchad").reload_theme()
       require("nvchad").change_theme(theme2, theme1)
    else
       vim.notify "Set your current theme to one of those mentioned in the theme_toggle table (chadrc)"
+   end
+end
+
+M.toggle_transparency = function()
+   local transparency_status = require("core.utils").load_config().ui.transparency
+   local write_data = require("nvchad").write_data
+
+   local function save_chadrc_data()
+      local old_data = "transparency = " .. tostring(transparency_status)
+      local new_data = "transparency = " .. tostring(g.transparency)
+
+      write_data(old_data, new_data)
+   end
+
+   if g.transparency then
+      g.transparency = false
+
+      M.load_theme()
+      save_chadrc_data()
+   else
+      g.transparency = true
+
+      M.load_theme()
+      save_chadrc_data()
    end
 end
 

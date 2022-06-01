@@ -47,7 +47,7 @@ if ui.hl_override then
 end
 
 -- local set_transparent = nvchad.load_config().ui.transparency
-if ui.transparency then
+if vim.g.transparency then
    highlights = merge_tb(highlights, require "nv_glassy")
 end
 
