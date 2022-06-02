@@ -57,9 +57,6 @@ M.polish_hl = {
    TSInclude = {
       fg = M.base_30.purple,
    },
-   LuaTSField = {
-      fg = M.base_30.yellow,
-   },
    TSFieldKey = {
       fg = M.base_30.orange,
    },

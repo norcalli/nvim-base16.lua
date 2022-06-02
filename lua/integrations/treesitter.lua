@@ -167,7 +167,7 @@ return {
    },
 
    luaTSField = {
-      fg = theme.base07,
+      fg = theme.base0D,
    },
 
    TSFieldKey = {
