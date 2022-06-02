@@ -18,7 +18,7 @@ M.base_30 = {
    line = "#3c3d49", -- for lines like vertsplit
    green = "#50fa7b",
    vibrant_green = "#5dff88",
-   nord_blue = "#b389ef",
+   nord_blue = "#8b9bcd",
    blue = "#a1b1e3",
    yellow = "#F1FA8C",
    sun = "#FFFFA5",
@@ -29,7 +29,6 @@ M.base_30 = {
    cyan = "#8BE9FD",
    statusline_bg = "#2d2f3b",
    lightbg = "#41434f",
-   lightbg2 = "#363844",
    pmenu_bg = "#b389ef",
    folder_bg = "#BD93F9",
 }

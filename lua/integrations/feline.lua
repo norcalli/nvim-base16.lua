@@ -14,26 +14,11 @@ return {
 
    FelineIconSeparator = {
       fg = colors.nord_blue,
-      bg = colors.lightbg,
+      bg = colors.grey,
    },
 
-   FelineFileName = {
-      fg = colors.white,
-      bg = colors.lightbg,
-   },
-
-   FelineFileName_Separator = {
-      fg = colors.lightbg,
-      bg = colors.lightbg2,
-   },
-
-   FelineDirName = {
-      fg = colors.light_grey,
-      bg = colors.lightbg2,
-   },
-
-   FelineDirName_Separator = {
-      fg = colors.lightbg2,
+   FelineCwd = {
+      fg = colors.red,
       bg = colors.statusline_bg,
    },
 
@@ -65,7 +50,7 @@ return {
    },
 
    Feline_LspIcon = {
-      fg = colors.nord_blue,
+      fg = colors.teal,
       bg = colors.statusline_bg,
    },
 
@@ -77,58 +62,73 @@ return {
    -- MODES
 
    Feline_NormalMode = {
-      fg = colors.red,
-      bg = colors.one_bg,
+      fg = colors.nord_blue,
+      bg = colors.lightbg,
    },
 
    Feline_InsertMode = {
       fg = colors.dark_purple,
-      bg = colors.one_bg,
+      bg = colors.lightbg,
    },
 
    Feline_TerminalMode = {
       fg = colors.green,
-      bg = colors.one_bg,
+      bg = colors.lightbg,
    },
 
    Feline_VisualMode = {
       fg = colors.cyan,
-      bg = colors.one_bg,
+      bg = colors.lightbg,
    },
 
    Feline_ReplaceMode = {
       fg = colors.orange,
-      bg = colors.one_bg,
+      bg = colors.lightbg,
    },
 
    Feline_ConfirmMode = {
       fg = colors.teal,
-      bg = colors.one_bg,
+      bg = colors.lightbg,
    },
 
    Feline_CommandMode = {
       fg = colors.pink,
-      bg = colors.one_bg,
+      bg = colors.lightbg,
    },
 
    Feline_SelectMode = {
       fg = colors.nord_blue,
-      bg = colors.one_bg,
+      bg = colors.lightbg,
    },
 
    Feline_EmptySpace = {
-      fg = colors.one_bg2,
-      bg = colors.one_bg,
+      fg = colors.grey,
+      bg = colors.lightbg,
    },
 
-   Feline_EmptySpace_git = {
-      fg = colors.one_bg,
+   Feline_file_info = {
+      bg = colors.nord_blue,
+      fg = colors.lightbg,
+   },
+
+   Feline_file_info_sep = {
+      fg = colors.nord_blue,
+      bg = colors.grey,
+   },
+
+   Feline_nvim_gps = {
+      fg = colors.purple,
       bg = colors.statusline_bg,
+   },
+
+   Feline_time = {
+      fg = colors.red,
+      bg = colors.lightbg,
    },
 
    Feline_CurrentLine = {
       fg = colors.green,
-      bg = colors.one_bg,
+      bg = colors.lightbg,
    },
 
    Feline_PositionIcon = {
@@ -138,6 +138,6 @@ return {
 
    Feline_PositionSeparator = {
       fg = colors.green,
-      bg = colors.one_bg2,
+      bg = colors.grey,
    },
 }
