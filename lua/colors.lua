@@ -160,4 +160,28 @@ M.change_hex_lightness = function(hex, percent)
    return M.hsl2hex(h, s, l)
 end
 
+-- Compute a gradient between two colors
+-- @param hex1 The first hex color value
+-- @param hex2 The second hex color value
+-- @param steps The number of steps to compute
+-- @return A table of hex color values
+M.compute_gradient = function(hex1, hex2, steps)
+   local h1, s1, l1 = M.hex2hsl(hex1)
+   local h2, s2, l2 = M.hex2hsl(hex2)
+   local h, s, l
+   local h_step = (h2 - h1) / (steps - 1)
+   local s_step = (s2 - s1) / (steps - 1)
+   local l_step = (l2 - l1) / (steps - 1)
+   local gradient = {}
+
+   for i = 0, steps - 1 do
+      h = h1 + (h_step * i)
+      s = s1 + (s_step * i)
+      l = l1 + (l_step * i)
+      gradient[i + 1] = M.hsl2hex(h, s, l)
+   end
+
+   return gradient
+end
+
 return M
