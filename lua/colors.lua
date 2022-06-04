@@ -1,4 +1,4 @@
-M = {}
+local M = {}
 
 -- Convert a hex color value to RGB
 -- @param hex: The hex color value
