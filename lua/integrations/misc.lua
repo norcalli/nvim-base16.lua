@@ -141,22 +141,12 @@ return {
    },
 
    CursorLine = {
-      bg = theme.base00,
-      sp = "none",
-   },
-
-   CursorLineNr = {
-      bg = theme.base00,
+      bg = "none",
       sp = "none",
    },
 
    QuickFixLine = {
       bg = theme.base01,
-      sp = "none",
-   },
-
-   StatusLine = {
-      bg = "NONE",
       sp = "none",
    },
 
