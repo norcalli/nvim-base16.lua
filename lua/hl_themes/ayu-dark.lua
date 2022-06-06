@@ -2,57 +2,85 @@ local M = {}
 
 M.base_30 = {
    white = "#ced4df",
-   darker_black = "#090e13",
-   black = "#0F1419", --  nvim bg
-   black2 = "#151a1f",
-   one_bg = "#1f2429",
-   one_bg2 = "#282d32",
-   one_bg3 = "#30353a",
-   grey = "#33383d",
-   grey_fg = "#23282d",
-   grey_fg2 = "#2d3237",
-   light_grey = "#353a3f",
+   darker_black = "#05080e",
+   black = "#0B0E14", --  nvim bg
+   black2 = "#14171d",
+   one_bg = "#1c1f25",
+   one_bg2 = "#24272d",
+   one_bg3 = "#2b2e34",
+   grey = "#33363c",
+   grey_fg = "#3d4046",
+   grey_fg2 = "#46494f",
+   light_grey = "#4e5157",
    red = "#F07178",
-   baby_pink = "#FFB5C3",
-   pink = "#f9afbd",
-   line = "#151A1E", -- for lines like vertsplit
-   green = "#B8CC52",
-   vibrant_green = "#c2d65c",
+   baby_pink = "#ff949b",
+   pink = "#ff8087",
+   line = "#24272d", -- for lines like vertsplit
+   green = "#AAD84C",
+   vibrant_green = "#b9e75b",
    blue = "#36A3D9",
    nord_blue = "#43b0e6",
    yellow = "#E7C547",
-   sun = "#efcd4f",
-   purple = "#D2A6FF",
+   sun = "#f0df8a",
+   purple = "#c79bf4",
    dark_purple = "#A37ACC",
-   teal = "#95E6CB",
-   orange = "#FF8F40",
-   cyan = "#a9fadf",
-   statusline_bg = "#13181d",
-   lightbg = "20252a",
-   lightbg2 = "#1a1f24",
-   pmenu_bg = "#E6E1CF",
-   folder_bg = "#39BAE6",
+   teal = "#74c5aa",
+   orange = "#ffa455",
+   cyan = "#95E6CB",
+   statusline_bg = "#12151b",
+   lightbg = "#24272d",
+   pmenu_bg = "#ff9445",
+   folder_bg = "#98a3af",
 }
 
 M.base_16 = {
-   base00 = "#171a1f",
-   base01 = "#2D3640",
-   base02 = "#253340",
-   base03 = "#5C6773",
-   base04 = "#383d43",
-   base05 = "#E6E1CF",
-   base06 = "#D9D7CE",
-   base07 = "#212733",
-   base08 = "#F07178",
+   base00 = "#0B0E14",
+   base01 = "#1c1f25",
+   base02 = "#24272d",
+   base03 = "#2b2e34",
+   base04 = "#33363c",
+   base05 = "#c9c7be",
+   base06 = "#E6E1CF",
+   base07 = "#D9D7CE",
+   base08 = "#c9c7be",
    base09 = "#FFEE99",
-   base0A = "#565B66",
-   base0B = "#B8CC52",
-   base0C = "#5b98a9",
-   base0D = "#dcf076",
-   base0E = "#FF7733",
-   base0F = "#E6B673",
+   base0A = "#56c3f9",
+   base0B = "#AAD84C",
+   base0C = "#FFB454",
+   base0D = "#F07174",
+   base0E = "#FFB454",
+   base0F = "#CBA6F7",
+}
+
+M.polish_hl = {
+
+   TSTagDelimiter = {
+      fg = M.base_30.cyan,
+   },
+
+   TSFunction = {
+      fg = M.base_30.orange,
+   },
+
+   luaTSField = {
+      fg = M.base_16.base0D,
+   },
+
+   TSParameter = {
+      fg = M.base_16.base0F,
+   },
+
+   TSConstructor = {
+      fg = M.base_16.base0A,
+   },
+
+   TSTagAttribute = {
+      fg = M.base_30.orange,
+   },
 }
 
 M = require("base46").override_theme(M, "ayu-dark")
+
+M.type = "dark"
 
 return M
