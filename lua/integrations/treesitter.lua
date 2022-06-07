@@ -87,7 +87,7 @@ return {
    },
 
    TSPunctSpecial = {
-      fg = theme.base05,
+      fg = theme.base08,
       sp = "none",
    },
 
