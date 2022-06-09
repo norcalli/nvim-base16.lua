@@ -182,18 +182,18 @@ return {
    },
 
    St_cwd_text = {
-      fg = colors.red,
+      fg = colors.white,
       bg = colors.lightbg,
    },
 
    St_cwd_sep = {
       fg = colors.red,
-      bg = colors.grey,
+      bg = colors.statusline_bg,
    },
 
    St_pos_sep = {
       fg = colors.green,
-      bg = colors.grey,
+      bg = colors.lightbg,
    },
 
    St_pos_icon = {
