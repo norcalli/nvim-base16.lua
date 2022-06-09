@@ -38,7 +38,7 @@ return {
    RenamerBorder = { fg = red },
 
    -- Pmenu i.e completion menu
-   Pmenu = { bg = black },
+   Pmenu = { bg = one_bg },
    PmenuSbar = { bg = one_bg },
    PmenuSel = { bg = pmenu_bg, fg = black },
    PmenuThumb = { bg = grey },
