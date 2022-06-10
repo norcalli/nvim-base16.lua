@@ -7,6 +7,11 @@ return {
       bg = colors.black2,
    },
 
+   BufferlineIndicatorVisible = {
+      fg = colors.black2,
+      bg = colors.black2,
+   },
+
    -- buffers
    BufferLineBufferSelected = {
       fg = colors.white,

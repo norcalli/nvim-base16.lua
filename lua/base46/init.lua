@@ -3,7 +3,7 @@ local g = vim.g
 local config = require("core.utils").load_config()
 
 M.get_theme_tb = function(name, type)
-   local default_path = "hl_themes." .. name
+   local default_path = "base46.themes." .. name
    local user_path = "custom.themes." .. name
 
    local present1, default_theme = pcall(require, default_path)
@@ -46,15 +46,8 @@ M.load_theme = function()
    local theme_type = M.get_theme_tb(g.nvchad_theme, "type") -- dark/light
    vim.opt.bg = theme_type
 
-   M.clear_highlights "BufferLine"
-   M.clear_highlights "TS"
-
-   -- reload highlights for theme switcher
-   require("plenary.reload").reload_module "integrations"
-   require("plenary.reload").reload_module "chadlights"
-   require("plenary.reload").reload_module "custom"
-
-   require "chadlights"
+   require "base46.term"
+   require "base46.chadlights"
 end
 
 M.override_theme = function(default_theme, theme_name)

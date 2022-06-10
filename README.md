@@ -6,7 +6,7 @@
 
 ## Contribute for new themes 
 
-- go to hl_themes and add your file, ex: atheme.lua
+- go to base46/themes and add your file, ex: atheme.lua
 ```lua
 -- atheme.lua file be like 
 

@@ -177,7 +177,7 @@ return {
    },
 
    St_cwd_icon = {
-      fg = colors.black,
+      fg = colors.one_bg,
       bg = colors.red,
    },
 
