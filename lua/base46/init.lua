@@ -46,6 +46,16 @@ M.load_theme = function()
    local theme_type = M.get_theme_tb(g.nvchad_theme, "type") -- dark/light
    vim.opt.bg = theme_type
 
+   local reload = require("plenary.reload").reload_module
+   local clear_hl = require("base46").clear_highlights
+
+   clear_hl "BufferLine"
+   clear_hl "TS"
+
+   -- reload highlights for theme switcher
+   reload "base46.integrations"
+   reload "base46.chadlights"
+
    require "base46.term"
    require "base46.chadlights"
 end
