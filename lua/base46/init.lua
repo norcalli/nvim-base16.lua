@@ -88,6 +88,7 @@ M.load_theme = function()
    end
 
    M.load_highlight "defaults"
+   M.load_highlight "statusline"
 end
 
 M.override_theme = function(default_theme, theme_name)
