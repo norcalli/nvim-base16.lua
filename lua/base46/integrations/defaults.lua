@@ -1,6 +1,34 @@
+local colors = require("base46").get_colors "base_30"
 local theme = require("base46").get_colors "base_16"
 
 return {
+   MatchWord = {
+      bg = colors.grey,
+      fg = colors.white,
+   },
+
+   Pmenu = { bg = colors.one_bg },
+   PmenuSbar = { bg = colors.one_bg },
+   PmenuSel = { bg = colors.pmenu_bg, fg = colors.black },
+   PmenuThumb = { bg = colors.grey },
+
+   MatchParen = { link = "MatchWord" },
+
+   Comment = { fg = colors.grey_fg },
+
+   CursorLineNr = { fg = colors.white },
+   LineNr = { fg = colors.grey },
+
+   -- floating windows
+   FloatBorder = { fg = colors.blue },
+   NormalFloat = { bg = colors.darker_black },
+
+   NvimInternalError = { fg = colors.red },
+   WinSeparator = { fg = colors.line },
+
+   -- packer
+   packerPackageName = { fg = colors.red },
+
    Normal = {
       fg = theme.base05,
       bg = theme.base00,
@@ -151,7 +179,6 @@ return {
    },
 
    -- spell
-
    SpellBad = {
       undercurl = true,
       sp = theme.base08,

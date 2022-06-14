@@ -1,7 +1,6 @@
-local ui = require("core.utils").load_config().ui
-
 local merge_tb = require("base46").merge_tb
 
+local ui = require("core.utils").load_config().ui
 local highlights = {}
 local hl_dir = vim.fn.stdpath "data" .. "/site/pack/packer/opt/base46/lua/base46/integrations"
 
@@ -51,7 +50,4 @@ if vim.g.transparency then
    highlights = merge_tb(highlights, require "base46.glassy")
 end
 
--- finally set all highlights :D
-for hl, col in pairs(highlights) do
-   vim.api.nvim_set_hl(0, hl, col)
-end
+return highlights

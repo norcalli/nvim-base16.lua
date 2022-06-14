@@ -41,23 +41,53 @@ M.clear_highlights = function(hl_group)
    end
 end
 
-M.load_theme = function()
-   -- set bg option
-   local theme_type = M.get_theme_tb(g.nvchad_theme, "type") -- dark/light
-   vim.opt.bg = theme_type
-
+M.load_all_highlights = function()
+   -- reload highlights for theme switcher
    local reload = require("plenary.reload").reload_module
    local clear_hl = require("base46").clear_highlights
 
    clear_hl "BufferLine"
    clear_hl "TS"
 
-   -- reload highlights for theme switcher
    reload "base46.integrations"
    reload "base46.chadlights"
 
-   require "base46.term"
-   require "base46.chadlights"
+   local hl_groups = require "base46.chadlights"
+
+   for hl, col in pairs(hl_groups) do
+      vim.api.nvim_set_hl(0, hl, col)
+   end
+end
+
+M.load_highlight = function(group)
+   local default_hl = require("base46.integrations." .. group)
+   local user_hl = config.ui.hl_override
+
+   if vim.g.transparency then
+      user_hl = M.merge_tb(user_hl, require "base46.glassy")
+   end
+
+   for key, value in pairs(user_hl) do
+      if default_hl[key] then
+         default_hl[key] = value
+      end
+   end
+
+   for hl, col in pairs(default_hl) do
+      vim.api.nvim_set_hl(0, hl, col)
+   end
+end
+
+M.load_theme = function()
+   -- set bg option
+   local theme_type = M.get_theme_tb(g.nvchad_theme, "type") -- dark/light
+   vim.opt.bg = theme_type
+
+   if vim.g.theme_switcher_loaded then
+      M.load_all_highlights()
+   end
+
+   M.load_highlight "defaults"
 end
 
 M.override_theme = function(default_theme, theme_name)
@@ -100,7 +130,7 @@ M.toggle_theme = function()
 end
 
 M.toggle_transparency = function()
-   local transparency_status = require("core.utils").load_config().ui.transparency
+   local transparency_status = config.ui.transparency
    local write_data = require("nvchad").write_data
 
    local function save_chadrc_data()
@@ -113,12 +143,12 @@ M.toggle_transparency = function()
    if g.transparency then
       g.transparency = false
 
-      M.load_theme()
+      M.load_all_highlights()
       save_chadrc_data()
    else
       g.transparency = true
 
-      M.load_theme()
+      M.load_all_highlights()
       save_chadrc_data()
    end
 end
