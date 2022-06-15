@@ -16,7 +16,7 @@ for _, file in ipairs(hl_files) do
 end
 
 -- polish theme specific highlights
-local polish_hl = require("base46").get_colors "polish_hl"
+local polish_hl = require("base46").get_theme_tb "polish_hl"
 
 if polish_hl then
    highlights = merge_tb(highlights, polish_hl)
@@ -25,7 +25,7 @@ end
 -- override user highlights if there are any
 if ui.hl_override then
    local user_highlights = ui.hl_override
-   local colors = require("base46").get_colors "base_30"
+   local colors = require("base46").get_theme_tb "base_30"
 
    -- fg = "white" set by user becomes fg = colors["white"]
    -- so no need for the user to import colors

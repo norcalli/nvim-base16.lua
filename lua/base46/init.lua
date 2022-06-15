@@ -2,9 +2,9 @@ local M = {}
 local g = vim.g
 local config = require("core.utils").load_config()
 
-M.get_theme_tb = function(name, type)
-   local default_path = "base46.themes." .. name
-   local user_path = "custom.themes." .. name
+M.get_theme_tb = function(type)
+   local default_path = "base46.themes." .. g.nvchad_theme
+   local user_path = "custom.themes." .. g.nvchad_theme
 
    local present1, default_theme = pcall(require, default_path)
    local present2, user_theme = pcall(require, user_path)
@@ -16,11 +16,6 @@ M.get_theme_tb = function(name, type)
    else
       error "No such theme bruh >_< "
    end
-end
-
-M.get_colors = function(type)
-   local name = g.nvchad_theme
-   return M.get_theme_tb(name, type)
 end
 
 M.merge_tb = function(table1, table2)
@@ -80,12 +75,8 @@ end
 
 M.load_theme = function()
    -- set bg option
-   local theme_type = M.get_theme_tb(g.nvchad_theme, "type") -- dark/light
+   local theme_type = M.get_theme_tb "type" -- dark/light
    vim.opt.bg = theme_type
-
-   if vim.g.theme_switcher_loaded then
-      M.load_all_highlights()
-   end
 
    M.load_highlight "defaults"
    M.load_highlight "statusline"
