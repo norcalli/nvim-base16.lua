@@ -17,6 +17,7 @@ M.base_30 = {
    pink = "#bb7cb6",
    line = "#2e2e2e", -- for lines like vertsplit
    green = "#B5CEA8",
+   green1 = "#4EC994",
    vibrant_green = "#bfd8b2",
    blue = "#569CD6",
    nord_blue = "#60a6e0",
@@ -24,7 +25,7 @@ M.base_30 = {
    sun = "#e1c487",
    purple = "#c68aee",
    dark_purple = "#b77bdf",
-   teal = "#4EC994",
+   teal = "#4294D6",
    orange = "#d3967d",
    cyan = "#9CDCFE",
    statusline_bg = "#242424",
@@ -50,10 +51,13 @@ M.base_16 = {
    base0C = "#9CDCFE",
    base0D = "#DCDCAA",
    base0E = "#C586C0",
-   base0F = "#CE9178",
+   base0F = "#E9E9E9",
 }
 
 M.polish_hl = {
+   TSParameter = {
+      fg = M.base_30.blue,
+   },
 
    TSKeyword = {
       fg = M.base_30.blue,
@@ -64,15 +68,19 @@ M.polish_hl = {
    },
 
    luaTSField = {
-      fg = M.base_30.red,
+      fg = M.base_30.teal,
    },
 
    TSFieldKey = {
-      fg = M.base_30.teal,
+      fg = M.base_30.green1,
    },
 
    TSKeywordReturn = {
       fg = M.base_16.base0E,
+   },
+
+   TSKeywordFunction = {
+      fg = M.base_30.teal,
    },
 }
 

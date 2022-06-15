@@ -39,10 +39,9 @@ end
 M.load_all_highlights = function()
    -- reload highlights for theme switcher
    local reload = require("plenary.reload").reload_module
-   local clear_hl = require("base46").clear_highlights
 
-   clear_hl "BufferLine"
-   clear_hl "TS"
+   M.clear_highlights "BufferLine"
+   M.clear_highlights "TS"
 
    reload "base46.integrations"
    reload "base46.chadlights"
@@ -54,21 +53,64 @@ M.load_all_highlights = function()
    end
 end
 
-M.load_highlight = function(group)
-   local default_hl = require("base46.integrations." .. group)
-   local user_hl = config.ui.hl_override
+M.turn_str_to_color = function(tb)
+   local colors = M.get_theme_tb "base_30"
 
-   if vim.g.transparency then
-      user_hl = M.merge_tb(user_hl, require "base46.glassy")
-   end
-
-   for key, value in pairs(user_hl) do
-      if default_hl[key] then
-         default_hl[key] = value
+   for _, groups in pairs(tb) do
+      for k, v in pairs(groups) do
+         if k == "fg" or k == "bg" then
+            if v:sub(1, 1) == "#" or v == "none" or v == "NONE" then
+            else
+               groups[k] = colors[v]
+            end
+         end
       end
    end
 
-   for hl, col in pairs(default_hl) do
+   return tb
+end
+
+M.extend_default_hl = function(highlights)
+   local glassy = require "base46.glassy"
+   local polish_hl = M.get_theme_tb "polish_hl"
+
+   if polish_hl then
+      -- polish themes
+      for key, value in pairs(polish_hl) do
+         if highlights[key] then
+            highlights[key] = value
+         end
+      end
+   end
+
+   -- transparency
+   if vim.g.transparency then
+      -- highlights_tb = M.merge_tb(highlights_tb,)
+      for key, value in pairs(glassy) do
+         if highlights[key] then
+            highlights[key] = value
+         end
+      end
+   end
+
+   local overriden_hl = M.turn_str_to_color(config.ui.hl_override)
+
+   for key, value in pairs(overriden_hl) do
+      if highlights[key] then
+         highlights[key] = value
+      end
+   end
+end
+
+M.load_highlight = function(group)
+   if type(group) == "string" then
+      group = require("base46.integrations." .. group)
+      M.extend_default_hl(group)
+   else
+      group = group
+   end
+
+   for hl, col in pairs(group) do
       vim.api.nvim_set_hl(0, hl, col)
    end
 end
@@ -80,6 +122,7 @@ M.load_theme = function()
 
    M.load_highlight "defaults"
    M.load_highlight "statusline"
+   M.load_highlight(M.turn_str_to_color(config.ui.hl_add))
 end
 
 M.override_theme = function(default_theme, theme_name)

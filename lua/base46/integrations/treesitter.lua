@@ -41,6 +41,16 @@ return {
       sp = "none",
    },
 
+   TSKeywordFunction = {
+      fg = theme.base0E,
+      sp = "none",
+   },
+
+   TSKeywordReturn = {
+      fg = theme.base0E,
+      sp = "none",
+   },
+
    TSFuncBuiltin = {
       fg = theme.base0D,
       sp = "none",
@@ -150,6 +160,10 @@ return {
    TSVariableBuiltin = {
       fg = theme.base09,
       sp = "none",
+   },
+
+   TSVariable = {
+      fg = theme.base05,
    },
 
    TSDefinition = {

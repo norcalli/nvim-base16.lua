@@ -32,6 +32,10 @@ return {
       fg = theme.base09,
    },
 
+   Variable = {
+      fg = theme.base05,
+   },
+
    Function = {
       fg = theme.base0D,
    },
