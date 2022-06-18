@@ -37,11 +37,14 @@ M.clear_highlights = function(hl_group)
 end
 
 M.load_all_highlights = function()
+   vim.opt.bg = require("base46").get_theme_tb "type" -- dark/light
+
    -- reload highlights for theme switcher
    local reload = require("plenary.reload").reload_module
+   local clear_hl = require("base46").clear_highlights
 
-   M.clear_highlights "BufferLine"
-   M.clear_highlights "TS"
+   clear_hl "BufferLine"
+   clear_hl "TS"
 
    reload "base46.integrations"
    reload "base46.chadlights"
@@ -174,12 +177,10 @@ M.toggle_transparency = function()
 
    if g.transparency then
       g.transparency = false
-
       M.load_all_highlights()
       save_chadrc_data()
    else
       g.transparency = true
-
       M.load_all_highlights()
       save_chadrc_data()
    end

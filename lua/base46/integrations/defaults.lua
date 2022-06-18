@@ -30,6 +30,8 @@ return {
    PackerPackageName = { fg = colors.red },
    PackerSuccess = { fg = colors.green },
    PackeProgress = { fg = colors.blue },
+   PackerOutput = { fg = colors.red },
+   PackerStatus = { fg = colors.blue },
 
    Normal = {
       fg = theme.base05,

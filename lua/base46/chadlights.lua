@@ -4,7 +4,7 @@ local ui = require("core.utils").load_config().ui
 local highlights = {}
 
 -- push hl_dir file names to table
-local hl_files = vim.fn.stdpath "data" .. "/site/pack/packer/opt/base46/lua/base46/integrations"
+local hl_files = vim.fn.stdpath "data" .. "/site/pack/packer/start/base46/lua/base46/integrations"
 
 for _, file in ipairs(vim.fn.readdir(hl_files)) do
    local integration = require("base46.integrations." .. vim.fn.fnamemodify(file, ":r"))
