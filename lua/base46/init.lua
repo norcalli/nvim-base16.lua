@@ -85,10 +85,9 @@ M.extend_default_hl = function(highlights)
 
    -- transparency
    if vim.g.transparency then
-      -- highlights_tb = M.merge_tb(highlights_tb,)
       for key, value in pairs(glassy) do
          if highlights[key] then
-            highlights[key] = value
+            highlights[key] = M.merge_tb(highlights[key], value)
          end
       end
    end
@@ -97,7 +96,7 @@ M.extend_default_hl = function(highlights)
 
    for key, value in pairs(overriden_hl) do
       if highlights[key] then
-         highlights[key] = value
+         highlights[key] = M.merge_tb(highlights[key], value)
       end
    end
 end
@@ -106,8 +105,6 @@ M.load_highlight = function(group)
    if type(group) == "string" then
       group = require("base46.integrations." .. group)
       M.extend_default_hl(group)
-   else
-      group = group
    end
 
    for hl, col in pairs(group) do

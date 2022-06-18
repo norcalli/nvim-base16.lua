@@ -27,7 +27,9 @@ return {
    WinSeparator = { fg = colors.line },
 
    -- packer
-   packerPackageName = { fg = colors.red },
+   PackerPackageName = { fg = colors.red },
+   PackerSuccess = { fg = colors.green },
+   PackeProgress = { fg = colors.blue },
 
    Normal = {
       fg = theme.base05,
