@@ -2,16 +2,12 @@ local merge_tb = require("base46").merge_tb
 
 local ui = require("core.utils").load_config().ui
 local highlights = {}
-local hl_dir = vim.fn.stdpath "data" .. "/site/pack/packer/opt/base46/lua/base46/integrations"
 
 -- push hl_dir file names to table
-local hl_files = require("plenary.scandir").scan_dir(hl_dir, {})
+local hl_files = vim.fn.stdpath "data" .. "/site/pack/packer/start/base46/lua/base46/integrations"
 
-for _, file in ipairs(hl_files) do
-   local a = vim.fn.fnamemodify(file, ":t")
-   a = vim.fn.fnamemodify(a, ":r")
-
-   local integration = require("base46.integrations." .. a)
+for _, file in ipairs(vim.fn.readdir(hl_files)) do
+   local integration = require("base46.integrations." .. vim.fn.fnamemodify(file, ":r"))
    highlights = merge_tb(highlights, integration)
 end
 

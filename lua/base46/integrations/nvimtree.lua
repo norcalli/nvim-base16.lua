@@ -29,4 +29,14 @@ return {
    NvimTreeGitNew = {
       fg = colors.yellow,
    },
+
+   NvimTreeSpecialFile = {
+      fg = colors.yellow,
+      bold = true,
+   },
+
+   NvimTreeRootFolder = {
+      fg = colors.red,
+      bold = true,
+   },
 }
