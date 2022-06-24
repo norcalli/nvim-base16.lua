@@ -15,7 +15,7 @@ M.base_30 = {
    red = "#ef8891",
    baby_pink = "#fca2aa",
    pink = "#fca2af",
-   line = "#20272e", -- for lines like vertsplit
+   line = "#272e35", -- for lines like vertsplit
    green = "#9fe8c3",
    vibrant_green = "#9ce5c0",
    blue = "#99aee5",
@@ -52,7 +52,7 @@ M.base_16 = {
    base06 = "#d3d9e4",
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "javacafe")
 

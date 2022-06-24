@@ -57,11 +57,9 @@ M.polish_hl = {
    TSConstructor = { fg = M.base_30.orange },
    TSVariable = { link = "TSConstructor" },
    TSConditional = { link = "TSInclude" },
-   Feline_LspIcon = { fg = M.base_30.teal },
-   FelineIcon = { bg = M.base_30.teal },
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "wombat")
 

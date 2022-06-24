@@ -60,9 +60,14 @@ M.polish_hl = {
    WhichKey = {
       fg = M.base_30.white,
    },
+
+   TbLineThemeToggleBtn = {
+      fg = M.base_30.black,
+      bg = M.base_30.white,
+   },
 }
 
-M.type = "light"
+vim.opt.bg = "light"
 
 M = require("base46").override_theme(M, "blossom")
 

@@ -70,7 +70,7 @@ M.polish_hl = {
    },
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "nightowl")
 

@@ -52,7 +52,7 @@ M.base_16 = {
    base0F = "#986801",
 }
 
-M.type = "light"
+vim.opt.bg = "light"
 
 M.polish_hl = {
    WhichKeyDesc = {
@@ -88,19 +88,9 @@ M.polish_hl = {
       fg = M.base_16.base05,
    },
 
-   FelineDirName = {
+   TbLineThemeToggleBtn = {
       fg = M.base_30.black,
-      bg = M.base_30.nord_blue,
-   },
-
-   FelineDirName_Separator = {
-      fg = M.base_30.nord_blue,
-      bg = M.base_30.statusline_bg,
-   },
-
-   FelineFileName_Separator = {
-      fg = M.base_30.lightbg,
-      bg = M.base_30.nord_blue,
+      bg = M.base_30.white,
    },
 }
 

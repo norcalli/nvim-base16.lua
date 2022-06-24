@@ -84,9 +84,14 @@ M.polish_hl = {
    NvimTreeFolderName = {
       fg = "#4e565c",
    },
+
+   TbLineThemeToggleBtn = {
+      fg = M.base_30.black,
+      bg = M.base_30.white,
+   },
 }
 
-M.type = "light"
+vim.opt.bg = "light"
 
 M = require("base46").override_theme(M, "everforest_light")
 

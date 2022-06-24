@@ -81,6 +81,6 @@ M.polish_hl = {
 
 M = require("base46").override_theme(M, "ayu-dark")
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 return M

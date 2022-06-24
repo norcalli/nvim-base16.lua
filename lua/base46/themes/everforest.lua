@@ -52,7 +52,7 @@ M.base_16 = {
    base0F = "#e67e80",
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M.polish_hl = {
    TSPunctBracket = {

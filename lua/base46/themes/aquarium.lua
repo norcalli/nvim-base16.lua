@@ -52,7 +52,7 @@ M.base_16 = {
    base0F = "#eAc1c1",
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "aquarium")
 

@@ -52,7 +52,7 @@ M.base_16 = {
    base0F = "#90a0a0",
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "nightlamp")
 

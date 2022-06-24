@@ -52,7 +52,7 @@ M.base_16 = {
    base0F = "#e05f65",
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "decay")
 

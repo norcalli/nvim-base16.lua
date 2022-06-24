@@ -1,6 +1,6 @@
 local colors = require("base46").get_theme_tb "base_16"
 
-vim.g.terminal_color_0 = colors.base02
+vim.g.terminal_color_0 = colors.base01
 vim.g.terminal_color_1 = colors.base08
 vim.g.terminal_color_2 = colors.base0B
 vim.g.terminal_color_3 = colors.base0A

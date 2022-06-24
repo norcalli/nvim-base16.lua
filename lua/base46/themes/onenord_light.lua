@@ -89,6 +89,6 @@ M.polish_hl = {
 
 M = require("base46").override_theme(M, "onenord_light")
 
-M.type = "light"
+vim.opt.bg = "light"
 
 return M

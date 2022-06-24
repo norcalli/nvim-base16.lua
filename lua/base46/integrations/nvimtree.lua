@@ -30,6 +30,10 @@ return {
       fg = colors.yellow,
    },
 
+   NvimTreeGitDeleted = {
+      fg = colors.red,
+   },
+
    NvimTreeSpecialFile = {
       fg = colors.yellow,
       bold = true,
