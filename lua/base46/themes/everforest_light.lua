@@ -27,8 +27,8 @@ M.base_30 = {
    teal = "#69a59d",
    orange = "#F7954F",
    cyan = "#7521e9",
-   statusline_bg = "#f0ead9",
-   lightbg = "#c9c3b2",
+   statusline_bg = "#ede7d6",
+   lightbg = "#d3cdbc",
    pmenu_bg = "#5f9b93",
    folder_bg = "#747b6e",
 }
@@ -53,42 +53,18 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-   DiffAdd = {
-      fg = M.base_30.green,
-   },
-
-   TSTag = {
-      fg = M.base_30.orange,
-   },
-
-   TSField = {
-      fg = M.base_16.base05,
-   },
-
-   TSInclude = {
-      fg = M.base_16.base08,
-   },
-
-   TSConstructor = {
-      fg = M.base_30.blue,
-   },
-
-   WhichKeyDesc = {
-      fg = M.base_30.white,
-   },
-
-   WhichKey = {
-      fg = M.base_30.white,
-   },
-
-   NvimTreeFolderName = {
-      fg = "#4e565c",
-   },
-
-   TbLineThemeToggleBtn = {
-      fg = M.base_30.black,
-      bg = M.base_30.white,
-   },
+   DiffAdd = { fg = M.base_30.green },
+   TSTag = { fg = M.base_30.orange },
+   TSField = { fg = M.base_16.base05 },
+   TSInclude = { fg = M.base_16.base08 },
+   TSConstructor = { fg = M.base_30.blue },
+   WhichKeyDesc = { fg = M.base_30.white },
+   WhichKey = { fg = M.base_30.white },
+   NvimTreeFolderName = { fg = "#4e565c" },
+   TbLineThemeToggleBtn = { bg = M.base_30.one_bg },
+   Pmenu = { bg = M.base_30.black2 },
+   IndentBlanklineContextStart = { bg = M.base_30.black2 },
+   St_pos_text = { fg = M.base_30.white },
 }
 
 vim.opt.bg = "light"

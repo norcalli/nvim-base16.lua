@@ -53,21 +53,10 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-   TSParameter = {
-      fg = M.base_30.orange,
-   },
-
-   TSKeywordReturn = {
-      fg = M.base_30.cyan,
-   },
-
-   TSConditional = {
-      fg = M.base_30.cyan,
-   },
-
-   PmenuSel = {
-      bg = M.base_30.blue,
-   },
+   TSParameter = { fg = M.base_30.orange },
+   TSKeywordReturn = { fg = M.base_30.cyan },
+   TSConditional = { fg = M.base_30.cyan },
+   PmenuSel = { bg = M.base_30.blue },
 }
 
 vim.opt.bg = "dark"

@@ -55,21 +55,10 @@ M.base_16 = {
 vim.opt.bg = "dark"
 
 M.polish_hl = {
-   TSPunctBracket = {
-      fg = M.base_30.red,
-   },
-
-   TSTag = {
-      fg = M.base_30.orange,
-   },
-
-   TSTagDelimiter = {
-      fg = M.base_30.green,
-   },
-
-   TSConstructor = {
-      fg = "#7fbbb3",
-   },
+   TSPunctBracket = { fg = M.base_30.red },
+   TSTag = { fg = M.base_30.orange },
+   TSTagDelimiter = { fg = M.base_30.green },
+   TSConstructor = { fg = "#7fbbb3" },
 }
 
 M = require("base46").override_theme(M, "everforest")

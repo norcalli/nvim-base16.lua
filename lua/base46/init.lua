@@ -77,11 +77,11 @@ M.extend_default_hl = function(highlights)
    local glassy = require "base46.glassy"
    local polish_hl = M.get_theme_tb "polish_hl"
 
+   -- polish themes
    if polish_hl then
-      -- polish themes
       for key, value in pairs(polish_hl) do
          if highlights[key] then
-            highlights[key] = value
+            highlights[key] = M.merge_tb(highlights[key], value)
          end
       end
    end

@@ -55,43 +55,16 @@ M.base_16 = {
 vim.opt.bg = "light"
 
 M.polish_hl = {
-   WhichKeyDesc = {
-      fg = M.base_30.white,
-   },
-
-   WhichKey = {
-      fg = M.base_30.white,
-   },
-
-   TelescopePromptPrefix = {
-      fg = M.base_30.white,
-   },
-
-   TelescopeSelection = {
-      bg = M.base_30.one_bg,
-      fg = M.base_30.white,
-   },
-
-   TSPunctBracket = {
-      fg = M.base_30.nord_blue,
-   },
-
-   NormalFloat = {
-      bg = M.base_30.black,
-   },
-
-   FloatBorder = {
-      fg = M.base_16.base05,
-   },
-
-   DiffAdd = {
-      fg = M.base_16.base05,
-   },
-
-   TbLineThemeToggleBtn = {
-      fg = M.base_30.black,
-      bg = M.base_30.white,
-   },
+   TelescopePromptPrefix = { fg = M.base_30.white },
+   TelescopeSelection = { bg = M.base_30.one_bg, fg = M.base_30.white },
+   TSPunctBracket = { fg = M.base_30.nord_blue },
+   NormalFloat = { bg = M.base_30.black2 },
+   FloatBorder = { fg = M.base_16.base05 },
+   DiffAdd = { fg = M.base_16.base05 },
+   TbLineThemeToggleBtn = { bg = M.base_30.one_bg3 },
+   WhichKeyDesc = { fg = M.base_30.white },
+   Pmenu = { bg = M.base_30.black2 },
+   St_pos_text = { fg = M.base_30.white },
 }
 
 M = require("base46").override_theme(M, "one_light")

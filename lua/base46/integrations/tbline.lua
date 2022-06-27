@@ -36,6 +36,12 @@ return {
       bg = colors.black2,
    },
 
+   TblineTabNewBtn = {
+      fg = colors.white,
+      bg = colors.one_bg3,
+      bold = true,
+   },
+
    TbLineTabOn = {
       fg = colors.black,
       bg = colors.nord_blue,
@@ -60,12 +66,12 @@ return {
    TbLineThemeToggleBtn = {
       bold = true,
       fg = colors.white,
-      bg = colors.black,
+      bg = colors.one_bg3,
    },
 
-   TblineTabNewBtn = {
-      fg = colors.white,
-      bg = colors.one_bg3,
+   TbLineCloseAllBufsBtn = {
       bold = true,
+      bg = colors.red,
+      fg = colors.black,
    },
 }

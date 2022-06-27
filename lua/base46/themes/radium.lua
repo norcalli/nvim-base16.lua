@@ -53,13 +53,8 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-   TSPunctBracket = {
-      fg = M.base_16.base07,
-   },
-
-   TSParenthesis = {
-     link = "TSPunctBracket"
-   },
+   TSPunctBracket = { fg = M.base_16.base07 },
+   TSParenthesis = { link = "TSPunctBracket" },
 }
 
 vim.opt.bg = "dark"

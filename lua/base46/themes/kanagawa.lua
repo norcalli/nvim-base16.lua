@@ -53,17 +53,9 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-   TSInclude = {
-      fg = M.base_30.purple,
-   },
-
-   TSURI = {
-      fg = M.base_30.blue,
-   },
-
-   TSTagDelimiter = {
-      fg = M.base_30.red,
-   },
+   TSInclude = { fg = M.base_30.purple },
+   TSURI = { fg = M.base_30.blue },
+   TSTagDelimiter = { fg = M.base_30.red },
 }
 
 vim.opt.bg = "dark"

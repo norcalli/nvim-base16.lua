@@ -27,8 +27,8 @@ M.base_30 = {
    teal = "#4b6987",
    orange = "#cc836c",
    cyan = "#75998e",
-   statusline_bg = "#dfd8d5",
-   lightbg = "#cac3c0",
+   statusline_bg = "#dcd5d2",
+   lightbg = "#cdc6c3",
    pmenu_bg = "#857e7b",
    folder_bg = "#746d6a",
 }
@@ -53,18 +53,16 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-   WhichKeyDesc = {
-      fg = M.base_30.white,
-   },
-
-   WhichKey = {
-      fg = M.base_30.white,
-   },
+   WhichKeyDesc = { fg = M.base_30.white },
+   WhichKey = { fg = M.base_30.white },
 
    TbLineThemeToggleBtn = {
       fg = M.base_30.black,
       bg = M.base_30.white,
    },
+
+   IndentBlanklineContextStart = { bg = M.base_30.black2 },
+   St_pos_text = { fg = M.base_30.white },
 }
 
 vim.opt.bg = "light"
