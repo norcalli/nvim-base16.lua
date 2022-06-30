@@ -91,6 +91,10 @@ return {
       sp = "none",
    },
 
+   TSPunctBracket = {
+      fg = theme.base0F,
+   },
+
    TSPunctDelimiter = {
       fg = theme.base0F,
       sp = "none",
@@ -185,6 +189,10 @@ return {
    },
 
    TSFieldKey = {
+      fg = theme.base08,
+   },
+
+   TSProperty = {
       fg = theme.base08,
    },
 }
