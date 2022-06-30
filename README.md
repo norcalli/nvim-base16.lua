@@ -20,7 +20,7 @@ M.base_16 = {
   -- some colors 
 }
 
-M.type = "dark" -- this can be either dark or light
+vim.opt.bg = "dark" -- this can be either dark or light
 
 M = require("base46").override_theme(M, "atheme")
 
