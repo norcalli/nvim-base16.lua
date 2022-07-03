@@ -28,4 +28,5 @@ return {
    DevIconwoff2 = { fg = colors.white },
    DevIconxz = { fg = colors.sun },
    DevIconzip = { fg = colors.sun },
+   DevIconZig = { fg = colors.orange },
 }

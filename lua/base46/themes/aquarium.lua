@@ -2,7 +2,7 @@ local M = {}
 
 M.base_30 = {
    white = "#ced4df",
-   darker_black = "#1a1a24",
+   darker_black = "#1c1c26",
    black = "#20202A", --  nvim bg
    black2 = "#25252f",
    one_bg = "#2a2a34",
@@ -15,7 +15,7 @@ M.base_30 = {
    red = "#ebb9b9",
    baby_pink = "#EAC1C1",
    pink = "#E9D1D1",
-   line = "#292933", -- for lines like vertsplit
+   line = "#2d2d37", -- for lines like vertsplit
    green = "#b1dba4",
    vibrant_green = "#BEE0A8",
    blue = "#CDDBF9",
