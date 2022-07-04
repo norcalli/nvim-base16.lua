@@ -181,4 +181,12 @@ return {
    TSProperty = {
       fg = theme.base08,
    },
+
+   TSInclude = {
+      link = "Include",
+   },
+
+   TSConditional = {
+      link = "Conditional",
+   },
 }
