@@ -41,6 +41,10 @@ return {
       sp = "none",
    },
 
+   TSKeyword = {
+      fg = theme.base0E,
+   },
+
    TSKeywordFunction = {
       fg = theme.base0E,
       sp = "none",
