@@ -19,7 +19,9 @@ if polish_hl then
 end
 
 -- override user highlights if there are any
-local user_highlights = ui.hl_override
+local user_hl_override = vim.deepcopy(ui.hl_override)
+local user_hl_add = vim.deepcopy(ui.hl_add)
+local user_highlights = merge_tb(user_hl_override, user_hl_add)
 local colors = require("base46").get_theme_tb "base_30"
 
 -- fg = "white" set by user becomes fg = colors["white"]

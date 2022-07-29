@@ -56,7 +56,8 @@ M.load_all_highlights = function()
   end
 end
 
-M.turn_str_to_color = function(tb)
+M.turn_str_to_color = function(tb_in)
+  local tb = vim.deepcopy(tb_in)
   local colors = M.get_theme_tb "base_30"
 
   for _, groups in pairs(tb) do
