@@ -119,6 +119,7 @@ end
 M.load_theme = function()
   M.load_highlight "defaults"
   M.load_highlight "statusline"
+  M.load_highlight "syntax"
   M.load_highlight(M.turn_str_to_color(config.ui.hl_add))
 end
 
