@@ -49,7 +49,7 @@ M.base_16 = {
   base01 = "#2e2e2e",
   base00 = "#282828",
   base09 = "#e78a4e",
-  base06 = "#d4be98",
+  base06 = "#7daea3",
 }
 
 vim.opt.bg = "dark"
