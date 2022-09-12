@@ -41,7 +41,7 @@ M.base_16 = {
   base0E = "#ea6962",
   base0D = "#a9b665",
   base0C = "#89b482",
-  base0B = "#a9b665",
+  base0B = "#89b482",
   base02 = "#323232",
   base0F = "#dd8044",
   base03 = "#434343",
@@ -56,7 +56,6 @@ M.polish_hl = {
   Include = { fg = M.base_16.base0E },
   TSVariable = { fg = M.base_16.base08 },
   TSProperty = { fg = M.base_16.base0C },
-  TSString = { fg = M.base_16.base0C },
 }
 
 vim.opt.bg = "dark"
