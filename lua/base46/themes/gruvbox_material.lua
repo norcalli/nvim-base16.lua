@@ -52,6 +52,10 @@ M.base_16 = {
   base06 = "#d4be98",
 }
 
+M.polish_hl = {
+  TSVariable = { fg = M.base_16.base08 },
+}
+
 vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "gruvbox_material")
