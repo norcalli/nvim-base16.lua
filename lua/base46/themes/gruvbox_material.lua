@@ -53,8 +53,8 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  TSVariable = { fg = M.base_16.base08 },
   TSInclude = { fg = M.base_16.base0E },
+  TSVariable = { fg = M.base_16.base08 },
 }
 
 vim.opt.bg = "dark"
