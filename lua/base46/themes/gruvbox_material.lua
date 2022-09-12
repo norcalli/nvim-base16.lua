@@ -53,7 +53,7 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  TSInclude = { fg = M.base_16.base0E },
+  Include = { fg = M.base_16.base0E },
   TSVariable = { fg = M.base_16.base08 },
 }
 
