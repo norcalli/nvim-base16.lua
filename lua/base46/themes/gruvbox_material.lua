@@ -56,7 +56,7 @@ M.polish_hl = {
   Include = { fg = M.base_16.base0E },
   TSVariable = { fg = M.base_16.base08 },
   TSProperty = { fg = M.base_16.base0C },
-  TSRepeat = { fg = M.base_16.base0 },
+  Repeat = { fg = M.base_16.base0 },
 }
 
 vim.opt.bg = "dark"
