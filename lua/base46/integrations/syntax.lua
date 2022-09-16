@@ -16,7 +16,7 @@ return {
   },
 
   Constant = {
-    fg = theme.base08,
+    fg = theme.base09,
   },
 
   Define = {
@@ -46,7 +46,7 @@ return {
   },
 
   Include = {
-    fg = theme.base0D,
+    fg = theme.base09,
   },
 
   Keyword = {
@@ -83,7 +83,7 @@ return {
   },
 
   Statement = {
-    fg = theme.base08,
+    fg = theme.base0E,
   },
 
   StorageClass = {
