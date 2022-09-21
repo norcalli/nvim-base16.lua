@@ -205,4 +205,9 @@ return {
     undercurl = true,
     sp = theme.base0E,
   },
+
+  healthSuccess = {
+    bg = colors.green,
+    fg = colors.black,
+  },
 }
