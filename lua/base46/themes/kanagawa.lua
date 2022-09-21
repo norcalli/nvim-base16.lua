@@ -48,11 +48,12 @@ M.base_16 = {
   base0B = "#98bb6c",
   base0C = "#7fb4ca",
   base0D = "#7e9cd8",
-  base0E = "#957FB8",
+  base0E = "#9c86bf",
   base0F = "#d8616b",
 }
 
 M.polish_hl = {
+  TSInclude = { fg = M.base_30.purple },
   TSURI = { fg = M.base_30.blue },
   TSTagDelimiter = { fg = M.base_30.red },
   Number = {
