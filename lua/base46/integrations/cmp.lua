@@ -38,4 +38,5 @@ return {
   -- CmpItemKindEvent = { fg = "" },
   CmpItemKindOperator = { fg = base16.base05 },
   CmpItemKindTypeParameter = { fg = base16.base08 },
+  CmpItemKindCopilot = { fg = colors.green },
 }
