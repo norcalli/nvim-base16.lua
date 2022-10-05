@@ -34,22 +34,22 @@ M.base_30 = {
 }
 
 M.base_16 = {
-  base0A = "#d8a657",
-  base04 = "#d4be98",
-  base07 = "#c7b89d",
-  base05 = "#c0b196",
-  base0E = "#ea6962",
-  base0D = "#a9b665",
-  base0C = "#89b482",
-  base0B = "#89b482",
-  base02 = "#323232",
-  base0F = "#dd8044",
-  base03 = "#434343",
-  base08 = "#7daea3",
-  base01 = "#2e2e2e",
-  base00 = "#282828",
-  base09 = "#e78a4e",
-  base06 = "#d4be98",
+  base00 = "#0B0E14",
+  base01 = "#1c1f25",
+  base02 = "#24272d",
+  base03 = "#2b2e34",
+  base04 = "#33363c",
+  base05 = "#93a1a1",
+  base06 = "#eee8d5",
+  base07 = "#fdf6e3",
+  base08 = "#dc322f",
+  base09 = "#cb4b16",
+  base0A = "#b58900",
+  base0B = "#859900",
+  base0C = "#2aa198",
+  base0D = "#268bd2",
+  base0E = "#6c71c4",
+  base0F = "#d33682",
 }
 
 M.polish_hl = {
@@ -57,6 +57,12 @@ M.polish_hl = {
   TSVariable = { fg = M.base_16.base08 },
   TSProperty = { fg = M.base_16.base0C },
   Repeat = { fg = M.base_16.base0E },
+  TSTagDelimiter = { fg = M.base_30.cyan },
+  TSFunction = { fg = M.base_30.orange },
+  luaTSField = { fg = M.base_16.base0D },
+  TSParameter = { fg = M.base_16.base0F },
+  TSConstructor = { fg = M.base_16.base0A },
+  TSTagAttribute = { fg = M.base_30.orange },
 }
 
 vim.opt.bg = "dark"
