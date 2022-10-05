@@ -1,7 +1,6 @@
 local M = {}
 
 M.base_30 = {
-  -- white = "#dcac8b",
   white = "#4a4a4a",
   darker_black = "#080808",
   black = "#0e0e0e", --  nvim bg
@@ -13,7 +12,6 @@ M.base_30 = {
   grey_fg = "#404040",
   grey_fg2 = "#4a4a4a",
   light_grey = "#525252",
-  -- red = "#ea6962",
   red = "#dc322f",
   baby_pink = "#a72e5b",
   pink = "#ff75a0",
@@ -44,17 +42,13 @@ M.base_16 = {
   base05 = "#c9c7be",
   base06 = "#E6E1CF",
   base07 = "#D9D7CE",
-  -- base08 = "#a72e5b", -- Confirmed: Variables Confirmed
   base08 = "#D9D7CE", -- Confirmed: Variables Confirmed
-  -- base09 = "#a17643", -- Confirmed: Integers, Booleans
   base09 = "#eaa273", -- Confirmed: Integers, Booleans
   base0A = "#6840ff", -- Classes
   base0B = "#ffdbbd", -- Confirmed: Strings
   base0C = "#F09483", -- Escape characters, Regular expressions
-  -- base0C = "#D9D7CE", -- Escape characters, Regular expressions
-  base0D = "#ffc455", -- Functions, Methods
+  base0D = "#fdb830", -- Functions, Methods
   base0E = "#25B0BC", -- Confirmed: Keywords, Storage, Selector, Markup
-  -- base0F = "#d33682", -- Deprecated, Opening/Closing embedded language tags
   base0F = "#a72e5b", -- Deprecated, Opening/Closing embedded language tags
 }
 
