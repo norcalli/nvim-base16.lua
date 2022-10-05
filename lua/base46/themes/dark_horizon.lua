@@ -18,7 +18,7 @@ M.base_30 = {
   baby_pink = "#a72e5b",
   pink = "#ff75a0",
   line = "#1d1d1d", -- for lines like vertsplit
-  green = "#89b482",
+  green = "#29D398",
   vibrant_green = "#a9b665",
   nord_blue = "#18a3af",
   blue = "#25B0BC",
@@ -28,11 +28,11 @@ M.base_30 = {
   dark_purple = "#c65cc2",
   teal = "#749689",
   orange = "#e78a4e",
-  cyan = "#89b482",
+  cyan = "#6BE4E6",
   statusline_bg = "#121212",
   lightbg = "#1f1f1f",
-  pmenu_bg = "#89b482",
-  folder_bg = "#6d8dad",
+  pmenu_bg = "#15bf84",
+  folder_bg = "#07929e",
 }
 
 M.base_16 = {
