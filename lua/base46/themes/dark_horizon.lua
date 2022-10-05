@@ -49,11 +49,12 @@ M.base_16 = {
   base09 = "#eaa273", -- Confirmed: Integers, Booleans
   base0A = "#6840ff", -- Classes
   base0B = "#ffdbbd", -- Confirmed: Strings
-  -- base0C = "#F09483", -- Escape characters, Regular expressions
-  base0C = "#D9D7CE", -- Escape characters, Regular expressions
+  base0C = "#F09483", -- Escape characters, Regular expressions
+  -- base0C = "#D9D7CE", -- Escape characters, Regular expressions
   base0D = "#FDB849", -- Functions, Methods
   base0E = "#25B0BC", -- Confirmed: Keywords, Storage, Selector, Markup
-  base0F = "#d33682", -- Deprecated, Opening/Closing embedded language tags
+  -- base0F = "#d33682", -- Deprecated, Opening/Closing embedded language tags
+  base0F = "#D9D7CE", -- Deprecated, Opening/Closing embedded language tags
 }
 
 M.polish_hl = {
