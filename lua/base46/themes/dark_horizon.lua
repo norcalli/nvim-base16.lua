@@ -42,14 +42,14 @@ M.base_16 = {
   base05 = "#c9c7be",
   base06 = "#E6E1CF",
   base07 = "#D9D7CE",
-  base08 = "#a72e5b",
-  base09 = "#a17643",
-  base0A = "#E0AAFF",
-  base0B = "#eaa98b",
-  base0C = "#25B0BC",
-  base0D = "#FDB849",
-  base0E = "#F09483",
-  base0F = "#d33682",
+  base08 = "#a72e5b", -- Variables
+  base09 = "#a17643", -- Integers, Booleans
+  base0A = "#E0AAFF", -- Classes
+  base0B = "#eaa98b", -- Strings
+  base0C = "#F09483", -- Escape characters, Regular expressions
+  base0D = "#FDB849", -- Functions, Methods
+  base0E = "#25B0BC", -- Keywords, Storage, Selector, Markup
+  base0F = "#d33682", -- Deprecated, Opening/Closing embedded language tags
 }
 
 M.polish_hl = {
