@@ -61,6 +61,6 @@ M.polish_hl = {
 
 vim.opt.bg = "dark"
 
-M = require("base46").override_theme(M, "gruvbox_material")
+M = require("base46").override_theme(M, "dark_horizon")
 
 return M
