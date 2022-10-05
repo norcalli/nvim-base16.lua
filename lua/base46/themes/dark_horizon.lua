@@ -44,7 +44,8 @@ M.base_16 = {
   base05 = "#c9c7be",
   base06 = "#E6E1CF",
   base07 = "#D9D7CE",
-  base08 = "#a72e5b", -- Confirmed: Variables Confirmed
+  -- base08 = "#a72e5b", -- Confirmed: Variables Confirmed
+  base08 = "#D9D7CE", -- Confirmed: Variables Confirmed
   -- base09 = "#a17643", -- Confirmed: Integers, Booleans
   base09 = "#eaa273", -- Confirmed: Integers, Booleans
   base0A = "#6840ff", -- Classes
@@ -54,7 +55,7 @@ M.base_16 = {
   base0D = "#FDB849", -- Functions, Methods
   base0E = "#25B0BC", -- Confirmed: Keywords, Storage, Selector, Markup
   -- base0F = "#d33682", -- Deprecated, Opening/Closing embedded language tags
-  base0F = "#D9D7CE", -- Deprecated, Opening/Closing embedded language tags
+  base0F = "#a72e5b", -- Deprecated, Opening/Closing embedded language tags
 }
 
 M.polish_hl = {
