@@ -49,7 +49,8 @@ M.base_16 = {
   base0A = "#6840ff", -- Classes
   base0B = "#ebc7a9", -- Confirmed: Strings
   base0C = "#F09483", -- Escape characters, Regular expressions
-  base0D = "#fdb830", -- Functions, Methods
+  -- base0D = "#fdb830", -- Functions, Methods
+  base0D = "#FFA500", -- Functions, Methods
   base0E = "#25B0BC", -- Confirmed: Keywords, Storage, Selector, Markup
   base0F = "#a72e5b", -- Deprecated, Opening/Closing embedded language tags
 }
