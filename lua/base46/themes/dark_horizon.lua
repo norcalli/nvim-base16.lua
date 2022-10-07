@@ -4,8 +4,8 @@ M.base_30 = {
   white = "#FFFFFF",
   darker_black = "#080808",
   black = "#0e0e0e", --  nvim bg
-  black2 = "#141414",
-  one_bg = "#181818",
+  black2 = "#181818",
+  one_bg = "#1c1c1c",
   one_bg2 = "#212121",
   one_bg3 = "#292929",
   grey = "#363636",
@@ -25,44 +25,44 @@ M.base_30 = {
   purple = "#da70d6",
   dark_purple = "#c65cc2",
   teal = "#749689",
-  orange = "#e78a4e",
+  orange = "#FFA500",
   cyan = "#6BE4E6",
-  statusline_bg = "#121212",
-  lightbg = "#1f1f1f",
+  statusline_bg = "#181818",
+  lightbg = "#292929",
   pmenu_bg = "#15bf84",
   folder_bg = "#07929e",
 }
 
 M.base_16 = {
-  base00 = "#151515",
-  base01 = "#1c1f25",
-  base02 = "#474a50",
-  base03 = "#3f4248",
-  base04 = "#33363c",
+  base00 = "#0e0e0e",
+  base01 = "#181818",
+  base02 = "#292929",
+  base03 = "#363636",
+  base04 = "#3f4248",
   base05 = "#c9c7be",
   base06 = "#E6E1CF",
   base07 = "#D9D7CE",
   base08 = "#D9D7CE", -- Confirmed: Variables Confirmed
   base09 = "#eaa273", -- Confirmed: Integers, Booleans
-  base0A = "#6840ff", -- Classes
-  base0B = "#ebc7a9", -- Confirmed: Strings
+  base0A = "#825aff", -- Classes
+  base0B = "#E3A587", -- Confirmed: Strings
   base0C = "#F09483", -- Escape characters, Regular expressions
   base0D = "#FFA500", -- Functions, Methods
-  base0E = "#25B0BC", -- Confirmed: Keywords, Storage, Selector, Markup
-  base0F = "#a72e5b", -- Deprecated, Opening/Closing embedded language tags
+  base0E = "#2ca9b4", -- Confirmed: Keywords, Storage, Selector, Markup
+  base0F = "#d75271", -- Deprecated, Opening/Closing embedded language tags
 }
 
 M.polish_hl = {
-  Include = { fg = M.base_16.base0E },
+  Include = { fg = M.base_16.base0E, bold = true },
   TSVariable = { fg = M.base_16.base08 },
-  TSProperty = { fg = M.base_16.base0C },
+  TSProperty = { fg = M.base_16.base0E },
   Repeat = { fg = M.base_16.base0E },
-  TSTagDelimiter = { fg = M.base_30.cyan },
+  TSTagDelimiter = { fg = M.base_16.base05 },
   TSFunction = { fg = M.base_30.orange },
-  luaTSField = { fg = M.base_16.base0D },
+  luaTSField = { fg = M.base_16.base0E },
   TSParameter = { fg = M.base_16.base0F },
   TSConstructor = { fg = M.base_16.base0A },
-  TSTagAttribute = { fg = M.base_30.orange },
+  TSTagAttribute = { fg = M.base_16.orange },
 }
 
 vim.opt.bg = "dark"
