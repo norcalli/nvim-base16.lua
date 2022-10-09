@@ -42,14 +42,14 @@ M.base_16 = {
   base05 = "#c0c5ce", -- Confirmed
   base06 = "#cdd3de", -- Confirmed
   base07 = "#d8dee9", -- Confirmed
-  base08 = "#D9D7CE",
-  base09 = "#eaa273",
-  base0A = "#825aff",
-  base0B = "#E3A587",
-  base0C = "#F09483",
-  base0D = "#FFA500",
-  base0E = "#2ca9b4",
-  base0F = "#d75271",
+  base08 = "#ca1243",
+  base09 = "#d75f00",
+  base0A = "#c18401",
+  base0B = "#50a14f",
+  base0C = "#0184bc",
+  base0D = "#4078f2",
+  base0E = "#a626a4",
+  base0F = "#986801",
 }
 
 M.polish_hl = {
