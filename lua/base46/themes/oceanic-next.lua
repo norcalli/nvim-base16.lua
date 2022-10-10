@@ -18,10 +18,10 @@ M.base_30 = {
   line = "#2a3a43", -- for lines like vertsplit
   green = "#99c794", -- Confirmed
   vibrant_green = "#b9e75b",
-  nord_blue = "#18a3af",
+  nord_blue = "#598cbf", -- Confirmed
   blue = "#6699cc", -- Confirmed
   yellow = "#fac863", -- Confirmed
-  sun = "#ffc038",
+  sun = "#ffd06b", -- Confirmed
   purple = "#c594c5", -- Confirmed
   dark_purple = "#c65cc2",
   teal = "#749689",
@@ -30,7 +30,7 @@ M.base_30 = {
   statusline_bg = "#1f2f38", -- Confirmed
   lightbg = "#2c3c45", -- Confirmed
   pmenu_bg = "#15bf84",
-  folder_bg = "#07929e",
+  folder_bg = "#598cbf", -- Confirmed
 }
 
 M.base_16 = {
@@ -42,14 +42,14 @@ M.base_16 = {
   base05 = "#c0c5ce", -- Confirmed
   base06 = "#cdd3de", -- Confirmed
   base07 = "#d8dee9", -- Confirmed
-  base08 = "#ca1243",
-  base09 = "#d75f00",
-  base0A = "#c18401",
-  base0B = "#50a14f",
-  base0C = "#0184bc",
-  base0D = "#4078f2",
-  base0E = "#a626a4",
-  base0F = "#986801",
+  base08 = "#ca1243", -- Confirmed
+  base09 = "#d75f00", -- Confirmed
+  base0A = "#c18401", -- Confirmed
+  base0B = "#50a14f", -- Confirmed
+  base0C = "#0184bc", -- Confirmed
+  base0D = "#4078f2", -- Confirmed
+  base0E = "#a626a4", -- Confirmed
+  base0F = "#986801", -- Confirmed
 }
 
 M.polish_hl = {
