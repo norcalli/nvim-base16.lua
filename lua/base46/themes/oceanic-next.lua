@@ -1,7 +1,7 @@
 local M = {}
 
 M.base_30 = {
-  white = "#ffffff", -- confirmed
+  white = "#5fb3b3", -- confirmed
   darker_black = "#15252e",
   black = "#1b2b34", --  nvim bg
   black2 = "#21313a",
