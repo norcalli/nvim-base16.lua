@@ -33,6 +33,8 @@ M.base_30 = {
   folder_bg = "#598cbf", -- Confirmed
 }
 
+-- Base16 colors taken from:
+-- https://github.com/norcalli/nvim-base16.lua/blob/master/lua/base16.lua
 M.base_16 = {
   base00 = "#1b2b34", -- Confirmed
   base01 = "#343d46", -- Confirmed
