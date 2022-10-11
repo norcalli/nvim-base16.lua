@@ -1,7 +1,10 @@
+-- credits to original theme https://github.com/voronianski/oceanic-next-color-scheme
+-- This is a modified version of the original theme.
+
 local M = {}
 
 M.base_30 = {
-  white = "#5fb3b3", -- confirmed
+  white = "#D8DEE9", -- confirmed
   darker_black = "#15252e",
   black = "#1B2B34", --  nvim bg
   black2 = "#21313a",
@@ -43,27 +46,23 @@ M.base_16 = {
   base05 = "#C0C5Ce", -- Confirmed
   base06 = "#CDD3De", -- Confirmed
   base07 = "#D8DEE9", -- Confirmed
-  base08 = "#EC5F67", -- Confirmed
-  base09 = "#F99157", -- Confirmed
-  base0A = "#FAC863", -- Confirmed
+  base08 = "#6cbdbc", -- Confirmed
+  base09 = "#FAC863", -- Confirmed
+  base0A = "#F99157", -- Confirmed
   base0B = "#99C794", -- Confirmed
-  base0C = "#62B3B2", -- Confirmed
+  base0C = "#5aaeae", -- Confirmed
   base0D = "#6699CC", -- Confirmed
   base0E = "#C594C5", -- Confirmed
-  base0F = "#AB7967", -- Confirmed
+  base0F = "#EC5F67", -- Confirmed
 }
 
 M.polish_hl = {
-  Include = { fg = M.base_16.base0E, bold = true },
-  TSVariable = { fg = M.base_30.sun },
-  TSProperty = { fg = M.base_16.base0E },
-  Repeat = { fg = M.base_16.base0E },
-  TSTagDelimiter = { fg = M.base_16.base05 },
-  TSFunction = { fg = M.base_30.orange },
-  luaTSField = { fg = M.base_16.base0E },
-  TSParameter = { fg = M.base_16.base0F },
-  TSConstructor = { fg = M.base_16.base0A },
-  TSTagAttribute = { fg = M.base_16.orange },
+  TSParameter = {
+    fg = M.base_16.base0A,
+  },
+  Constant = {
+    fg = M.base_16.base09,
+  },
 }
 
 vim.opt.bg = "dark"
