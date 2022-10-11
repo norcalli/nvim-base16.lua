@@ -58,7 +58,7 @@ M.base_16 = {
 
 M.polish_hl = {
   Include = { fg = M.base_16.base0E, bold = true },
-  TSVariable = { fg = M.base_30.pink },
+  TSVariable = { fg = M.base_30.sun },
   TSProperty = { fg = M.base_16.base0E },
   Repeat = { fg = M.base_16.base0E },
   TSTagDelimiter = { fg = M.base_16.base05 },
