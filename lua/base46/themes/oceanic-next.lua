@@ -16,7 +16,8 @@ M.base_30 = {
   red = "#ff5252",
   -- baby_pink = "#ff7d85",
   baby_pink = "#ff7b7b",
-  pink = "#ffafb7",
+  -- pink = "#ffafb7",
+  pink = "#ffc8d0",
   line = "#2a3a43", -- for lines like vertsplit
   green = "#99C794",
   vibrant_green = "#b9e75b",
@@ -57,7 +58,7 @@ M.base_16 = {
 
 M.polish_hl = {
   Include = { fg = M.base_16.base0E, bold = true },
-  TSVariable = { fg = M.base_16.base05 },
+  TSVariable = { fg = M.base_30.pink },
   TSProperty = { fg = M.base_16.base0E },
   Repeat = { fg = M.base_16.base0E },
   TSTagDelimiter = { fg = M.base_16.base05 },
