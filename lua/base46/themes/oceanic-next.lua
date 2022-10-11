@@ -55,18 +55,19 @@ M.base_16 = {
   base0F = "#AB7967", -- Confirmed
 }
 
--- M.polish_hl = {
---   Include = { fg = M.base_16.base0E, bold = true },
---   TSVariable = { fg = M.base_16.base08 },
---   TSProperty = { fg = M.base_16.base0E },
---   Repeat = { fg = M.base_16.base0E },
---   TSTagDelimiter = { fg = M.base_16.base05 },
---   TSFunction = { fg = M.base_30.orange },
---   luaTSField = { fg = M.base_16.base0E },
---   TSParameter = { fg = M.base_16.base0F },
---   TSConstructor = { fg = M.base_16.base0A },
---   TSTagAttribute = { fg = M.base_16.orange },
--- }
+M.polish_hl = {
+  Include = { fg = M.base_16.base0E, bold = true },
+  TSVariable = { fg = M.base_16.base08 },
+  -- TSProperty = { fg = M.base_16.base0E },
+  TSProperty = { fg = M.base_30.red },
+  Repeat = { fg = M.base_16.base0E },
+  TSTagDelimiter = { fg = M.base_16.base05 },
+  TSFunction = { fg = M.base_30.orange },
+  luaTSField = { fg = M.base_16.base0E },
+  TSParameter = { fg = M.base_16.base0F },
+  TSConstructor = { fg = M.base_16.base0A },
+  TSTagAttribute = { fg = M.base_16.orange },
+}
 
 vim.opt.bg = "dark"
 
