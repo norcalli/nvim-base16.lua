@@ -63,7 +63,7 @@ M.polish_hl = {
   Operator = { fg = M.base_30.blue },
   ["@attribute"] = { fg = M.base_30.cyan },
   ["@punctuation.bracket"] = { fg = M.base_16.base06 },
-  ["@parenthesis"] = { link = "TSPunctBracket" },
+  ["@parenthesis"] = { link = "@punctuation.bracket" },
   ["@parameter"] = { fg = M.base_30.green },
   ["@function.builtin"] = { fg = M.base_30.yellow },
 }

@@ -1,7 +1,8 @@
 local theme = require("base46").get_theme_tb "base_16"
 
 return {
-  TSAnnotation = {
+  -- `@annotation` is not one of the default capture group, should we keep it 
+  ["@annotation"] = { 
     fg = theme.base0F,
   },
 
@@ -112,7 +113,7 @@ return {
   -- @tag
 
   ["@tag.attribute"] = {
-    link = "TSProperty",
+    link = "@property",
   },
 
   ["@tag.delimiter"] = {
