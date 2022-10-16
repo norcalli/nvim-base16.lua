@@ -81,7 +81,7 @@ return {
     fg = theme.base08,
   },
 
-  TSParameterReference = {
+  ["@reference"] = {
     fg = theme.base05,
   },
 
@@ -169,7 +169,7 @@ return {
     underline = true,
   },
 
-  TSCurrentScope = {
+  ["@scope"] = {
     bold = true,
   },
 
@@ -177,7 +177,7 @@ return {
     fg = theme.base08,
   },
 
-  TSFieldKey = {
+  ["@field.key"] = {
     fg = theme.base0D,
   },
 
