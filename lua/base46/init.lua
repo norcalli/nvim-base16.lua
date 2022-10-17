@@ -44,7 +44,7 @@ M.load_all_highlights = function()
   local clear_hl = require("base46").clear_highlights
 
   clear_hl "BufferLine"
-  clear_hl "TS"
+  clear_hl "@"
 
   reload "base46.integrations"
   reload "base46.chadlights"
