@@ -78,7 +78,7 @@ return {
     fg = theme.base05,
   },
 
-  ["@paramter"] = {
+  ["@parameter"] = {
     fg = theme.base08,
   },
 
