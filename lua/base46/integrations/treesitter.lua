@@ -1,12 +1,12 @@
 local theme = require("base46").get_theme_tb "base_16"
 
 return {
-  -- `@annotation` is not one of the default capture group, should we keep it 
-  ["@annotation"] = { 
+  -- `@annotation` is not one of the default capture group, should we keep it
+  ["@annotation"] = {
     fg = theme.base0F,
   },
 
-  ['@attribute'] = {
+  ["@attribute"] = {
     fg = theme.base0A,
   },
 
@@ -110,7 +110,9 @@ return {
     fg = theme.base0B,
   },
 
-  -- @tag
+  ["@tag"] = {
+    link = "Tag",
+  },
 
   ["@tag.attribute"] = {
     link = "@property",
