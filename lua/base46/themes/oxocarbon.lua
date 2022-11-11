@@ -1,17 +1,20 @@
+-- Credits to original theme for existing https://github.com/shaunsingh/oxocarbon.nvim
+-- this is a modified version of it
+
 local M = {}
 
 M.base_30 = {
   white = "#f2f4f8",
-  darker_black = "#131313",
-  black = "#1E1D2D", --  nvim bg
-  black2 = "#393939",
-  one_bg = "#2d2c3c", -- real bg of onedark
-  one_bg2 = "#363545",
-  one_bg3 = "#3e3d4d",
-  grey = "#474656",
-  grey_fg = "#4e4d5d",
-  grey_fg2 = "#525252",
-  light_grey = "#605f6f",
+  darker_black = "#0f0f0f",
+  black = "#161616", --  nvim bg
+  black2 = "#202020",
+  one_bg = "#2a2a2a", -- real bg of onedark
+  one_bg2 = "#343434",
+  one_bg3 = "#3c3c3c",
+  grey = "#464646",
+  grey_fg = "#4c4c4c",
+  grey_fg2 = "#555555",
+  light_grey = "#5f5f5f",
   red = "#ee5396",
   baby_pink = "#ff7eb6",
   pink = "#be95ff",
@@ -27,8 +30,8 @@ M.base_30 = {
   teal = "#B5E8E0",
   orange = "#F8BD96",
   cyan = "#3ddbd9",
-  statusline_bg = "#393939",
-  lightbg = "#262626",
+  statusline_bg = "#202020",
+  lightbg = "#2a2a2a",
   pmenu_bg = "#3ddbd9",
   folder_bg = "#78a9ff",
   lavender = "#c7d1ff",
@@ -54,18 +57,13 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  Function = {
-    fg = M.base_16.base0C,
-    bold = true,
+  Conditional = {
+    fg = M.base_30.nord_blue,
   },
-  String = {
-    fg = M.base_16.base0E,
+
+  Tag = {
+    fg = M.base_30.white,
   },
-  TSVariable = { fg = M.base_30.lavender },
-  TSProperty = { fg = M.base_30.teal },
-  TSVariableBuiltin = { fg = M.base_30.red },
-  Operator = { fg = M.base_30.dark_purple },
-  TSAttribute = { fg = M.base_30.purple },
 }
 
 vim.opt.bg = "dark"
