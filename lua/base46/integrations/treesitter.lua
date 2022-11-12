@@ -179,10 +179,10 @@ return {
   ["@field"] = {
     fg = theme.base08,
   },
-  --
-  -- ["@field.key"] = {
-  --   fg = theme.base0D,
-  -- },
+  
+  ["@field.key"] = {
+    fg = theme.base08,
+  },
 
   ["@property"] = {
     fg = theme.base08,
