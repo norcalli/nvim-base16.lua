@@ -1,76 +1,90 @@
---
+-- credits to original theme for existing https://github.com/primer/github-vscode-theme
+-- This is a modified version of it
+
 local M = {}
 
 M.base_30 = {
   white = "#c9d1d9",
   darker_black = "#010409",
   black = "#0d1117", --  nvim bg
-  black2 = "#2d3139",
-  one_bg = "#20262c",
-  one_bg2 = "#30363d", -- StatusBar (filename)
-  one_bg3 = "#c5cbd3",
-  grey = "#6e7681", -- Line numbers (shouldn't be base01?)
-  grey_fg = "#8b949e", -- Why this affects comments?
-  grey_fg2 = "#99a4b2",
-  light_grey = "#8b97a7",
+  black2 = "#1a1e24",
+  one_bg = "#1c2026",
+  one_bg2 = "#262a30", -- StatusBar (filename)
+  one_bg3 = "#30343a",
+  grey = "#3d4147", -- Line numbers (shouldn't be base01?)
+  grey_fg = "#494d53", -- Why this affects comments?
+  grey_fg2 = "#53575d",
+  light_grey = "#5d6167",
   red = "#ff7b72", -- StatusBar (username)
-  baby_pink = "#ffb8b3",
-  pink = "#d2a8ff",
-  line = "#30363d", -- for lines like vertsplit
-  green = "#3fb950", -- StatusBar (file percentage)
-  vibrant_green = "#56d364",
+  baby_pink = "#ffa198",
+  pink = "#ec6cb9",
+  line = "#1c2026", -- for lines like vertsplit
+  green = "#56d364", -- StatusBar (file percentage)
+  vibrant_green = "#85e89d",
   nord_blue = "#58a6ff", -- Mode indicator
   blue = "#79c0ff",
   yellow = "#e3b341", --"#d29922",
   sun = "#d29922", --"#e3b341",
-  purple = "#8965cd",
-  dark_purple = "#5a32a3",
+  purple = "#d2a8ff",
+  dark_purple = "#bc8cff",
   teal = "#39c5cf",
   orange = "#ffa657",
   cyan = "#56d4dd",
-  statusline_bg = "#0d1117",
-  lightbg = "#30363d",
-  pmenu_bg = "#c5cbd3", -- Command bar suggestions
-  folder_bg = "#8b949e",
+  statusline_bg = "#171b21",
+  lightbg = "#262a30",
+  pmenu_bg = "#3d4147", -- Command bar suggestions
+  folder_bg = "#58a6ff",
 }
 
 M.base_16 = {
   base00 = "#0d1117", -- Default bg
-  base01 = "#010409", -- Lighter bg (status bar, line number, folding mks)
-  base02 = "#193047", -- Selection bg
-  base03 = "#8b949e", -- Comments, invisibles, line hl
-  base04 = "#666666", -- Dark fg (status bars)
+  base01 = "#1c2026", -- Lighter bg (status bar, line number, folding mks)
+  base02 = "#262a30", -- Selection bg
+  base03 = "#30343a", -- Comments, invisibles, line hl
+  base04 = "#3d4147", -- Dark fg (status bars)
   base05 = "#c9d1d9", -- Default fg (caret, delimiters, Operators)
-  base06 = "#c9d1d9", -- Light fg (not often used)
-  base07 = "#0d1117", -- Light bg (not often used)
-  base08 = "#ffa657", -- Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
--- Change "Variables" with "parameters"
+  base06 = "#d3dbe3", -- Light fg (not often used)
+  base07 = "#dde5ed", -- Light bg (not often used)
+  base08 = "#79c0ff", -- Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
   base09 = "#4cb0ff", -- Integers, Boolean, Constants, XML Attributes, Markup Link Url
-  base0A = "#ff7b72", -- Classes, Markup Bold, Search Text Background
+  base0A = "#e3b341", -- Classes, Markup Bold, Search Text Background
   base0B = "#a5d6ff", -- Strings, Inherited Class, Markup Code, Diff Inserted
-  -- "%p" should be recognized as 
   base0C = "#79c0ff", -- Support, regex, escape chars
   base0D = "#b9a6ff", -- Function, methods, headings
-  -- #include should not be parsed as a heading if .c
   base0E = "#ff7b72", -- Keywords
-  base0F = "#c9d1d9", -- Deprecated, open/close embedded tags
+  base0F = "#ffa657", -- Deprecated, open/close embedded tags
 }
 
-vim.opt.bg = "light"
+vim.opt.bg = "dark"
 
 M.polish_hl = {
-  TelescopePromptPrefix = { fg = M.base_30.white },
-  TelescopeSelection = { bg = M.base_30.one_bg, fg = M.base_30.white },
-  FloatBorder = { fg = M.base_16.base05 },
-  DiffAdd = { fg = M.base_16.base05 },
-  TbLineThemeToggleBtn = { bg = M.base_30.one_bg3 },
-  WhichKeyDesc = { fg = M.base_30.white },
-  Pmenu = { bg = M.base_30.black2 },
-  St_pos_text = { fg = M.base_30.white },
-  TSVariableBuiltin = { fg = M.base_30.red },
-  TSProperty = { fg = M.base_30.teal },
+  PmenuSel = {
+    fg = M.base_30.white,
+  },
+
+  ["@punctuation.bracket"] = {
+    fg = M.base_30.white,
+  },
+
+  ["@field.key"] = {
+    fg = M.base_30.white,
+  },
+
+  Constant = {
+    fg = M.base_16.base07,
+  },
+
+  ["@constructor"] = {
+    fg = M.base_30.vibrant_green,
+    bold = true,
+  },
+
+  Tag = {
+    bold = true,
+    fg = M.base_30.vibrant_green,
+  },
 }
 
-M = require("base46").override_theme(M, "github_light")
+M = require("base46").override_theme(M, "github_dark_default")
 
 return M
