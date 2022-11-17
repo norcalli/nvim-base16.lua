@@ -210,4 +210,325 @@ return {
     bg = colors.green,
     fg = colors.black,
   },
+
+  ------------------------------------- Syntax ----------------------------------------------
+
+  Boolean = {
+    fg = theme.base09,
+  },
+
+  Character = {
+    fg = theme.base08,
+  },
+
+  Conditional = {
+    fg = theme.base0E,
+  },
+
+  Constant = {
+    fg = theme.base08,
+  },
+
+  Define = {
+    fg = theme.base0E,
+    sp = "none",
+  },
+
+  Delimiter = {
+    fg = theme.base0F,
+  },
+
+  Float = {
+    fg = theme.base09,
+  },
+
+  Variable = {
+    fg = theme.base05,
+  },
+
+  Function = {
+    fg = theme.base0D,
+  },
+
+  Identifier = {
+    fg = theme.base08,
+    sp = "none",
+  },
+
+  Include = {
+    fg = theme.base0D,
+  },
+
+  Keyword = {
+    fg = theme.base0E,
+  },
+
+  Label = {
+    fg = theme.base0A,
+  },
+
+  Number = {
+    fg = theme.base09,
+  },
+
+  Operator = {
+    fg = theme.base05,
+    sp = "none",
+  },
+
+  PreProc = {
+    fg = theme.base0A,
+  },
+
+  Repeat = {
+    fg = theme.base0A,
+  },
+
+  Special = {
+    fg = theme.base0C,
+  },
+
+  SpecialChar = {
+    fg = theme.base0F,
+  },
+
+  Statement = {
+    fg = theme.base08,
+  },
+
+  StorageClass = {
+    fg = theme.base0A,
+  },
+
+  String = {
+    fg = theme.base0B,
+  },
+
+  Structure = {
+    fg = theme.base0E,
+  },
+
+  Tag = {
+    fg = theme.base0A,
+  },
+
+  Todo = {
+    fg = theme.base0A,
+    bg = theme.base01,
+  },
+
+  Type = {
+    fg = theme.base0A,
+    sp = "none",
+  },
+
+  Typedef = {
+    fg = theme.base0A,
+  },
+
+  ------------------------------------- Statusline ----------------------------------------------
+
+  StatusLine = {
+    bg = colors.statusline_bg,
+  },
+
+  St_gitIcons = {
+    fg = colors.light_grey,
+    bg = colors.statusline_bg,
+    bold = true,
+  },
+
+  -- LSP
+
+  St_lspError = {
+    fg = colors.red,
+    bg = colors.statusline_bg,
+  },
+
+  St_lspWarning = {
+    fg = colors.yellow,
+    bg = colors.statusline_bg,
+  },
+
+  St_LspHints = {
+    fg = colors.purple,
+    bg = colors.statusline_bg,
+  },
+
+  St_LspInfo = {
+    fg = colors.green,
+    bg = colors.statusline_bg,
+  },
+
+  St_LspStatus = {
+    fg = colors.nord_blue,
+    bg = colors.statusline_bg,
+  },
+
+  St_LspProgress = {
+    fg = colors.green,
+    bg = colors.statusline_bg,
+  },
+
+  St_LspStatus_Icon = {
+    fg = colors.black,
+    bg = colors.nord_blue,
+  },
+
+  -- MODES
+
+  St_NormalMode = {
+    bg = colors.nord_blue,
+    fg = colors.black,
+    bold = true,
+  },
+
+  St_InsertMode = {
+    bg = colors.dark_purple,
+    fg = colors.black,
+
+    bold = true,
+  },
+
+  St_TerminalMode = {
+    bg = colors.green,
+    fg = colors.black,
+    bold = true,
+  },
+
+  St_NTerminalMode = {
+    bg = colors.yellow,
+    fg = colors.black,
+    bold = true,
+  },
+
+  St_VisualMode = {
+    bg = colors.cyan,
+    fg = colors.black,
+    bold = true,
+  },
+
+  St_ReplaceMode = {
+    bg = colors.orange,
+    fg = colors.black,
+
+    bold = true,
+  },
+
+  St_ConfirmMode = {
+    bg = colors.teal,
+    fg = colors.black,
+
+    bold = true,
+  },
+
+  St_CommandMode = {
+    bg = colors.green,
+    fg = colors.black,
+
+    bold = true,
+  },
+
+  St_SelectMode = {
+    bg = colors.nord_blue,
+    fg = colors.black,
+
+    bold = true,
+  },
+
+  -- Separators for mode
+  St_NormalModeSep = {
+    fg = colors.nord_blue,
+    bg = colors.grey,
+  },
+
+  St_InsertModeSep = {
+    fg = colors.dark_purple,
+    bg = colors.grey,
+  },
+
+  St_TerminalModeSep = {
+    fg = colors.green,
+    bg = colors.grey,
+  },
+
+  St_NTerminalModeSep = {
+    fg = colors.yellow,
+    bg = colors.grey,
+  },
+
+  St_VisualModeSep = {
+    fg = colors.cyan,
+    bg = colors.grey,
+  },
+
+  St_ReplaceModeSep = {
+    fg = colors.orange,
+    bg = colors.grey,
+  },
+
+  St_ConfirmModeSep = {
+    fg = colors.teal,
+    bg = colors.grey,
+  },
+
+  St_CommandModeSep = {
+    fg = colors.green,
+    bg = colors.grey,
+  },
+
+  St_SelectModeSep = {
+    fg = colors.nord_blue,
+    bg = colors.grey,
+  },
+
+  St_EmptySpace = {
+    fg = colors.grey,
+    bg = colors.lightbg,
+  },
+
+  St_EmptySpace2 = {
+    fg = colors.grey,
+    bg = colors.statusline_bg,
+  },
+
+  St_file_info = {
+    bg = colors.lightbg,
+    fg = colors.white,
+  },
+
+  St_file_sep = {
+    bg = colors.statusline_bg,
+    fg = colors.lightbg,
+  },
+
+  St_cwd_icon = {
+    fg = colors.one_bg,
+    bg = colors.red,
+  },
+
+  St_cwd_text = {
+    fg = colors.white,
+    bg = colors.lightbg,
+  },
+
+  St_cwd_sep = {
+    fg = colors.red,
+    bg = colors.statusline_bg,
+  },
+
+  St_pos_sep = {
+    fg = colors.green,
+    bg = colors.lightbg,
+  },
+
+  St_pos_icon = {
+    fg = colors.black,
+    bg = colors.green,
+  },
+
+  St_pos_text = {
+    fg = colors.green,
+    bg = colors.lightbg,
+  },
 }

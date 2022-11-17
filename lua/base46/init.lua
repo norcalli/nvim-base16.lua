@@ -99,11 +99,41 @@ M.load_highlight = function(group)
   end
 end
 
-M.load_theme = function()
-  M.load_highlight "defaults"
-  M.load_highlight "statusline"
-  M.load_highlight "syntax"
-  M.load_highlight(M.turn_str_to_color(config.ui.hl_add))
+-- save table
+M.table_to_file = function(filename, tb)
+  local file = io.open(filename, "w")
+  local result = ""
+
+  for hlgroupName, hlgroup_vals in pairs(tb) do
+    local hlname = "'" .. hlgroupName .. "',"
+    local opts = ""
+
+    for optName, optVal in pairs(hlgroup_vals) do
+      local valueInStr = type(optVal) == "boolean" and " " .. tostring(optVal) or '"' .. optVal .. '"'
+      opts = opts .. optName .. "=" .. valueInStr .. ","
+    end
+
+    result = result .. "vim.api.nvim_set_hl(0," .. hlname .. "{" .. opts .. "})"
+  end
+
+  if file then
+    file:write(result)
+    file:close()
+  end
+end
+
+-- M.load_highlight(M.turn_str_to_color(config.ui.hl_add))
+
+M.compile = function()
+  local hl_files = vim.fn.stdpath "data" .. "/site/pack/packer/start/base46/lua/base46/integrations"
+
+  for _, file in ipairs(vim.fn.readdir(hl_files)) do
+    local integration = require("base46.integrations." .. vim.fn.fnamemodify(file, ":r"))
+    M.table_to_file(
+      vim.fn.stdpath "data" .. "/site/pack/packer/start/base46_cache/lua/base46_cache/" .. file,
+      integration
+    )
+  end
 end
 
 M.override_theme = function(default_theme, theme_name)
