@@ -23,18 +23,15 @@ M.merge_tb = function(table1, table2)
 end
 
 M.load_all_highlights = function()
-  vim.opt.bg = require("base46").get_theme_tb "type" -- dark/light
-
   -- reload highlights for theme switcher
-  local reload = require("plenary.reload").reload_module
+  require("plenary.reload").reload_module "base46"
 
-  reload "base46.integrations"
-  reload "base46.chadlights"
+  M.compile()
 
-  local hl_groups = require "base46.chadlights"
+  local hl_files = vim.fn.stdpath "data" .. "/site/pack/packer/start/base46_cache/lua/base46_cache"
 
-  for hl, col in pairs(hl_groups) do
-    vim.api.nvim_set_hl(0, hl, col)
+  for _, file in ipairs(vim.fn.readdir(hl_files)) do
+    require("base46_cache." .. vim.fn.fnamemodify(file, ":r"))
   end
 end
 
@@ -79,11 +76,13 @@ M.extend_default_hl = function(highlights)
     end
   end
 
-  local overriden_hl = M.turn_str_to_color(config.ui.hl_override)
+  if config.ui.hl_override then
+    local overriden_hl = M.turn_str_to_color(config.ui.hl_override)
 
-  for key, value in pairs(overriden_hl) do
-    if highlights[key] then
-      highlights[key] = M.merge_tb(highlights[key], value)
+    for key, value in pairs(overriden_hl) do
+      if highlights[key] then
+        highlights[key] = M.merge_tb(highlights[key], value)
+      end
     end
   end
 end
