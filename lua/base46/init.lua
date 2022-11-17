@@ -28,7 +28,7 @@ M.load_all_highlights = function()
 
   M.compile()
 
-  local hl_files = vim.fn.stdpath "data" .. "/site/pack/packer/start/base46_cache/lua/base46_cache"
+  local hl_files = vim.fn.stdpath "data" .. "/site/pack/base46_cache/start/compiled_themes/lua/base46_cache/"
 
   for _, file in ipairs(vim.fn.readdir(hl_files)) do
     require("base46_cache." .. vim.fn.fnamemodify(file, ":r"))
@@ -129,7 +129,7 @@ M.compile = function()
   for _, file in ipairs(vim.fn.readdir(hl_files)) do
     local integration = require("base46.integrations." .. vim.fn.fnamemodify(file, ":r"))
     M.table_to_file(
-      vim.fn.stdpath "data" .. "/site/pack/packer/start/base46_cache/lua/base46_cache/" .. file,
+      vim.fn.stdpath "data" .. "/site/pack/base46_cache/start/compiled_themes/lua/base46_cache/" .. file,
       integration
     )
   end
