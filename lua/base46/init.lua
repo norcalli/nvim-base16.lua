@@ -101,21 +101,22 @@ end
 -- save table
 M.table_to_file = function(filename, tb)
   local file = io.open(filename, "w")
-  local result = ""
-
-  for hlgroupName, hlgroup_vals in pairs(tb) do
-    local hlname = "'" .. hlgroupName .. "',"
-    local opts = ""
-
-    for optName, optVal in pairs(hlgroup_vals) do
-      local valueInStr = type(optVal) == "boolean" and " " .. tostring(optVal) or '"' .. optVal .. '"'
-      opts = opts .. optName .. "=" .. valueInStr .. ","
-    end
-
-    result = result .. "vim.api.nvim_set_hl(0," .. hlname .. "{" .. opts .. "})"
-  end
 
   if file then
+    local result = ""
+
+    for hlgroupName, hlgroup_vals in pairs(tb) do
+      local hlname = "'" .. hlgroupName .. "',"
+      local opts = ""
+
+      for optName, optVal in pairs(hlgroup_vals) do
+        local valueInStr = type(optVal) == "boolean" and " " .. tostring(optVal) or '"' .. optVal .. '"'
+        opts = opts .. optName .. "=" .. valueInStr .. ","
+      end
+
+      result = result .. "vim.api.nvim_set_hl(0," .. hlname .. "{" .. opts .. "})"
+    end
+
     file:write(result)
     file:close()
   end
