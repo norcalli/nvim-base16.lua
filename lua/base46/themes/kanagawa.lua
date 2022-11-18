@@ -61,7 +61,7 @@ M.polish_hl = {
   },
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M = require("base46").override_theme(M, "kanagawa")
 

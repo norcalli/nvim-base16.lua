@@ -55,7 +55,7 @@ M.base_16 = {
   base0F = "#85e89d", -- Deprecated, open/close embedded tags
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M.polish_hl = {
   PmenuSel = {

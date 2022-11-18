@@ -66,6 +66,6 @@ M.polish_hl = {
 
 M = require("base46").override_theme(M, "ayu-light")
 
-vim.opt.bg = "light"
+M.type = "light"
 
 return M

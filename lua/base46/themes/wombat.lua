@@ -59,7 +59,7 @@ M.polish_hl = {
   ["@conditional"] = { link = "@include" },
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M = require("base46").override_theme(M, "wombat")
 

@@ -52,7 +52,7 @@ M.base_16 = {
   base0F = "#d65d0e",
 }
 
-vim.opt.bg = "light"
+M.type = "light"
 
 M.polish_hl = {
   TbLineThemeToggleBtn = { fg = M.base_30.black, bg = M.base_30.white },

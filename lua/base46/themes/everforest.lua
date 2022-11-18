@@ -52,7 +52,8 @@ M.base_16 = {
   base0F = "#d699b6",
 }
 
-vim.opt.bg = "dark"
+
+M.type = "dark"
 
 M.polish_hl = {
   ["@tag"] = { fg = M.base_30.orange },

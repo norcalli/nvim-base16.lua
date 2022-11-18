@@ -56,7 +56,7 @@ M.polish_hl = {
   ["@punctuation.bracket"] = { fg = M.base_30.white },
   ["@punctuation.delimiter"] = { fg = M.base_30.white },
 }
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M = require("base46").override_theme(M, "nord")
 

@@ -65,7 +65,7 @@ M.polish_hl = {
   St_pos_text = { fg = M.base_30.white },
 }
 
-vim.opt.bg = "light"
+M.type = "light"
 
 M = require("base46").override_theme(M, "blossom")
 

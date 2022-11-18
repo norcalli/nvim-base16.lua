@@ -64,7 +64,7 @@ M.polish_hl = {
   ["@keywordfunction"] = { fg = M.base_30.teal },
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M = require("base46").override_theme(M, "vscode_dark")
 

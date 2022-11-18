@@ -68,7 +68,7 @@ M.polish_hl = {
   ["@function.builtin"] = { fg = M.base_30.yellow },
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M = require("base46").override_theme(M, "chocolate")
 

@@ -52,7 +52,7 @@ M.base_16 = {
   base06 = "#e0e0e0",
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M.polish_hl = {
   PmenuSel = { fg = M.base_30.black, bg = M.base_30.red },

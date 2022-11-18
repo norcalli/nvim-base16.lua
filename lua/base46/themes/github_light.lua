@@ -55,7 +55,7 @@ M.base_16 = {
   base0F = "#18654B", -- Deprecated, open/close embedded tags
 }
 
-vim.opt.bg = "light"
+M.type = "light"
 
 M.polish_hl = {
   ["@punctuation.bracket"] = {

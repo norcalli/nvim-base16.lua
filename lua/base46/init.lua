@@ -95,10 +95,13 @@ end
 
 -- save table
 M.table_to_file = function(filename, tb)
-  local file = io.open(filename, "w")
+  local theme_type = M.get_theme_tb "type" -- dark / light
+  local cache_path = vim.fn.stdpath "data" .. "/site/pack/base46_cache/start/compiled_themes/lua/base46_cache/"
+  local file = io.open(cache_path .. filename, "w")
 
   if file then
-    local result = ""
+    -- set vim.opt.bg code in defaults.lua only
+    local result = filename == "defaults.lua" and "M.type='" .. theme_type .. "'" or ""
 
     for hlgroupName, hlgroup_vals in pairs(tb) do
       local hlname = "'" .. hlgroupName .. "',"
@@ -119,7 +122,6 @@ end
 
 M.compile = function()
   local hl_files = vim.fn.stdpath "data" .. "/site/pack/packer/start/base46/lua/base46/integrations"
-  local cache_path = vim.fn.stdpath "data" .. "/site/pack/base46_cache/start/compiled_themes/lua/base46_cache/"
 
   for _, file in ipairs(vim.fn.readdir(hl_files)) do
     local integration = M.load_highlight(vim.fn.fnamemodify(file, ":r"))
@@ -129,7 +131,7 @@ M.compile = function()
       integration = M.merge_tb(integration, (M.turn_str_to_color(config.ui.hl_add)))
     end
 
-    M.table_to_file(cache_path .. file, integration)
+    M.table_to_file(file, integration)
   end
 end
 

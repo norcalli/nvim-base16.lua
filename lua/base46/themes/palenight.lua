@@ -57,7 +57,7 @@ M.polish_hl = {
   ["@field.key"] = { fg = M.base_30.orange },
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M = require("base46").override_theme(M, "palenight")
 

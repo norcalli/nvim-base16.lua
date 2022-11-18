@@ -55,7 +55,7 @@ M.base_16 = {
   base0F = "#FF738A",
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M.polish_hl = {
   Conditional = {

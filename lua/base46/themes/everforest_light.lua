@@ -67,7 +67,7 @@ M.polish_hl = {
   ["@constructor"] = { fg = M.base_30.blue },
 }
 
-vim.opt.bg = "light"
+M.type = "light"
 
 M = require("base46").override_theme(M, "everforest_light")
 

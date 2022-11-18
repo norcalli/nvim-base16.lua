@@ -52,7 +52,7 @@ M.base_16 = {
   base0F = "#cf6a4c",
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M = require("base46").override_theme(M, "jellybeans")
 

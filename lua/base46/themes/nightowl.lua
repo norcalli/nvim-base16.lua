@@ -59,7 +59,7 @@ M.polish_hl = {
   PmenuSel = { bg = M.base_30.blue },
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M = require("base46").override_theme(M, "nightowl")
 

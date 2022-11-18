@@ -57,7 +57,7 @@ M.polish_hl = {
   ["@parenthesis"] = { link = "@punctuation.bracket" },
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M = require("base46").override_theme(M, "radium")
 

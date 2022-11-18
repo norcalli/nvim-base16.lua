@@ -82,7 +82,7 @@ M.polish_hl = {
   },
 }
 
-vim.opt.bg = "light"
+M.type = "light"
 
 M = require("base46").override_theme(M, "penumbra_light")
 

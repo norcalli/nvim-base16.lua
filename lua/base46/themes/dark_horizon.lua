@@ -65,7 +65,7 @@ M.polish_hl = {
   ["@tag.attribute"] = { fg = M.base_16.orange },
 }
 
-vim.opt.bg = "dark"
+M.type = "dark"
 
 M = require("base46").override_theme(M, "dark_horizon")
 
