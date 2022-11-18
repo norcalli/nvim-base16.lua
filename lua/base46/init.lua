@@ -101,7 +101,7 @@ M.table_to_file = function(filename, tb)
 
   if file then
     -- set vim.opt.bg code in defaults.lua only
-    local result = filename == "defaults.lua" and "M.type='" .. theme_type .. "'" or ""
+    local result = filename == "defaults.lua" and "vim.opt.bg='" .. theme_type .. "'" or ""
 
     for hlgroupName, hlgroup_vals in pairs(tb) do
       local hlname = "'" .. hlgroupName .. "',"
