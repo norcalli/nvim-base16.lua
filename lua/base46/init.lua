@@ -88,14 +88,9 @@ M.extend_default_hl = function(highlights)
 end
 
 M.load_highlight = function(group)
-  if type(group) == "string" then
-    group = require("base46.integrations." .. group)
-    M.extend_default_hl(group)
-  end
-
-  for hl, col in pairs(group) do
-    vim.api.nvim_set_hl(0, hl, col)
-  end
+  group = require("base46.integrations." .. group)
+  M.extend_default_hl(group)
+  return group
 end
 
 -- save table
@@ -122,17 +117,19 @@ M.table_to_file = function(filename, tb)
   end
 end
 
--- M.load_highlight(M.turn_str_to_color(config.ui.hl_add))
-
 M.compile = function()
   local hl_files = vim.fn.stdpath "data" .. "/site/pack/packer/start/base46/lua/base46/integrations"
+  local cache_path = vim.fn.stdpath "data" .. "/site/pack/base46_cache/start/compiled_themes/lua/base46_cache/"
 
   for _, file in ipairs(vim.fn.readdir(hl_files)) do
-    local integration = require("base46.integrations." .. vim.fn.fnamemodify(file, ":r"))
-    M.table_to_file(
-      vim.fn.stdpath "data" .. "/site/pack/base46_cache/start/compiled_themes/lua/base46_cache/" .. file,
-      integration
-    )
+    local integration = M.load_highlight(vim.fn.fnamemodify(file, ":r"))
+
+    -- merge new hl groups added by users
+    if vim.fn.fnamemodify(file, ":r") == "defaults" then
+      integration = M.merge_tb(integration, (M.turn_str_to_color(config.ui.hl_add)))
+    end
+
+    M.table_to_file(cache_path .. file, integration)
   end
 end
 
