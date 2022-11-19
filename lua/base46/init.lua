@@ -22,19 +22,6 @@ M.merge_tb = function(table1, table2)
   return vim.tbl_deep_extend("force", table1, table2)
 end
 
-M.load_all_highlights = function()
-  -- reload highlights for theme switcher
-  require("plenary.reload").reload_module "base46"
-
-  M.compile()
-
-  local hl_files = vim.fn.stdpath "data" .. "/site/pack/base46_cache/start/compiled_themes/lua/base46_cache/"
-
-  for _, file in ipairs(vim.fn.readdir(hl_files)) do
-    require("base46_cache." .. vim.fn.fnamemodify(file, ":r"))
-  end
-end
-
 M.turn_str_to_color = function(tb_in)
   local tb = vim.deepcopy(tb_in)
   local colors = M.get_theme_tb "base_30"
@@ -93,45 +80,65 @@ M.load_highlight = function(group)
   return group
 end
 
--- save table
-M.table_to_file = function(filename, tb)
+-- convert table into string
+M.table_to_str = function(filename, tb)
   local theme_type = M.get_theme_tb "type" -- dark / light
-  local cache_path = vim.fn.stdpath "data" .. "/site/pack/base46_cache/start/compiled_themes/lua/base46_cache/"
-  local file = io.open(cache_path .. filename, "w")
+  local result = filename == "defaults" and "vim.opt.bg='" .. theme_type .. "'" or ""
 
-  if file then
-    -- set vim.opt.bg code in defaults.lua only
-    local result = filename == "defaults.lua" and "vim.opt.bg='" .. theme_type .. "'" or ""
+  for hlgroupName, hlgroup_vals in pairs(tb) do
+    local hlname = "'" .. hlgroupName .. "',"
+    local opts = ""
 
-    for hlgroupName, hlgroup_vals in pairs(tb) do
-      local hlname = "'" .. hlgroupName .. "',"
-      local opts = ""
-
-      for optName, optVal in pairs(hlgroup_vals) do
-        local valueInStr = type(optVal) == "boolean" and " " .. tostring(optVal) or '"' .. optVal .. '"'
-        opts = opts .. optName .. "=" .. valueInStr .. ","
-      end
-
-      result = result .. "vim.api.nvim_set_hl(0," .. hlname .. "{" .. opts .. "})"
+    for optName, optVal in pairs(hlgroup_vals) do
+      local valueInStr = type(optVal) == "boolean" and " " .. tostring(optVal) or '"' .. optVal .. '"'
+      opts = opts .. optName .. "=" .. valueInStr .. ","
     end
 
-    file:write(result)
+    result = result .. "vim.api.nvim_set_hl(0," .. hlname .. "{" .. opts .. "})"
+  end
+
+  return result
+end
+
+M.saveStr_to_cache = function(filename, tb)
+  -- Thanks to https://github.com/EdenEast/nightfox.nvim
+  -- It helped me understand string.dump stuff
+
+  local cache_path = vim.fn.stdpath "cache" .. "/nvchad/base46/"
+  local lines = 'require("base46").compiled = string.dump(function()' .. M.table_to_str(filename, tb) .. "end)"
+  local file = io.open(cache_path .. filename, "wb")
+
+  loadstring(lines, "=")()
+
+  if file then
+    file:write(require("base46").compiled)
     file:close()
   end
 end
 
 M.compile = function()
+  -- All integration modules, each file returns a table
   local hl_files = vim.fn.stdpath "data" .. "/site/pack/packer/start/base46/lua/base46/integrations"
 
   for _, file in ipairs(vim.fn.readdir(hl_files)) do
-    local integration = M.load_highlight(vim.fn.fnamemodify(file, ":r"))
+    local filename = vim.fn.fnamemodify(file, ":r")
+    local integration = M.load_highlight(filename)
 
     -- merge new hl groups added by users
-    if vim.fn.fnamemodify(file, ":r") == "defaults" then
+    if filename == "defaults" then
       integration = M.merge_tb(integration, (M.turn_str_to_color(config.ui.hl_add)))
     end
 
-    M.table_to_file(file, integration)
+    M.saveStr_to_cache(filename, integration)
+  end
+end
+
+M.load_all_highlights = function()
+  require("plenary.reload").reload_module "base46"
+  M.compile()
+
+  for _, file in ipairs(vim.fn.readdir(vim.g.base46_cache)) do
+    loadfile(vim.g.base46_cache .. file)()
   end
 end
 
