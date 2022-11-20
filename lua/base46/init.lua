@@ -2,9 +2,6 @@ local M = {}
 local g = vim.g
 local config = require("core.utils").load_config()
 
-g.nvchad_theme = config.ui.theme
-g.transparency = config.ui.transparency
-
 M.get_theme_tb = function(type)
   local default_path = "base46.themes." .. g.nvchad_theme
   local user_path = "custom.themes." .. g.nvchad_theme
