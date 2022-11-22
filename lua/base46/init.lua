@@ -81,9 +81,8 @@ M.load_highlight = function(group)
 end
 
 -- convert table into string
-M.table_to_str = function(filename, tb)
-  local theme_type = M.get_theme_tb "type" -- dark / light
-  local result = filename == "defaults" and "vim.opt.bg='" .. theme_type .. "'" or ""
+M.table_to_str = function(tb)
+  local result = ""
 
   for hlgroupName, hlgroup_vals in pairs(tb) do
     local hlname = "'" .. hlgroupName .. "',"
@@ -105,7 +104,7 @@ M.saveStr_to_cache = function(filename, tb)
   -- It helped me understand string.dump stuff
 
   local cache_path = vim.fn.stdpath "cache" .. "/nvchad/base46/"
-  local lines = 'require("base46").compiled = string.dump(function()' .. M.table_to_str(filename, tb) .. "end)"
+  local lines = 'require("base46").compiled = string.dump(function()' .. M.table_to_str(tb) .. "end)"
   local file = io.open(cache_path .. filename, "wb")
 
   loadstring(lines, "=")()
@@ -130,6 +129,13 @@ M.compile = function()
     end
 
     M.saveStr_to_cache(filename, integration)
+  end
+
+  local bg_file = io.open(vim.fn.stdpath "cache" .. "/nvchad/base46/bg", "wb")
+
+  if bg_file then
+    bg_file:write("vim.opt.bg='" .. M.get_theme_tb "type".."'")
+    bg_file:close()
   end
 end
 
