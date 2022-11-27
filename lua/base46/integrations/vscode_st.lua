@@ -6,17 +6,17 @@ colors.statusline_bg = generate_color(colors.statusline_bg, 1)
 
 return {
   StatusLine = {
-    fg = generate_color(colors.light_grey, 19),
+    fg = colors.light_grey,
     bg = colors.statusline_bg,
   },
 
   St_Mode = {
-    fg = generate_color(colors.light_grey, 19),
+    fg = colors.light_grey,
     bg = colors.one_bg3,
   },
 
   StText = {
-    fg = generate_color(colors.light_grey, 19),
+    fg = colors.light_grey,
     bg = colors.statusline_bg,
   },
 }
