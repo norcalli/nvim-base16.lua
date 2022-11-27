@@ -31,6 +31,11 @@ return {
     fg = colors.red,
   },
 
+  DiffText = {
+   fg = colors.white,
+   bg = colors.black2
+  },
+
   -- git commits
   gitcommitOverflow = {
     fg = theme.base08,
