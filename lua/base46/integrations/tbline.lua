@@ -36,33 +36,6 @@ return {
     bg = colors.black2,
   },
 
-  TblineTabNewBtn = {
-    fg = colors.white,
-    bg = colors.one_bg3,
-    bold = true,
-  },
-
-  TbLineTabOn = {
-    fg = colors.black,
-    bg = colors.nord_blue,
-    bold = true,
-  },
-
-  TbLineTabOff = {
-    fg = colors.white,
-    bg = colors.one_bg2,
-  },
-
-  TbLineTabCloseBtn = {
-    fg = colors.black,
-    bg = colors.nord_blue,
-  },
-
-  TBTabTitle = {
-    fg = colors.black,
-    bg = colors.white,
-  },
-
   TbLineThemeToggleBtn = {
     bold = true,
     fg = colors.white,

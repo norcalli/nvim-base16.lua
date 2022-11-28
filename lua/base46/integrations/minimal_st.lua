@@ -38,28 +38,36 @@ local groups = {
     bg = colors.black,
   },
 
-  St_LspStatus_Icon = {
-    fg = colors.black,
-    bg = colors.nord_blue,
-  },
   St_EmptySpace = {
     fg = colors.black,
     bg = colors.black,
   },
 
-  St_EmptySpace2 = {
-    fg = colors.black,
-    bg = colors.black,
-  },
-
-  St_file_info = {
-    bg = colors.black,
+   TblineTabNewBtn = {
     fg = colors.white,
+    bg = colors.one_bg,
+    bold = true,
   },
 
-  St_file_sep = {
-    bg = colors.black,
+  TbLineTabOn = {
     fg = colors.black,
+    bg = colors.blue,
+    bold = true,
+  },
+
+  TbLineTabOff = {
+    fg = colors.white,
+    bg = colors.one_bg,
+  },
+
+  TbLineTabCloseBtn = {
+    fg = colors.black,
+    bg = colors.blue,
+  },
+
+  TBTabTitle = {
+    fg = colors.black,
+    bg = colors.white,
   },
 }
 
@@ -167,5 +175,6 @@ gen_hl("file", "red")
 gen_hl("Pos", "yellow")
 gen_hl("cwd", "orange")
 gen_hl("lsp", "green")
+gen_hl("tab", "blue")
 
 return groups
