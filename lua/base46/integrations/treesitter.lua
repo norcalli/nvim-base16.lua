@@ -62,6 +62,10 @@ return {
     fg = theme.base08,
   },
 
+  ["@function.call"] = {
+    fg = theme.base0D,
+  },
+
   ["@keyword.operator"] = {
     fg = theme.base0E,
   },
@@ -179,7 +183,7 @@ return {
   ["@field"] = {
     fg = theme.base08,
   },
-  
+
   ["@field.key"] = {
     fg = theme.base08,
   },
