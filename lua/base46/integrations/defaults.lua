@@ -225,11 +225,13 @@ return {
   },
 
   LazyH2 = {
-    bg = colors.one_bg2,
-    fg = colors.orange,
+    fg = colors.red,
+    bold = true,
+    underline = true,
   },
+
   LazyReasonPlugin = { fg = colors.red },
-  LazyValue = { fg = colors.red },
+  LazyValue = { fg = colors.teal },
   LazyDir = { fg = theme.base05 },
   LazyUrl = { fg = theme.base05 },
   LazyCommit = { fg = colors.green },
