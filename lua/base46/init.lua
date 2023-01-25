@@ -118,7 +118,7 @@ end
 
 M.compile = function()
   -- All integration modules, each file returns a table
-  local hl_files = vim.fn.stdpath "data" .. "/lazy/base46/lua/base46/integrations"
+  local hl_files = vim.g.base46_custom_path or vim.fn.stdpath "data" .. "/lazy/base46/lua/base46/integrations"
 
   for _, file in ipairs(vim.fn.readdir(hl_files)) do
     local filename = vim.fn.fnamemodify(file, ":r")
