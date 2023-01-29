@@ -104,8 +104,11 @@ M.saveStr_to_cache = function(filename, tb)
   -- Thanks to https://github.com/EdenEast/nightfox.nvim
   -- It helped me understand string.dump stuff
 
+  local bg_opt = "vim.opt.bg='" .. M.get_theme_tb "type" .. "'"
+  local defaults_cond = filename == "defaults" and bg_opt or ""
+
   local cache_path = vim.fn.stdpath "cache" .. "/nvchad/base46/"
-  local lines = 'require("base46").compiled = string.dump(function()' .. M.table_to_str(tb) .. "end)"
+  local lines = 'require("base46").compiled = string.dump(function()' .. defaults_cond .. M.table_to_str(tb) .. "end)"
   local file = io.open(cache_path .. filename, "wb")
 
   loadstring(lines, "=")()
@@ -121,22 +124,11 @@ M.compile = function()
   local hl_files = vim.g.base46_custom_path or vim.fn.stdpath "data" .. "/lazy/base46/lua/base46/integrations"
 
   for _, file in ipairs(vim.fn.readdir(hl_files)) do
-    local filename = vim.fn.fnamemodify(file, ":r")
-    local integration = M.load_highlight(filename)
-
-    -- merge new hl groups added by users
-    if filename == "defaults" then
-      integration = M.merge_tb(integration, (M.turn_str_to_color(config.ui.hl_add)))
+    -- skip caching statusline file as its done in defaults file
+    if file ~= "statusline" then
+      local filename = vim.fn.fnamemodify(file, ":r")
+      M.saveStr_to_cache(filename, M.load_highlight(filename))
     end
-
-    M.saveStr_to_cache(filename, integration)
-  end
-
-  local bg_file = io.open(vim.fn.stdpath "cache" .. "/nvchad/base46/bg", "wb")
-
-  if bg_file then
-    bg_file:write("vim.opt.bg='" .. M.get_theme_tb "type".."'")
-    bg_file:close()
   end
 end
 

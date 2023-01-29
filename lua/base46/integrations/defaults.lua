@@ -3,7 +3,7 @@ local theme = require("base46").get_theme_tb "base_16"
 
 local generate_color = require("base46.colors").change_hex_lightness
 
-return {
+local defaults = {
   MatchWord = {
     bg = colors.grey,
     fg = colors.white,
@@ -250,3 +250,11 @@ return {
   LazyReasonImport = { fg = colors.white },
   LazyProgressDone = { fg = colors.green },
 }
+
+-- merge statusilne & hl_add tables!
+local merge_tb = require("base46").merge_tb
+
+defaults = merge_tb(defaults, require("base46").load_highlight "statusline")
+defaults = merge_tb(defaults, require("core.utils").load_config().ui.hl_add)
+
+return defaults
