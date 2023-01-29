@@ -120,12 +120,13 @@ M.saveStr_to_cache = function(filename, tb)
 end
 
 M.compile = function()
+
   -- All integration modules, each file returns a table
   local hl_files = vim.g.base46_custom_path or vim.fn.stdpath "data" .. "/lazy/base46/lua/base46/integrations"
 
   for _, file in ipairs(vim.fn.readdir(hl_files)) do
-    -- skip caching statusline file as its done in defaults file
-    if file ~= "statusline" then
+    -- skip caching some files
+    if file ~= "statusline" or file ~= "treesitter" then
       local filename = vim.fn.fnamemodify(file, ":r")
       M.saveStr_to_cache(filename, M.load_highlight(filename))
     end

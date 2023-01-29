@@ -1,6 +1,6 @@
 local theme = require("base46").get_theme_tb "base_16"
 
-return {
+local syntax = {
   Boolean = {
     fg = theme.base09,
   },
@@ -114,3 +114,6 @@ return {
     fg = theme.base0A,
   },
 }
+
+local merge_tb = require("base46").merge_tb
+return merge_tb(syntax, require("base46").load_highlight "treesitter")
