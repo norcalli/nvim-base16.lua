@@ -22,16 +22,15 @@ M.merge_tb = function(table1, table2)
   return vim.tbl_deep_extend("force", table1, table2)
 end
 
-M.turn_str_to_color = function(tb_in)
-  local tb = vim.deepcopy(tb_in)
+M.turn_str_to_color = function(tb)
   local colors = M.get_theme_tb "base_30"
 
-  for _, groups in pairs(tb) do
-    for k, v in pairs(groups) do
-      if k == "fg" or k == "bg" then
-        if v:sub(1, 1) == "#" or v == "none" or v == "NONE" then
+  for _, hlgroups in pairs(tb) do
+    for opt, val in pairs(hlgroups) do
+      if opt == "fg" or opt == "bg" then
+        if val:sub(1, 1) == "#" or val == "none" or val == "NONE" then
         else
-          groups[k] = colors[v]
+          hlgroups[opt] = colors[val]
         end
       end
     end
@@ -120,7 +119,6 @@ M.saveStr_to_cache = function(filename, tb)
 end
 
 M.compile = function()
-
   -- All integration modules, each file returns a table
   local hl_files = vim.g.base46_custom_path or vim.fn.stdpath "data" .. "/lazy/base46/lua/base46/integrations"
 

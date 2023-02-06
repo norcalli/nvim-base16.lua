@@ -255,4 +255,7 @@ local defaults = {
 local merge_tb = require("base46").merge_tb
 defaults = merge_tb(defaults, require("base46").load_highlight "statusline")
 
-return merge_tb(defaults, require("core.utils").load_config().ui.hl_add)
+local hexify_ColorStrs = require("base46").turn_str_to_color
+local user_new_highlights = require("core.utils").load_config().ui.hl_add
+
+return merge_tb(defaults, hexify_ColorStrs(user_new_highlights))
