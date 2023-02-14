@@ -136,7 +136,7 @@ M.load_all_highlights = function()
   M.compile()
 
   for _, file in ipairs(vim.fn.readdir(vim.g.base46_cache)) do
-    loadfile(vim.g.base46_cache .. file)()
+    dofile(vim.g.base46_cache .. file)
   end
 end
 
