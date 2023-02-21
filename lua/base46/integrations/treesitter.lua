@@ -139,7 +139,7 @@ return {
   },
 
   ["@text.strike"] = {
-    fg = theme.base00,
+    fg = theme.base0F,
     strikethrough = true,
   },
 
