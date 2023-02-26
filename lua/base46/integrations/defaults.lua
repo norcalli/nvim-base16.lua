@@ -28,16 +28,6 @@ local defaults = {
   NvimInternalError = { fg = colors.red },
   WinSeparator = { fg = colors.line },
 
-  -- packer
-  PackerPackageName = { fg = colors.red },
-  PackerSuccess = { fg = colors.green },
-  PackerStatusSuccess = { fg = theme.base08 },
-  PackerStatusCommit = { fg = colors.blue },
-  PackeProgress = { fg = colors.blue },
-  PackerOutput = { fg = colors.red },
-  PackerStatus = { fg = colors.blue },
-  PackerHash = { fg = colors.blue },
-
   Normal = {
     fg = theme.base05,
     bg = theme.base00,
