@@ -82,6 +82,10 @@ return {
     fg = theme.base0D,
   },
 
+  ["@method.call"] = {
+    fg = theme.base0D,
+  },
+
   ["@namespace"] = {
     fg = theme.base08,
   },
