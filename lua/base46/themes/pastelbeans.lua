@@ -1,4 +1,4 @@
--- This theme was made by chatgpt on the request of creating base16 for jellybeans 
+-- credits to chatgpt
 
 local M = {}
 
@@ -14,25 +14,25 @@ M.base_30 = {
   grey_fg = "#474747",
   grey_fg2 = "#4c4c4c",
   light_grey = "#525252",
-  red = "#cf6a4c",
-  baby_pink = "#da7557",
+  red = "#ff9da4",
+  baby_pink = "#FFD3F3",
   pink = "#f0a0c0",
   line = "#2d2d2d", -- for lines like vertsplit
-  green = "#99ad6a",
+  green = "#d1f1a9",
   vibrant_green = "#c2cea6",
-  nord_blue = "#768cb4",
-  blue = "#8197bf",
+  nord_blue = "#bbdaff",
+  blue = "#bbdaff",
   yellow = "#fad07a",
   sun = "#ffb964",
-  purple = "#ea94ea",
+  purple = "#ebbbff",
   dark_purple = "#e58fe5",
   teal = "#668799",
-  orange = "#e78a4e",
-  cyan = "#8fbfdc",
+  orange = "#ff9d00",
+  cyan = "#99ffff",
   statusline_bg = "#191919",
   lightbg = "#2c2c2c",
-  pmenu_bg = "#8197bf",
-  folder_bg = "#8197bf",
+  pmenu_bg = "#ff9da4",
+  folder_bg = "#bbdaff",
 }
 
 M.base_16 = {
@@ -44,18 +44,18 @@ M.base_16 = {
   base05 = "#d0d0d0",
   base06 = "#e0e0e0",
   base07 = "#f5f5f5",
-  base08 = "#ff9da4",
+  base08 = "#ebbbff",
   base09 = "#ff9d00",
   base0A = "#ffd700",
   base0B = "#d1f1a9",
   base0C = "#99ffff",
   base0D = "#bbdaff",
-  base0E = "#ebbbff",
+  base0E = "#ff9da4",
   base0F = "#ff79c6",
 }
 
 M.type = "dark"
 
-M = require("base46").override_theme(M, "jellybeans")
+M = require("base46").override_theme(M, "pastelbeans")
 
 return M
