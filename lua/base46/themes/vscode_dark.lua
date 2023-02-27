@@ -59,7 +59,7 @@ M.polish_hl = {
   ["@parameter"] = { fg = M.base_30.blue },
   ["@keyword"] = { fg = M.base_30.blue },
   ["@variable"] = { fg = M.base_30.cyan },
-  ["@fieldkey"] = { fg = M.base_30.green1 },
+  ["@field.key"] = { fg = M.base_30.green1 },
   ["@keywordreturn"] = { fg = M.base_16.base0E },
   ["@keywordfunction"] = { fg = M.base_30.teal },
 }

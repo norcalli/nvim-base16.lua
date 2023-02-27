@@ -1,3 +1,6 @@
+-- credits to original theme for existing https://github.com/blossom-theme/blossom.vim
+-- This is just a modified version of it
+
 local M = {}
 
 M.base_30 = {

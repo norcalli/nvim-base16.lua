@@ -53,9 +53,9 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  ["@variable"] = { fg = M.base_30.red },
+  ["@variable"] = { fg = M.base_16.base05 },
   ["@function.builtin"] = { fg = M.base_30.cyan },
-  ["@parameter"] = { fg = M.base_30.white },
+  ["@parameter"] = { fg = M.base_30.red },
 }
 
 M.type = "dark"

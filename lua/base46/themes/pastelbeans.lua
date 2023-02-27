@@ -1,5 +1,4 @@
--- Credits to original https://github.com/NTBBloodbath/doom-one.nvim
--- This is modified version of it
+-- This theme was made by chatgpt on the request of creating base16 for jellybeans 
 
 local M = {}
 
@@ -38,21 +37,21 @@ M.base_30 = {
 
 M.base_16 = {
   base00 = "#151515",
-  base01 = "#2e2e2e",
-  base02 = "#3a3a3a",
-  base03 = "#424242",
-  base04 = "#474747",
-  base05 = "#d9d9c4",
-  base06 = "#dedec9",
-  base07 = "#f1f1e5",
-  base08 = "#C6B5DA",
-  base09 = "#c99f4a",
-  base0A = "#e1b655",
-  base0B = "#99ad6a",
-  base0C = "#99ad6a",
-  base0D = "#8fa5cd",
-  base0E = "#e18be1",
-  base0F = "#cf6a4c",
+  base01 = "#202020",
+  base02 = "#303030",
+  base03 = "#505050",
+  base04 = "#b0b0b0",
+  base05 = "#d0d0d0",
+  base06 = "#e0e0e0",
+  base07 = "#f5f5f5",
+  base08 = "#ff9da4",
+  base09 = "#ff9d00",
+  base0A = "#ffd700",
+  base0B = "#d1f1a9",
+  base0C = "#99ffff",
+  base0D = "#bbdaff",
+  base0E = "#ebbbff",
+  base0F = "#ff79c6",
 }
 
 M.type = "dark"
