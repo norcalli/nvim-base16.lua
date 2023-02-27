@@ -129,6 +129,15 @@ M.compile = function()
       M.saveStr_to_cache(filename, M.load_highlight(filename))
     end
   end
+
+  -- look for custom cached highlight files
+  local extended_integrations = config.ui.extended_integrations
+
+  if extended_integrations then
+    for _, integration in ipairs(extended_integrations) do
+      M.saveStr_to_cache(integration, require("base46.extended_integrations." .. integration))
+    end
+  end
 end
 
 M.load_all_highlights = function()
