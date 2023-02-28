@@ -70,6 +70,6 @@ M.polish_hl = {
 
 M.type = "light"
 
-M = require("base46").override_theme(M, "blossom")
+M = require("base46").override_theme(M, "blossom_light")
 
 return M
