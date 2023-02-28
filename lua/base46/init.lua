@@ -119,6 +119,10 @@ M.saveStr_to_cache = function(filename, tb)
 end
 
 M.compile = function()
+  if not vim.loop.fs_stat(vim.g.base46_cache) then
+    vim.fn.mkdir(vim.g.base46_cache, "p")
+  end
+
   -- All integration modules, each file returns a table
   local hl_files = vim.g.base46_custom_path or vim.fn.stdpath "data" .. "/lazy/base46/lua/base46/integrations"
 
