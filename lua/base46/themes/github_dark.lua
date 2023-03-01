@@ -32,7 +32,7 @@ M.base_30 = {
   cyan = "#56d4dd",
   statusline_bg = "#2b3035",
   lightbg = "#383d42",
-  pmenu_bg = "#3d4147", -- Command bar suggestions
+  pmenu_bg = "#58a6ff", -- Command bar suggestions
   folder_bg = "#58a6ff",
 }
 
