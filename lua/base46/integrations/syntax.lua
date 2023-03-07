@@ -119,16 +119,25 @@ local merge_tb = require("base46").merge_tb
 
 if vim.version().minor == 9 then
   local semantic_hls = {
-    ["@class"] = { fg = theme.base0E },
-    ["@struct"] = { fg = theme.base0E },
-    ["@enum"] = { fg = theme.base0A },
-    ["@enumMember"] = { fg = theme.base08 },
-    ["@event"] = { fg = theme.base08 },
-    ["@interface"] = { fg = theme.base08 },
-    ["@modifier"] = { fg = theme.base08 },
-    ["@regexp"] = { fg = theme.base0F },
-    ["@typeParamater"] = { fg = theme.base0A },
-    ["@decorator"] = { fg = theme.base08 },
+    ["@lsp.type.class"] = { fg = theme.base0E },
+    ["@lsp.type.decorator"] = { fg = theme.base08 },
+    ["@lsp.type.enum"] = { fg = theme.base0A },
+    ["@lsp.type.enumMember"] = { fg = theme.base08 },
+    ["@lsp.type.function"] = { fg = theme.base0D },
+    ["@lsp.type.interface"] = { fg = theme.base08 },
+    ["@lsp.type.macro"] = { fg = theme.base08 },
+    ["@lsp.type.method"] = { fg = theme.base0D },
+    ["@lsp.type.namespace"] = { fg = theme.base08 },
+    ["@lsp.type.parameter"] = { fg = theme.base08 },
+    ["@lsp.type.property"] = { fg = theme.base08 },
+    ["@lsp.type.struct"] = { fg = theme.base0E },
+    ["@lsp.type.type"] = { fg = theme.base0A },
+    ["@lsp.type.typeParamater"] = { fg = theme.base0A },
+    ["@lsp.type.variable"] = { fg = theme.base05 },
+
+    -- ["@event"] = { fg = theme.base08 },
+    -- ["@modifier"] = { fg = theme.base08 },
+    -- ["@regexp"] = { fg = theme.base0F },
   }
 
   syntax = merge_tb(syntax, semantic_hls)
