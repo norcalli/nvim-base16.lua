@@ -15,7 +15,7 @@ M.get_theme_tb = function(type)
   elseif present2 then
     return user_theme[type]
   else
-    error "No such theme bruh >_< "
+    error "No such theme!"
   end
 end
 
@@ -23,16 +23,15 @@ M.merge_tb = function(table1, table2)
   return vim.tbl_deep_extend("force", table1, table2)
 end
 
+-- turns color var names in hl_override/hl_add to actual colors
+-- hl_add = { abc = { bg = "one_bg" }} -> bg = colors.one_bg
 M.turn_str_to_color = function(tb)
   local colors = M.get_theme_tb "base_30"
 
   for _, hlgroups in pairs(tb) do
     for opt, val in pairs(hlgroups) do
-      if opt == "fg" or opt == "bg" then
-        if val:sub(1, 1) == "#" or val == "none" or val == "NONE" then
-        else
-          hlgroups[opt] = colors[val]
-        end
+      if (opt == "fg" or opt == "bg") and not (val:sub(1, 1) == "#" or val == "none" or val == "NONE") then
+        hlgroups[opt] = colors[val]
       end
     end
   end
@@ -194,25 +193,14 @@ M.toggle_theme = function()
 end
 
 M.toggle_transparency = function()
-  local transparency_status = config.ui.transparency
-  local write_data = require("nvchad").write_data
+  g.transparency = not g.transparency
+  M.load_all_highlights()
 
-  local function save_chadrc_data()
-    local old_data = "transparency = " .. tostring(transparency_status)
-    local new_data = "transparency = " .. tostring(g.transparency)
+  -- write transparency value to chadrc
+  local old_data = "transparency = " .. tostring(config.ui.transparency)
+  local new_data = "transparency = " .. tostring(g.transparency)
 
-    write_data(old_data, new_data)
-  end
-
-  if g.transparency then
-    g.transparency = false
-    M.load_all_highlights()
-    save_chadrc_data()
-  else
-    g.transparency = true
-    M.load_all_highlights()
-    save_chadrc_data()
-  end
+  require("nvchad").replace_word(old_data, new_data)
 end
 
 return M
