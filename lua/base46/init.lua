@@ -165,30 +165,24 @@ end
 
 M.toggle_theme = function()
   local themes = config.ui.theme_toggle
-
   local theme1 = themes[1]
   local theme2 = themes[2]
 
-  if g.nvchad_theme == theme1 or g.nvchad_theme == theme2 then
-    if g.toggle_theme_icon == "   " then
-      g.toggle_theme_icon = "   "
-    else
-      g.toggle_theme_icon = "   "
-    end
+  if g.nvchad_theme ~= theme1 and g.nvchad_theme ~= theme2 then
+    vim.notify "Set your current theme to one of those mentioned in the theme_toggle table (chadrc)"
+    return
   end
 
+  M.load_all_highlights()
+
   if g.nvchad_theme == theme1 then
-    g.nvchad_theme = theme2
-
-    require("nvchad").reload_theme()
-    require("nvchad").change_theme(theme1, theme2)
-  elseif g.nvchad_theme == theme2 then
-    g.nvchad_theme = theme1
-
-    require("nvchad").reload_theme()
-    require("nvchad").change_theme(theme2, theme1)
+    g.toggle_theme_icon = "   "
+    vim.g.nvchad_theme = theme2
+    require("nvchad").replace_word(theme1, theme2)
   else
-    vim.notify "Set your current theme to one of those mentioned in the theme_toggle table (chadrc)"
+    vim.g.nvchad_theme = theme1
+    g.toggle_theme_icon = "   "
+    require("nvchad").replace_word(theme2, theme1)
   end
 end
 
