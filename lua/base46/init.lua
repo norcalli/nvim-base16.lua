@@ -106,9 +106,8 @@ M.saveStr_to_cache = function(filename, tb)
   local bg_opt = "vim.opt.bg='" .. M.get_theme_tb "type" .. "'"
   local defaults_cond = filename == "defaults" and bg_opt or ""
 
-  local cache_path = vim.fn.stdpath "cache" .. "/nvchad/base46/"
   local lines = "return string.dump(function()" .. defaults_cond .. M.table_to_str(tb) .. "end, true)"
-  local file = io.open(cache_path .. filename, "wb")
+  local file = io.open(vim.g.base46_cache .. filename, "wb")
 
   if file then
     file:write(loadstring(lines)())
