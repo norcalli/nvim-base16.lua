@@ -30,5 +30,6 @@ return {
   DevIconzip = { fg = colors.sun },
   DevIconZig = { fg = colors.orange },
   DevIconMd = {fg = colors.blue},
-  DevIconTSX = {fg = colors.blue}
+  DevIconTSX = {fg = colors.blue},
+  DevIconJSX = {fg = colors.blue}
 }
