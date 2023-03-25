@@ -30,7 +30,9 @@ M.turn_str_to_color = function(tb)
 
   for _, hlgroups in pairs(tb) do
     for opt, val in pairs(hlgroups) do
-      if (opt == "fg" or opt == "bg") and not (val:sub(1, 1) == "#" or val == "none" or val == "NONE") then
+      if
+        (opt == "fg" or opt == "bg" or opt == "sp") and not (val:sub(1, 1) == "#" or val == "none" or val == "NONE")
+      then
         hlgroups[opt] = colors[val]
       end
     end
