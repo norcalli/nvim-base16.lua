@@ -156,10 +156,10 @@ end
 M.override_theme = function(default_theme, theme_name)
   local changed_themes = config.ui.changed_themes
 
-  if changed_themes[theme_name] then
+  if changed_themes.all then
+    return M.merge_tb(default_theme, changed_themes.all)
+  elseif changed_themes[theme_name] then
     return M.merge_tb(default_theme, changed_themes[theme_name])
-  else
-    return default_theme
   end
 end
 
