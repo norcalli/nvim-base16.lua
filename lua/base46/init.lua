@@ -19,8 +19,8 @@ M.get_theme_tb = function(type)
   end
 end
 
-M.merge_tb = function(table1, table2)
-  return vim.tbl_deep_extend("force", table1, table2)
+M.merge_tb = function(...)
+  return vim.tbl_deep_extend("force", ...)
 end
 
 -- turns color var names in hl_override/hl_add to actual colors
@@ -155,17 +155,7 @@ end
 
 M.override_theme = function(default_theme, theme_name)
   local changed_themes = config.ui.changed_themes
-  local final_tb = default_theme
-
-  if changed_themes.all then
-    final_tb = M.merge_tb(final_tb, changed_themes.all)
-  end
-
-  if changed_themes[theme_name] then
-    final_tb = M.merge_tb(final_tb, changed_themes[theme_name])
-  end
-
-  return final_tb
+  return M.merge_tb(default_theme, changed_themes.all or {}, changed_themes[theme_name] or {})
 end
 
 M.toggle_theme = function()
