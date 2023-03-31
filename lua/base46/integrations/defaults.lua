@@ -114,7 +114,7 @@ local defaults = {
   },
 
   UnderLined = {
-    fg = theme.base0B,
+    underline = true,
   },
 
   Visual = {
