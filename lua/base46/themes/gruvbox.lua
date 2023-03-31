@@ -59,4 +59,14 @@ M.type = "dark"
 
 M = require("base46").override_theme(M, "gruvbox")
 
+M.polish_hl = {
+  Operator = {
+    fg = M.base_30.nord_blue,
+  },
+
+  ["@operator"] = {
+    fg = M.base_30.nord_blue,
+  },
+}
+
 return M
