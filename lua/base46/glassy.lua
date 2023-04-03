@@ -27,6 +27,7 @@ local hl_groups = {
   "TelescopePromptPrefix",
   "CursorLine",
   "Pmenu",
+  "CmpPmenu",
 }
 
 for _, groups in ipairs(hl_groups) do
@@ -43,6 +44,11 @@ M.TelescopeBorder = {
 M.TelescopePromptBorder = {
   fg = colors.grey,
   bg = "NONE",
+}
+
+M.CmpDocBorder = {
+  bg = "none",
+  fg = colors.grey,
 }
 
 return M
