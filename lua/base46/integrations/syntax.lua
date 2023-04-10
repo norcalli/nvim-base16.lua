@@ -116,8 +116,9 @@ local syntax = {
 }
 
 local merge_tb = require("base46").merge_tb
+local lsp_semantic_tokens = require("core.utils").load_config().ui.lsp_semantic_tokens
 
-if vim.version().minor >= 9 then
+if vim.version().minor >= 9 and lsp_semantic_tokens then
   local semantic_hls = {
     ["@lsp.type.class"] = { fg = theme.base0E },
     ["@lsp.type.decorator"] = { fg = theme.base08 },
